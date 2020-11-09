@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="MVM Randomizer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MVM_Randomizer_jar</output-path>
+    <root id="archive" name="MVM Randomizer.jar">
+      <element id="module-output" name="MVM Randomizer" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/gson-2.8.6.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

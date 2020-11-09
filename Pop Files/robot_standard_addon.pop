@@ -1,0 +1,123 @@
+WaveSchedule
+{
+	Templates
+	{
+		T_TFBot_Heavyweapons
+		{
+			Class Heavyweapons
+			Skill Easy
+			Name "Heavy"
+		}
+		
+		T_TFBot_Soldier
+		{
+			Class Soldier
+			Skill Easy
+			Name "Soldier"
+		}
+		
+		T_TFBot_Scout
+		{
+			Class Scout
+			Skill Easy
+			Name "Scout"
+		}
+
+		T_TFBot_Giant_Demoman_Samurai
+		{
+            Class Demoman
+			Name "Samurai Demo"
+			ClassIcon demoknight_samurai
+			Skill Expert
+			Item "The Half-Zatoichi"
+			Item "The Splendid Screen"
+			ItemAttributes
+			{
+				ItemName "The Splendid Screen"
+				"Attack not cancel charge" 1
+			}
+			Item "Demo Kabuto"
+			Health 650
+			WeaponRestrictions MeleeOnly
+			Attributes AirChargeOnly
+			Attributes AutoJump
+				AutoJumpMin 10
+				AutoJumpMax 10
+			Attributes MiniBoss
+			Scale "1.3"
+			CharacterAttributes
+			{
+				"charge time increased" 2
+				"charge recharge rate increased" 7
+				"increased jump height" 2.3
+				"bot custom jump particle"	1
+				"damage bonus"	1.5
+			}
+		}
+
+		T_TFBot_Giant_Sniper_Huntsman
+		{
+			Class Sniper
+			Name "Bowman Rapid Fire"
+			Item "The Huntsman"
+			ClassIcon sniper_bow
+			Skill Hard
+			Health 1200
+			Attributes MiniBoss
+			"scale" 1.5
+			ItemAttributes
+			{
+				ItemName "The Huntsman"
+				"fire rate bonus" 0.6
+			}
+			CharacterAttributes
+			{
+				"head scale" 0.7
+				"move speed bonus"	0.6
+			}
+		}
+
+		T_TFBot_Soldier_RocketPush_Airblast
+		{
+			Class Soldier
+			Skill Expert
+			WeaponRestrictions PrimaryOnly
+			Item "The Liberty Launcher"
+			Name "Sergeant Bitchass"
+			ClassIcon soldier_liberty_airblast
+			Attributes HoldFireUntilFullReload
+			ItemAttributes
+			{
+				ItemName "The Liberty Launcher"
+				"damage causes airblast" 1
+				"damage bonus" .45
+				"fire rate bonus" 0.001
+				"clip size upgrade atomic" -2
+				"faster reload rate" 1.5
+				"Blast radius decreased" 1.2
+				"projectile spread angle penalty" 2
+			}
+		}
+
+		T_TFBot_Soldier_RocketPush_NoAirblast
+        {
+            Class Soldier
+            Skill Expert
+            WeaponRestrictions PrimaryOnly
+            Item "The Liberty Launcher"
+            Name "Blast Soldier"
+            ClassIcon soldier_libertylauncher
+            Attributes HoldFireUntilFullReload
+            ItemAttributes
+            {
+                ItemName "The Liberty Launcher"
+                "damage bonus" .45
+                "fire rate bonus" 0.001
+                "clip size upgrade atomic" -2
+                "faster reload rate" 1.5
+                "Blast radius decreased" 1.2
+                "projectile spread angle penalty" 2
+            }
+        }
+	}
+}
