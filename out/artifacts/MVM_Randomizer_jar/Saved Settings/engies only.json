@@ -3364,7 +3364,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "DAMM": {
         "map": "DAMM",
@@ -3434,7 +3434,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "SHIVER_PEAK": {
         "map": "SHIVER_PEAK",
@@ -3444,7 +3444,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "QUETZALCOATL": {
         "map": "QUETZALCOATL",
@@ -3464,7 +3464,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "AFFINITY": {
         "map": "AFFINITY",
@@ -3474,7 +3474,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "TEIEN": {
         "map": "TEIEN",
@@ -3494,7 +3494,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "DOCKYARD": {
         "map": "DOCKYARD",
@@ -3514,7 +3514,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "CONDEMNED": {
         "map": "CONDEMNED",
@@ -3524,7 +3524,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "MANNHATTAN": {
         "map": "MANNHATTAN",
@@ -3544,7 +3544,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "CASINO_CITY": {
         "map": "CASINO_CITY",
@@ -3554,7 +3554,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "SADDLE": {
         "map": "SADDLE",
@@ -3564,7 +3564,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "COAST_ROCK": {
         "map": "COAST_ROCK",
@@ -3574,7 +3574,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "OILRIG": {
         "map": "OILRIG",
@@ -3584,7 +3584,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "BIGROCK": {
         "map": "BIGROCK",
@@ -3604,7 +3604,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "ROTTENBURG": {
         "map": "ROTTENBURG",
@@ -3624,7 +3624,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "BRUGGE": {
         "map": "BRUGGE",
@@ -3674,7 +3674,7 @@
           "lowerBound": 800,
           "upperBound": 1300
         },
-        "enabled": true
+        "enabled": false
       },
       "DEFAULT": {
         "map": "DEFAULT",
