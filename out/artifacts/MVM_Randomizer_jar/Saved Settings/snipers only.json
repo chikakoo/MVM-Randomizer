@@ -25,8 +25,8 @@
           "lowerBound": 2,
           "upperBound": 3
         },
-        "percentMissions": 10,
-        "percentSupport": 0,
+        "percentMissions": 55,
+        "percentSupport": 10,
         "percentGiants": 0,
         "maxGiants": 0,
         "percentTanks": 0
@@ -40,11 +40,11 @@
           "lowerBound": 2,
           "upperBound": 3
         },
-        "percentMissions": 20,
-        "percentSupport": 0,
+        "percentMissions": 55,
+        "percentSupport": 20,
         "percentGiants": 10,
         "maxGiants": 1,
-        "percentTanks": 0
+        "percentTanks": 10
       },
       {
         "currencyRange": {
@@ -55,11 +55,11 @@
           "lowerBound": 3,
           "upperBound": 3
         },
-        "percentMissions": 35,
-        "percentSupport": 0,
+        "percentMissions": 55,
+        "percentSupport": 20,
         "percentGiants": 15,
         "maxGiants": 1,
-        "percentTanks": 0
+        "percentTanks": 10
       },
       {
         "currencyRange": {
@@ -70,11 +70,11 @@
           "lowerBound": 3,
           "upperBound": 4
         },
-        "percentMissions": 35,
-        "percentSupport": 0,
+        "percentMissions": 55,
+        "percentSupport": 35,
         "percentGiants": 15,
         "maxGiants": 1,
-        "percentTanks": 0
+        "percentTanks": 10
       },
       {
         "currencyRange": {
@@ -85,11 +85,11 @@
           "lowerBound": 4,
           "upperBound": 4
         },
-        "percentMissions": 35,
-        "percentSupport": 0,
+        "percentMissions": 55,
+        "percentSupport": 35,
         "percentGiants": 20,
         "maxGiants": 1,
-        "percentTanks": 0
+        "percentTanks": 10
       },
       {
         "currencyRange": {
@@ -100,11 +100,11 @@
           "lowerBound": 4,
           "upperBound": 5
         },
-        "percentMissions": 35,
-        "percentSupport": 0,
+        "percentMissions": 55,
+        "percentSupport": 35,
         "percentGiants": 40,
         "maxGiants": 1,
-        "percentTanks": 0
+        "percentTanks": 10
       },
       {
         "currencyRange": {
@@ -115,11 +115,11 @@
           "lowerBound": 4,
           "upperBound": 5
         },
-        "percentMissions": 35,
-        "percentSupport": 0,
+        "percentMissions": 55,
+        "percentSupport": 35,
         "percentGiants": 40,
         "maxGiants": 1,
-        "percentTanks": 0
+        "percentTanks": 10
       },
       {
         "currencyRange": {
@@ -130,11 +130,11 @@
           "lowerBound": 4,
           "upperBound": 5
         },
-        "percentMissions": 35,
-        "percentSupport": 0,
+        "percentMissions": 55,
+        "percentSupport": 35,
         "percentGiants": 40,
         "maxGiants": 2,
-        "percentTanks": 0
+        "percentTanks": 10
       },
       {
         "currencyRange": {
@@ -145,11 +145,11 @@
           "lowerBound": 4,
           "upperBound": 5
         },
-        "percentMissions": 35,
-        "percentSupport": 0,
+        "percentMissions": 55,
+        "percentSupport": 35,
         "percentGiants": 45,
         "maxGiants": 2,
-        "percentTanks": 0
+        "percentTanks": 10
       },
       {
         "currencyRange": {
@@ -160,11 +160,11 @@
           "lowerBound": 5,
           "upperBound": 6
         },
-        "percentMissions": 35,
-        "percentSupport": 0,
+        "percentMissions": 55,
+        "percentSupport": 35,
         "percentGiants": 50,
         "maxGiants": 2,
-        "percentTanks": 0
+        "percentTanks": 15
       }
     ]
   },
@@ -3191,37 +3191,37 @@
     },
     "percentRandom": 40,
     "standardBotDistributions": {
-      "demomanPercentage": 0,
+      "demomanPercentage": 20,
       "engineerPercentage": 0,
-      "heavyPercentage": 0,
-      "medicPercentage": 0,
-      "pyroPercentage": 0,
-      "scoutPercentage": 0,
-      "sniperPercentage": 100,
-      "soldierPercentage": 0,
-      "spyPercentage": 0
+      "heavyPercentage": 15,
+      "medicPercentage": 15,
+      "pyroPercentage": 20,
+      "scoutPercentage": 25,
+      "sniperPercentage": 10,
+      "soldierPercentage": 15,
+      "spyPercentage": 5
     },
     "giantBotDistributions": {
-      "demomanPercentage": 0,
+      "demomanPercentage": 100,
       "engineerPercentage": 0,
-      "heavyPercentage": 0,
-      "medicPercentage": 0,
-      "pyroPercentage": 0,
-      "scoutPercentage": 0,
-      "sniperPercentage": 100,
-      "soldierPercentage": 0,
-      "spyPercentage": 0
+      "heavyPercentage": 75,
+      "medicPercentage": 90,
+      "pyroPercentage": 100,
+      "scoutPercentage": 50,
+      "sniperPercentage": 35,
+      "soldierPercentage": 100,
+      "spyPercentage": 35
     },
     "supportBotDistributions": {
-      "demomanPercentage": 0,
-      "engineerPercentage": 0,
-      "heavyPercentage": 0,
-      "medicPercentage": 0,
-      "pyroPercentage": 0,
-      "scoutPercentage": 0,
-      "sniperPercentage": 100,
-      "soldierPercentage": 0,
-      "spyPercentage": 0
+      "demomanPercentage": 3,
+      "engineerPercentage": 20,
+      "heavyPercentage": 1,
+      "medicPercentage": 2,
+      "pyroPercentage": 3,
+      "scoutPercentage": 10,
+      "sniperPercentage": 40,
+      "soldierPercentage": 3,
+      "spyPercentage": 40
     },
     "highlanderMode": false
   },
