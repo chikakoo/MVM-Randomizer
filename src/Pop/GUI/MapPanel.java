@@ -21,6 +21,7 @@ public class MapPanel extends JPanel {
     private JPopupMenu contextMenu;
     private JMenuItem selectStandardMapsMenuItem = new JMenuItem("enable only standard maps");
     private JMenuItem selectCommunityMapsMenuItem = new JMenuItem("enable only community maps");
+    private JMenuItem selectEngineerMapsMenuItem = new JMenuItem("enable only Engineer maps");
     private JMenuItem selectAllMapsMenuItem = new JMenuItem("enable all maps");
     private JMenuItem selectNoMapsMenuItem = new JMenuItem("enable no maps");
 
@@ -71,12 +72,14 @@ public class MapPanel extends JPanel {
         contextMenu = new JPopupMenu();
         contextMenu.add(selectStandardMapsMenuItem);
         contextMenu.add(selectCommunityMapsMenuItem);
+        contextMenu.add(selectEngineerMapsMenuItem);
         contextMenu.addSeparator();
         contextMenu.add(selectAllMapsMenuItem);
         contextMenu.add(selectNoMapsMenuItem);
 
         selectStandardMapsMenuItem.addActionListener(new SelectStandardMapsListener());
         selectCommunityMapsMenuItem.addActionListener(new SelectCommunityMapsListener());
+        selectEngineerMapsMenuItem.addActionListener(new SelectEngineerMapsListener());
         selectAllMapsMenuItem.addActionListener(new SelectAllMapsListener());
         selectNoMapsMenuItem.addActionListener(new SelectNoMapsListener());
 
@@ -109,6 +112,18 @@ public class MapPanel extends JPanel {
         public void actionPerformed(ActionEvent e) {
             tableModel.selectOnlyCommunityMaps();
         }
+    }
+
+    /**
+     * Listener for the select engineer maps option
+     */
+    private class SelectEngineerMapsListener implements ActionListener {
+        /**
+         * Selects only engineer maps
+         * @param e
+         */
+        @Override
+        public void actionPerformed(ActionEvent e) { tableModel.selectOnlyEngineerMaps(); }
     }
 
     /**

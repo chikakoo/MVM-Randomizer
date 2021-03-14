@@ -1,7 +1,7 @@
 package Pop.GUI.TableModels;
 
 import Pop.Enums.Maps;
-import Pop.Range;
+import Pop.Maps.Map;
 import Pop.Settings.MapSetting;
 import javax.swing.table.AbstractTableModel;
 import java.util.*;
@@ -54,6 +54,17 @@ public class MapItemModel extends AbstractTableModel {
     public void selectOnlyCommunityMaps() {
         for (MapSetting mapSetting : maps) {
             mapSetting.setEnabled(!Maps.isStandardMap(mapSetting.getMap()));
+        }
+        fireTableDataChanged();
+    }
+
+    /**
+     * Selects only engineer maps
+     */
+    public void selectOnlyEngineerMaps() {
+        for (MapSetting mapSetting : maps) {
+            Map map = Map.getMapFromEnum(mapSetting.getMap());
+            mapSetting.setEnabled(map.getCanSpawnEngineers());
         }
         fireTableDataChanged();
     }
