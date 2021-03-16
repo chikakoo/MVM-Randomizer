@@ -16,7 +16,7 @@ public class MapPanel extends JPanel {
     /**
      * GUI Components
      */
-    private JTable mapTable;
+    private AutoSelectTable mapTable;
     private MapItemModel tableModel;
     private JPopupMenu contextMenu;
     private JMenuItem selectStandardMapsMenuItem = new JMenuItem("enable only standard maps");
@@ -32,7 +32,7 @@ public class MapPanel extends JPanel {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         tableModel = new MapItemModel();
-        mapTable = new JTable(tableModel);
+        mapTable = new AutoSelectTable(tableModel);
         mapTable.setFillsViewportHeight(true);
         JScrollPane mapScrollPane = new JScrollPane(mapTable);
 

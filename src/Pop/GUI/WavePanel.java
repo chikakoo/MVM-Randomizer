@@ -20,7 +20,7 @@ public class WavePanel extends JPanel {
     /**
      * GUI Componenets
      */
-    private JTable waveTable;
+    private AutoSelectTable waveTable;
     private WaveItemModel tableModel;
     private JPopupMenu contextMenu;
     private JMenuItem moveDownMenuItem = new JMenuItem("move down");
@@ -40,7 +40,7 @@ public class WavePanel extends JPanel {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         tableModel = new WaveItemModel();
-        waveTable = new JTable(tableModel);
+        waveTable = new AutoSelectTable(tableModel);
         waveTable.setFillsViewportHeight(true);
         JScrollPane tankScrollPane = new JScrollPane(waveTable);
 

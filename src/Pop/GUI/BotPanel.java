@@ -7,18 +7,13 @@ import Pop.MVMRandomizer;
 import Pop.Settings.ClassPercentage;
 
 import javax.swing.*;
-import javax.swing.border.Border;
-import javax.swing.border.MatteBorder;
-import javax.swing.border.TitledBorder;
+import javax.swing.border.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableCellRenderer;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
+import java.awt.event.*;
 
 /**
  * Panel for configuring bot generation
@@ -35,7 +30,7 @@ public class BotPanel extends JPanel {
 
     private JComboBox<String> tfClassComboBox;
 
-    private JTable botSettingsTable;
+    private AutoSelectTable botSettingsTable;
     private BotSettingsItemModel botSettingsModel;
 
     JMenuItem setEasySpawnRangeMenuItem = new JMenuItem("Set easy spawn range");
@@ -43,9 +38,9 @@ public class BotPanel extends JPanel {
     JMenuItem setHardSpawnRangeMenuItem = new JMenuItem("Set hard spawn range");
     JMenuItem setImpossibleSpawnRangeMenuItem = new JMenuItem("Set impossible spawn range");
 
-    private JTable standardBotDistributionsTable;
-    private JTable giantBotDistrubtionsTable;
-    private JTable supportBotDistrubtionsTable;
+    private AutoSelectTable standardBotDistributionsTable;
+    private AutoSelectTable giantBotDistrubtionsTable;
+    private AutoSelectTable supportBotDistrubtionsTable;
 
     private JScrollPane nonSupportDistrubtionsScrollPane;
 
@@ -184,7 +179,7 @@ public class BotPanel extends JPanel {
         botSettingsPanel.setLayout(new BorderLayout());
 
         botSettingsModel = new BotSettingsItemModel();
-        botSettingsTable = new JTable(botSettingsModel);
+        botSettingsTable = new AutoSelectTable(botSettingsModel);
         botSettingsTable.getSelectionModel().addListSelectionListener(new RowSelectionListener());
         botSettingsTable.setAutoCreateRowSorter(true);
         JScrollPane botSettingsScrollPane = new JScrollPane(botSettingsTable);
@@ -405,31 +400,35 @@ public class BotPanel extends JPanel {
         classDistributionsPanel.setLayout(new BoxLayout(classDistributionsPanel, BoxLayout.X_AXIS));
 
         standardBotDistributionsModel = new ClassDistributionModel();
-        standardBotDistributionsTable = new JTable(standardBotDistributionsModel);
+        standardBotDistributionsTable = new AutoSelectTable(standardBotDistributionsModel);
 
         giantBotDistributionsModel = new ClassDistributionModel();
-        giantBotDistrubtionsTable = new JTable(giantBotDistributionsModel);
+        giantBotDistrubtionsTable = new AutoSelectTable(giantBotDistributionsModel);
 
         nonSupportDistrubtionsScrollPane = new JScrollPane();
         changeNonSupportDistrubtionsScrollPane(false);
 
         supportBotDistrubtionsModel = new ClassDistributionModel(true);
-        supportBotDistrubtionsTable = new JTable(supportBotDistrubtionsModel)
+        supportBotDistrubtionsTable = new AutoSelectTable(supportBotDistrubtionsModel)
         {
             public Component prepareRenderer(TableCellRenderer renderer, int row, int column)
             {
                 Component component = super.prepareRenderer(renderer, row, column);
                 JComponent jComponent = (JComponent)component;
-                Border border = new MatteBorder(0, 0, 1, 0, Color.RED);
 
                 // Add a border to the area dividing the mission bots and standard bots
-                if (row == 5) {
-                    jComponent.setBorder(border);
+                final int TOP_BORDER_ROW = 5;
+                final int BOTTOM_BORDER_ROW = 6;
+                if (row == TOP_BORDER_ROW) {
+                    jComponent.setBorder(getBorderForSupportTable(false));
+                } else if (row == BOTTOM_BORDER_ROW) {
+                    jComponent.setBorder(getBorderForSupportTable(true));
                 }
 
                 return component;
             }
         };
+
         JScrollPane supportBotDistrubtionsScrollPane = new JScrollPane(supportBotDistrubtionsTable);
         supportBotDistrubtionsScrollPane.setBorder(new TitledBorder("Support/Mission Bot Spawning Ratios"));
 
@@ -437,6 +436,22 @@ public class BotPanel extends JPanel {
         classDistributionsPanel.add(supportBotDistrubtionsScrollPane);
 
         return classDistributionsPanel;
+    }
+
+
+    /**
+     * Gets the Border object for the support table
+     * @param isBottomBorder - whether this is for the bottom border
+     * @return
+     */
+    private Border getBorderForSupportTable(boolean isBottomBorder) {
+        Border border = isBottomBorder ?
+            new MatteBorder(1, 0, 0, 0, Color.RED) :
+            new MatteBorder(0, 0, 1, 0, Color.RED);
+        Border insideMargin = BorderFactory.createEmptyBorder(5, 5, 5, 5);
+        Border borderWithMargin = BorderFactory.createCompoundBorder(border, insideMargin);
+
+        return borderWithMargin;
     }
 
     /**

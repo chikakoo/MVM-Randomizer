@@ -22,7 +22,7 @@ public class TankPanel extends JPanel {
      * GUI Components
      */
     private IntegerFieldPanel waveSpawnReductionPanel = new IntegerFieldPanel("Wave spawn reduction:", new Dimension(30, 20));
-    private JTable tankTable;
+    private AutoSelectTable tankTable;
     private TankItemModel tableModel;
     private JPopupMenu contextMenu;
     private JMenuItem addMenuItem = new JMenuItem("add");
@@ -44,7 +44,7 @@ public class TankPanel extends JPanel {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         tableModel = new TankItemModel();
-        tankTable = new JTable(tableModel);
+        tankTable = new AutoSelectTable(tableModel);
         tankTable.setFillsViewportHeight(true);
         JScrollPane tankScrollPane = new JScrollPane(tankTable);
 

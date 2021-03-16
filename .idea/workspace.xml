@@ -7,10 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fda81880-0a9e-4653-b26f-968fd12e828f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MVM_Randomizer_jar/Saved Settings/snipers only.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MVM_Randomizer_jar/Saved Settings/snipers only.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pop/Bot/Weapons/WeaponModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pop/GUI/AutoSelectTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pop/Bot/RandomBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pop/Bot/RandomBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pop/Bot/WeaponModels.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pop/Bot/Weapons/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pop/Bot/Weapons/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pop/Bot/Weapons/WeaponModels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pop/Bot/Weapons/WeaponModels.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pop/GUI/BotPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pop/GUI/BotPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pop/GUI/MapPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pop/GUI/MapPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pop/GUI/TableModels/MapItemModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pop/GUI/TableModels/MapItemModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pop/Maps/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pop/Maps/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pop/GUI/TankPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pop/GUI/TankPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pop/GUI/WavePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pop/GUI/WavePanel.java" afterDir="false" />
     </list>
     <ignored path="MVM Randomizer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,119 +40,49 @@
     <favorites_list name="MVM Randomizer" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pop/Maps/CoastRock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pop/Maps/Intersection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="21" column="81" lean-forward="true" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pop/GUI/MapPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="112" column="32" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Pop/GUI/TableModels/MapItemModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="51" column="34" lean-forward="true" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pop/Settings/MapSetting.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pop/Enums/Maps.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pop/Maps/Map.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="129" column="36" selection-start-line="129" selection-start-column="22" selection-end-line="129" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>looku</find>
-      <find>milk</find>
-      <find>standardbotdis</find>
-      <find>updateBotSettingsTableForBotSize</find>
-      <find>initializeForStandardBots</find>
-      <find>standardBotDistributionsModel</find>
-      <find>giantBotDistrubtionsTable</find>
-      <find>giantBotDistrubtionsModel</find>
-      <find>isgiant</find>
-      <find>centercelltext</find>
-      <find>getStandardBotDistributions</find>
-      <find>getstandardbot</find>
-      <find>getBotFromEnum</find>
-      <find>generateCustomGiantBot</find>
-      <find>generateGiantBot</find>
-      <find>getmissionobject</find>
-      <find>setBotsBasedOnObjective</find>
-      <find>generatesupport</find>
-      <find>generaterandom</find>
-      <find>canspawn</find>
-      <find>addattribute</find>
-      <find>alwayscrit</find>
-      <find>NORMAL_SPAWN_RANGE</find>
-      <find>support</find>
       <find>TODO</find>
       <find>generatecustombot</find>
       <find>cutthroat</find>
       <find>enable only</find>
       <find>selectCommunityMapsMenuItem</find>
       <find>SelectCommunityMapsListener</find>
+      <find>supportBotDistrubtionsTable</find>
+      <find>jtable</find>
+      <find>model</find>
+      <find>c_saxxy</find>
+      <find>weaponsThatTurnToGold</find>
+      <find>attach part</find>
+      <find>atta</find>
+      <find>weaponsthatturntogold</find>
+      <find>turntogold</find>
+      <find>randomModel.getTurnToGoldOnDeath</find>
+      <find>weaponsthat</find>
+      <find>weaponmodels</find>
+      <find>addRandomProjectileModelForTemplatedBot</find>
+      <find>setrandombotname</find>
+      <find>generatetemplatedbot</find>
+      <find>tryAddRandomProjectileModel</find>
+      <find>weapontofriendly</find>
+      <find>friendlyname</find>
+      <find>generateRandomWeapons</find>
+      <find>setRandomBotName</find>
+      <find>getMainWeapon</find>
+      <find>saxxy</find>
+      <find>getrandomweapon</find>
+      <find>setrandombot</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,10 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Pop/Bot/RandomSpy.java" />
-        <option value="$PROJECT_DIR$/src/Pop/Bot/RandomPyro.java" />
-        <option value="$PROJECT_DIR$/src/Pop/Maps/Condemned.java" />
-        <option value="$PROJECT_DIR$/src/Pop/Settings/MapSettings.java" />
         <option value="$PROJECT_DIR$/src/Pop/Enums/Maps.java" />
         <option value="$PROJECT_DIR$/src/Pop/Enums/SpawnLocations.java" />
         <option value="$PROJECT_DIR$/src/Pop/Maps/Coaltown.java" />
@@ -174,9 +107,7 @@
         <option value="$PROJECT_DIR$/src/Pop/Bot/RandomSoldier.java" />
         <option value="$PROJECT_DIR$/src/Pop/Bot/RandomSniper.java" />
         <option value="$PROJECT_DIR$/src/Pop/Bot/RandomDemoman.java" />
-        <option value="$PROJECT_DIR$/src/Pop/Bot/Weapons/WeaponModels.java" />
         <option value="$PROJECT_DIR$/src/Pop/Maps/Affinity.java" />
-        <option value="$PROJECT_DIR$/src/Pop/GUI/WavePanel.java" />
         <option value="$PROJECT_DIR$/src/Pop/Bot/Weapons/LunchBoxItem.java" />
         <option value="$PROJECT_DIR$/src/Pop/Bot/RandomHeavy.java" />
         <option value="$PROJECT_DIR$/src/Pop/Bot/Weapons/DrinkItem.java" />
@@ -191,7 +122,6 @@
         <option value="$PROJECT_DIR$/src/Pop/Bot/Weapons/StickyLauncherBase.java" />
         <option value="$PROJECT_DIR$/src/Pop/Enums/ClassDistrubutionType.java" />
         <option value="$PROJECT_DIR$/src/Pop/GUI/TableModels/ClassDistributionModel.java" />
-        <option value="$PROJECT_DIR$/src/Pop/GUI/BotPanel.java" />
         <option value="$PROJECT_DIR$/src/Pop/GUI/MVMRandomizerGUI.java" />
         <option value="$PROJECT_DIR$/src/Pop/WeightedRandomizer.java" />
         <option value="$PROJECT_DIR$/src/Pop/WaveSchedule.java" />
@@ -204,12 +134,19 @@
         <option value="$PROJECT_DIR$/src/Pop/GUI/OutputConsole.java" />
         <option value="$PROJECT_DIR$/src/Pop/TFBot.java" />
         <option value="$PROJECT_DIR$/src/Pop/Bot/RandomMedic.java" />
-        <option value="$PROJECT_DIR$/src/Pop/Bot/RandomBot.java" />
         <option value="$PROJECT_DIR$/src/Pop/Bot/Cosmetics/AllClassCosmeticLists.java" />
-        <option value="$PROJECT_DIR$/src/Pop/Bot/Weapons/Weapon.java" />
-        <option value="$PROJECT_DIR$/src/Pop/GUI/MapPanel.java" />
         <option value="$PROJECT_DIR$/src/Pop/Maps/Map.java" />
         <option value="$PROJECT_DIR$/src/Pop/GUI/TableModels/MapItemModel.java" />
+        <option value="$PROJECT_DIR$/src/Pop/GUI/MapPanel.java" />
+        <option value="$PROJECT_DIR$/src/Pop/GUI/TankPanel.java" />
+        <option value="$PROJECT_DIR$/src/Pop/GUI/WavePanel.java" />
+        <option value="$PROJECT_DIR$/src/Pop/GUI/BotPanel.java" />
+        <option value="$PROJECT_DIR$/src/Pop/GUI/AutoSelectTable.java" />
+        <option value="$PROJECT_DIR$/src/Pop/Bot/WeaponModels.java" />
+        <option value="$PROJECT_DIR$/src/Pop/Bot/Weapons/Weapon.java" />
+        <option value="$PROJECT_DIR$/src/Pop/Bot/RandomBot.java" />
+        <option value="$PROJECT_DIR$/src/Pop/Bot/Weapons/WeaponModel.java" />
+        <option value="$PROJECT_DIR$/src/Pop/Bot/Weapons/WeaponModels.java" />
       </list>
     </option>
   </component>
@@ -221,8 +158,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="593" />
-    <option name="y" value="-18" />
+    <option name="x" value="471" />
+    <option name="y" value="-17" />
     <option name="width" value="1400" />
     <option name="height" value="1047" />
   </component>
@@ -231,8 +168,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -256,6 +191,29 @@
               <item name="MVM Randomizer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Pop" type="462c0819:PsiDirectoryNode" />
+              <item name="Bot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MVM Randomizer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MVM Randomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Pop" type="462c0819:PsiDirectoryNode" />
+              <item name="Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="Cosmetics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MVM Randomizer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MVM Randomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Pop" type="462c0819:PsiDirectoryNode" />
+              <item name="Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="Weapons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MVM Randomizer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MVM Randomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Pop" type="462c0819:PsiDirectoryNode" />
               <item name="Enums" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -263,7 +221,15 @@
               <item name="MVM Randomizer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Pop" type="462c0819:PsiDirectoryNode" />
-              <item name="Maps" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MVM Randomizer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MVM Randomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Pop" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+              <item name="TableModels" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MVM Randomizer" type="b2602c69:ProjectViewProjectNode" />
@@ -280,6 +246,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -628,24 +596,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20442571" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24815595" />
       <window_info id="Structure" order="1" weight="0.24971752" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Palette&#9;" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.40086675" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.68817204" weight="0.35969663" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.51895994" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.68817204" weight="0.10400867" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2979415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.31182796" side_tool="true" weight="0.20490928" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4966443" weight="0.30552545" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4966443" weight="0.20585048" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.06982943" />
@@ -678,8 +645,43 @@
           <properties />
           <option name="timeStamp" value="231" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Pop/Bot/RandomBot.java</url>
+          <line>441</line>
+          <properties />
+          <option name="timeStamp" value="233" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Pop/Bot/RandomBot.java</url>
+          <line>280</line>
+          <properties />
+          <option name="timeStamp" value="237" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Pop/Bot/RandomBot.java</url>
+          <line>214</line>
+          <properties />
+          <option name="timeStamp" value="239" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Pop/Bot/RandomBot.java</url>
+          <line>216</line>
+          <properties />
+          <option name="timeStamp" value="240" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Pop/Bot/RandomBot.java</url>
+          <line>440</line>
+          <properties />
+          <option name="timeStamp" value="243" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="supportBotDistrubtionsTable" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -710,111 +712,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Pop/GUI/TableModels/BotSettingsItemModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/GUI/TableModels/ClassDistributionModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/Enums/ClassDistrubutionType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/GUI/BotPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="66" column="73" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/Enums/WeaponProjectileTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/Enums/ProjectileTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="93" column="25" lean-forward="true" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/PopFileWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/PopGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/MVMRandomizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/WeightedRandomizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/WeightedItemCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-615">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/PopObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="63" column="7" lean-forward="true" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/Settings/ClassPercentage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/WaveSchedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2652">
-          <caret line="166" column="39" selection-start-line="166" selection-start-column="39" selection-end-line="166" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/Settings/RandomBotSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Pop/Settings/WaveSettings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="841">
@@ -949,27 +846,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/Bot/RandomBot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2737">
-          <caret line="174" column="60" selection-start-line="174" selection-start-column="60" selection-end-line="174" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Pop/Bot/Cosmetics/AllClassCosmeticLists.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2380">
           <caret line="141" column="69" selection-start-line="141" selection-start-column="69" selection-end-line="141" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/Bot/Weapons/Weapon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="168" selection-start-line="168" selection-end-line="168" />
         </state>
       </provider>
     </entry>
@@ -1020,27 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/Maps/CoastRock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/Maps/Intersection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="21" column="81" lean-forward="true" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/GUI/MapPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="112" column="32" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Pop/Settings/MapSettings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1048,10 +907,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pop/Settings/MapSetting.java">
+    <entry file="file://$PROJECT_DIR$/src/Pop/Maps/CoastRock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="272">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/Maps/Intersection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="81" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -1064,7 +930,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Pop/Maps/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="2108">
           <caret line="129" column="36" selection-start-line="129" selection-start-column="22" selection-end-line="129" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1074,10 +940,164 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Pop/GUI/TableModels/MapItemModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="51" column="34" lean-forward="true" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+        <state relative-caret-position="-443">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/GUI/TableModels/BotSettingsItemModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1615">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/Settings/MapSetting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/java/awt/DefaultKeyboardFocusManager.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/GUI/TableModels/ClassDistributionModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/GUI/WavePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="48" column="69" lean-forward="true" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/GUI/MapPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/GUI/TankPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/GUI/TableModels/TankItemModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/GUI/AutoSelectTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/GUI/RangePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/Bot/RandomScout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="95" column="44" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/GUI/BotPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="454" column="5" lean-forward="true" selection-start-line="454" selection-start-column="5" selection-end-line="454" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/Enums/WeaponProjectileTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/Bot/WeaponModels.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="527" lean-forward="true" selection-end-line="546" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#1509#1510#0" expanded="true" />
+            <element signature="e#1530#1531#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/Bot/Weapons/WeaponModels.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/Bot/Weapons/Weapon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="210" column="13" lean-forward="true" selection-start-line="210" selection-start-column="13" selection-end-line="210" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/Bot/Weapons/WeaponModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/Bot/RandomDemoman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="177" column="18" selection-start-line="177" selection-start-column="18" selection-end-line="177" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pop/Bot/RandomBot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="439" column="35" selection-start-line="439" selection-start-column="35" selection-end-line="439" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#16509#16510#0" expanded="true" />
+            <element signature="e#18163#18164#0" expanded="true" />
+            <element signature="e#19794#19795#0" expanded="true" />
+            <element signature="e#19960#19961#0" expanded="true" />
           </folding>
         </state>
       </provider>

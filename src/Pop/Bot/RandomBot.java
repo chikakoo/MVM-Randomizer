@@ -5,6 +5,8 @@ import Pop.Bot.Cosmetics.AllClassCosmeticLists;
 import Pop.Bot.Cosmetics.Cosmetic;
 import Pop.Bot.Weapons.PassiveItem;
 import Pop.Bot.Weapons.Weapon;
+import Pop.Bot.Weapons.WeaponModel;
+import Pop.Bot.Weapons.WeaponModels;
 import Pop.BotModifiers.BotModifiers;
 import Pop.Enums.*;
 import Pop.Settings.BotSetting;
@@ -68,7 +70,6 @@ public abstract class RandomBot extends TFBot {
      */
     protected int baseHealth = 125;
     public int getBaseHealth() { return baseHealth; }
-
 
     /**
      * Default constructor
@@ -341,7 +342,7 @@ public abstract class RandomBot extends TFBot {
 
         boolean hasUnusualEffect = PopRandomizer.generateBooleanFromPercentage(MVMRandomizer.randomBotSettings.getPercentUnusualEffect());
         if (hasUnusualEffect) {
-            int unusualEffect = PopRandomizer.generateNumberInRange(1, 110); // The range of the unusual particle effects in TF2
+            int unusualEffect = PopRandomizer.generateNumberInRange(1, 176); // The range of the unusual particle effects in TF2
             cosmeticAttributes.add("attach particle effect", Integer.toString(unusualEffect));
         }
 
@@ -434,10 +435,33 @@ public abstract class RandomBot extends TFBot {
     public void setRandomBotName() {
         botName = isGiant ? "Giant " : "";
 
-        if (cosmetic == null || PopRandomizer.generateBoolean()) {
-            botName += getMainWeaponNameForBotName() + " " + tfClass.getDisplayString();
-        } else {
-            botName += cosmetic.getDisplayName() + " " + tfClass.getDisplayString();
+        int nameCase = 1;
+
+        WeaponModel mainWeaponModel = getMainWeapon().getWeaponModel();
+        if (mainWeaponModel != null && mainWeaponModel.hasFriendlyName()) {
+            nameCase = PopRandomizer.generateNumberInRange(1, 3);
+            if (cosmetic == null) {
+                nameCase = PopRandomizer.generateBoolean() ? 1 : 3;
+            }
+        }
+        else {
+            if (cosmetic == null || PopRandomizer.generateBoolean()) {
+                nameCase = 1;
+            } else {
+                nameCase = 2;
+            }
+        }
+
+        switch(nameCase) {
+            case 1:
+                botName += getMainWeaponNameForBotName() + " " + tfClass.getDisplayString();
+                break;
+            case 2:
+                botName += cosmetic.getDisplayName() + " " + tfClass.getDisplayString();
+                break;
+            case 3:
+                botName += mainWeaponModel.getFriendlyName() + " " + tfClass.getDisplayString();
+                break;
         }
     }
 
@@ -590,10 +614,10 @@ public abstract class RandomBot extends TFBot {
      * @param weaponName - The weapon name
      */
     protected void addRandomProjectileModelForTemplatedBot(String weaponName) {
-        String randomModel = WeaponModels.getRandomModel();
+        WeaponModel randomModel = WeaponModels.getRandomModel();
         addToItemAttributeSet(weaponName, "custom projectile model", "\"" + randomModel + "\"");
 
-        if (WeaponModels.weaponsThatTurnToGold.contains(randomModel)) {
+        if (randomModel.getTurnToGoldOnDeath()) {
             addToItemAttributeSet(weaponName, "turn to gold", "1");
         }
     }

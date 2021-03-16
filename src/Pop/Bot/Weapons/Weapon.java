@@ -66,6 +66,12 @@ public class Weapon {
     protected boolean canHaveCustomProjectileModel = false;
 
     /**
+     * The weapon model belonging to this weapon
+     */
+    protected WeaponModel weaponModel = null;
+    public WeaponModel getWeaponModel() { return weaponModel; }
+
+    /**
      * The overridden projectile type of the weapon
      */
     protected ProjectileTypes overriddenProjectileType = null;
@@ -83,7 +89,6 @@ public class Weapon {
     protected ItemAttributes itemAttributes;
     public ItemAttributes getItemAttributes() {
         this.tryAddRandomProjectileType();
-        this.tryAddRandomProjectileModel();
         return itemAttributes;
     }
 
@@ -192,17 +197,17 @@ public class Weapon {
     /**
      * Adds a random projectile model to the given weapon
      */
-    private void tryAddRandomProjectileModel() {
+    private static void tryAddRandomProjectileModel(Weapon weapon) {
         boolean hasCannonballProjectiles =
-            overriddenProjectileType != null && overriddenProjectileType.equals(ProjectileTypes.CANNONBALL);
-        boolean canHaveRandomModel = canHaveCustomProjectileModel || hasCannonballProjectiles;
+                weapon.overriddenProjectileType != null && weapon.overriddenProjectileType.equals(ProjectileTypes.CANNONBALL);
+        boolean canHaveRandomModel = weapon.canHaveCustomProjectileModel || hasCannonballProjectiles;
         if (canHaveRandomModel &&
             PopRandomizer.generateBooleanFromPercentage(MVMRandomizer.randomBotSettings.getPercentRandomProjectileModel())) {
-            String randomModel = WeaponModels.getRandomModel();
-            itemAttributes.add("custom projectile model", "\"" + randomModel + "\"");
+            weapon.weaponModel = WeaponModels.getRandomModel();
+            weapon.itemAttributes.add("custom projectile model", "\"" + weapon.weaponModel + "\"");
 
-            if (WeaponModels.weaponsThatTurnToGold.contains(randomModel)) {
-                itemAttributes.add("turn to gold", "1");
+            if (weapon.weaponModel.getTurnToGoldOnDeath()) {
+                weapon.itemAttributes.add("turn to gold", "1");
             }
         }
     }
@@ -218,6 +223,8 @@ public class Weapon {
             weightedWeaponList.add(weapon, weapon.weight);
         }
 
-        return weightedWeaponList.getRandomItem();
+        Weapon randomWeapon = weightedWeaponList.getRandomItem();
+        tryAddRandomProjectileModel(randomWeapon);
+        return randomWeapon;
     }
 }
