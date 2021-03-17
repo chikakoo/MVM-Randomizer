@@ -80,6 +80,7 @@ WaveSchedule
 			Item "A Whiff of the Old Brimstone"
 			Item "The Liquor Locker"
 			WeaponRestrictions PrimaryOnly
+			//CustomProjectileWeapon "Upgradeable TF_WEAPON_GRENADELAUNCHER"
 
 			ItemAttributes
 			{

@@ -119,6 +119,7 @@ WaveSchedule
 			WeaponRestrictions PrimaryOnly
 			Attributes HoldFireUntilFullReload
 			Attributes MiniBoss
+			//CustomProjectileWeapon "TF_WEAPON_GRENADELAUNCHER"
 			ItemAttributes
 			{
 				ItemName "TF_WEAPON_GRENADELAUNCHER"
@@ -145,6 +146,7 @@ WaveSchedule
 			WeaponRestrictions PrimaryOnly
 			Attributes HoldFireUntilFullReload
 			Attributes MiniBoss
+			//CustomProjectileWeapon "TF_WEAPON_GRENADELAUNCHER"
 			ItemAttributes
 			{
 				ItemName "TF_WEAPON_GRENADELAUNCHER"
@@ -693,6 +695,7 @@ WaveSchedule
 			WeaponRestrictions PrimaryOnly
 			Attributes MiniBoss
 			Attributes HoldFireUntilFullReload
+			//CustomProjectileWeapon "TF_WEAPON_GRENADELAUNCHER"
 			ItemAttributes
 			{
 				ItemName "TF_WEAPON_GRENADELAUNCHER"

@@ -70,7 +70,7 @@ public class RandomDemoman extends RandomBot {
             new Cosmetic("Demoman's Fro"),
             new Cosmetic("Glengarry Bonnet"),
             new Cosmetic("Scotsman's Stove Pipe", "Stove Pipe"),
-            new Cosmetic("Demoman Hallmark"),
+            new Cosmetic("Demoman Hallmark", "Hallmark"),
             new Cosmetic("Tippler's Tricorne"),
             new Cosmetic("Carouser's Capotain"),
             new Cosmetic("Rimmed Raincatcher"),
@@ -78,7 +78,7 @@ public class RandomDemoman extends RandomBot {
             new Cosmetic("TTG Glasses"),
             new Cosmetic("Prince Tavish's Crown", "Tavish's Crown"),
             new Cosmetic("Scotch Bonnet"),
-            new Cosmetic("Demo Kabuto"),
+            new Cosmetic("Demo Kabuto", "Kabuto"),
             new Cosmetic("Reggaelator"),
             new Cosmetic("Private Eye"),
             new Cosmetic("Conjurer's Cowl"),
@@ -156,30 +156,6 @@ public class RandomDemoman extends RandomBot {
     protected void adjustWeaponAttributesForCustomBots() {
         if (weaponRestrictions.equals(WeaponRestrictions.SECONDARY_ONLY) && secondaryWeapon instanceof StickyLauncherBase) {
             attributes.add("AlwaysFireWeapon");
-        }
-    }
-
-    /**
-     * Adds custom projectiles to templated bots
-     */
-    @Override
-    protected void addRandomProjectileModelForTemplatedBot() {
-        if (template == null) { return; }
-
-        ArrayList<String> templatesNeedingCustomProjectiles = new ArrayList<>(Arrays.asList(
-            "T_TFBot_Demoman",
-            "T_TFBot_Demo_Burst",
-            "T_TFBot_Giant_Demoman",
-            "T_TFBot_Giant_Demo_RapidFire",
-            "T_TFBot_Giant_Demo_Burst"
-        ));
-
-        if (templatesNeedingCustomProjectiles.contains(template.getTemplateName())) {
-            super.addRandomProjectileModelForTemplatedBot("TF_WEAPON_GRENADELAUNCHER");
-        } else if (template.getTemplateName().equals("T_TFBot_Demoman_Captain")) {
-            super.addRandomProjectileModelForTemplatedBot("Upgradeable TF_WEAPON_GRENADELAUNCHER");
-        } else if (template.getTemplateName().equals("T_TFBot_Giant_Demoman_Michelle")) {
-            super.addRandomProjectileModelForTemplatedBot("The Loose Cannon");
         }
     }
 }

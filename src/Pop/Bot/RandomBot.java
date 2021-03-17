@@ -76,12 +76,10 @@ public abstract class RandomBot extends TFBot {
      */
     public RandomBot() { }
 
-    /**
+    /**d
      * Constructor
      */
-    public RandomBot(TFClasses tfClass) {
-        this.tfClass = tfClass;
-    }
+    public RandomBot(TFClasses tfClass) { this.tfClass = tfClass; }
 
     /**
      * Generates a bot
@@ -184,12 +182,6 @@ public abstract class RandomBot extends TFBot {
         } else {
             generateTemplatedBot();
         }
-
-        //TODO: get rid of me... this is just for heavy/spy combo..... also put this on generateGiantBot
-//        if (tfClass.equals(TFClasses.HEAVY)) {
-//            health = 1;
-//            spawnRange = new Range(1, 1);
-//        }
     }
 
     /**
@@ -430,39 +422,24 @@ public abstract class RandomBot extends TFBot {
     /**
      * Sets a bot to a name based on their weapon or cosmetic
      * Set to a 50% chance to base the name off their main weapon or cosmetic
+     * If the main weapon has a custom projectile, then use the name of that projectile
      * Prefixes "Giant" if the bot is a giant
      */
     public void setRandomBotName() {
         botName = isGiant ? "Giant " : "";
 
-        int nameCase = 1;
-
         WeaponModel mainWeaponModel = getMainWeapon().getWeaponModel();
-        if (mainWeaponModel != null && mainWeaponModel.hasFriendlyName()) {
-            nameCase = PopRandomizer.generateNumberInRange(1, 3);
-            if (cosmetic == null) {
-                nameCase = PopRandomizer.generateBoolean() ? 1 : 3;
-            }
-        }
-        else {
-            if (cosmetic == null || PopRandomizer.generateBoolean()) {
-                nameCase = 1;
-            } else {
-                nameCase = 2;
-            }
+        boolean hasCustomProjectile = mainWeaponModel != null && mainWeaponModel.hasFriendlyName();
+
+        if (cosmetic == null || PopRandomizer.generateBoolean()) {
+            botName += hasCustomProjectile ?
+                mainWeaponModel.getFriendlyName() :
+                getMainWeaponNameForBotName();
+        } else {
+            botName += cosmetic.getDisplayName();
         }
 
-        switch(nameCase) {
-            case 1:
-                botName += getMainWeaponNameForBotName() + " " + tfClass.getDisplayString();
-                break;
-            case 2:
-                botName += cosmetic.getDisplayName() + " " + tfClass.getDisplayString();
-                break;
-            case 3:
-                botName += mainWeaponModel.getFriendlyName() + " " + tfClass.getDisplayString();
-                break;
-        }
+        botName += " " + tfClass.getDisplayString();
     }
 
     /**
@@ -605,15 +582,24 @@ public abstract class RandomBot extends TFBot {
     }
 
     /**
-     * Adds a custom projectile for templated bots - the actual functions are defined in the appropriate child classes
+     * Adds a custom projectile for templated bots
      */
-    protected void addRandomProjectileModelForTemplatedBot() { }
+    private void addRandomProjectileModelForTemplatedBot() {
+        if (template == null) { return; }
+
+        String customProjectileName = template.getCustomProjectileWeapon();
+        if (customProjectileName != null &&
+                !customProjectileName.equals("") &&
+                PopRandomizer.generateBooleanFromPercentage(MVMRandomizer.randomBotSettings.getPercentRandomProjectileModel())) {
+            addRandomProjectileModelForTemplatedBot(customProjectileName);
+        }
+    }
 
     /**
      * Used by template bots - adds a random projectile model for the bot's given item
      * @param weaponName - The weapon name
      */
-    protected void addRandomProjectileModelForTemplatedBot(String weaponName) {
+    private void addRandomProjectileModelForTemplatedBot(String weaponName) {
         WeaponModel randomModel = WeaponModels.getRandomModel();
         addToItemAttributeSet(weaponName, "custom projectile model", "\"" + randomModel + "\"");
 

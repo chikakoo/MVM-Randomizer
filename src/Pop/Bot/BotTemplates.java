@@ -40,9 +40,9 @@ public class BotTemplates {
      * @param name - the name of the bot
      * @param classIcon - the class icon on the template
      */
-    private static void addTemplate(String templateName, TFClasses tfClass, String name, String classIcon) {
+    private static void addTemplate(String templateName, TFClasses tfClass, String name, String customProjectileWeapon, String classIcon) {
         boolean isGiant = templateName.toLowerCase().startsWith("t_tfbot_giant");
-        BotTemplate template = new BotTemplate(templateName, tfClass, name, isGiant, classIcon);
+        BotTemplate template = new BotTemplate(templateName, tfClass, name, isGiant, customProjectileWeapon, classIcon);
 
         ArrayList<BotTemplate> classTemplateList;
         if (isGiant) {
@@ -98,6 +98,7 @@ public class BotTemplates {
                 String currentTemplateName = "";
                 TFClasses currentTFClass = null;
                 String currentName = "";
+                String currentCustomProjectileWeapon = null;
                 String currentClassIcon = "";
                 isFirstBotInFile = true;
 
@@ -110,13 +111,14 @@ public class BotTemplates {
 
                         if (lineToCompare.contains("t_tfbot")) {
                             // Add the icon of the previous bot
-                            if (!isFirstBotInFile && !tryAddTemplate(currentTemplateName, currentTFClass, currentName, currentClassIcon)) {
+                            if (!isFirstBotInFile && !tryAddTemplate(currentTemplateName, currentTFClass, currentName, currentCustomProjectileWeapon, currentClassIcon)) {
                                 OutputConsole.addMessage("ERROR: could not add template of name: " + currentTemplateName + " in "  + currentFile.getName());
                             }
                             isFirstBotInFile = false;
                             currentTemplateName = "";
                             currentTFClass = null;
                             currentName = "";
+                            currentCustomProjectileWeapon = null;
                             currentClassIcon = "";
 
                             if (!currentTemplateName.equals("")) {
@@ -133,6 +135,11 @@ public class BotTemplates {
                                 return "ERROR: Found a name (" + currentLine + ")  without a template in " + currentFile.getName();
                             }
                             currentName = currentLine.substring(4).trim().replace("\"", "");
+                        } else if (lineToCompare.startsWith("//customprojectileweapon ")) {
+                            currentCustomProjectileWeapon = currentLine
+                                .replaceAll("(?i)//CustomProjectileWeapon ", "")
+                                .replace("\"", "")
+                                .trim();
                         } else if (lineToCompare.startsWith("classicon ")) {
                             if (currentTemplateName.equals("")) {
                                 return "ERROR: Found a class icon (" + lineToCompare + ")  without a template in " + currentFile.getName();
@@ -141,7 +148,7 @@ public class BotTemplates {
                         }
                     }
                     // Add the last bot in the file
-                    if (!tryAddTemplate(currentTemplateName, currentTFClass, currentName, currentClassIcon)) {
+                    if (!tryAddTemplate(currentTemplateName, currentTFClass, currentName, currentCustomProjectileWeapon, currentClassIcon)) {
                         OutputConsole.addMessage("ERROR: could not add template of name: " + currentTemplateName + " in "  + currentFile.getName());
                     }
 
@@ -162,10 +169,10 @@ public class BotTemplates {
      * @param classIcon - the bot's class icon
      * @return
      */
-    private static boolean tryAddTemplate(String templateName, TFClasses tfClass, String name, String classIcon) {
+    private static boolean tryAddTemplate(String templateName, TFClasses tfClass, String name, String customProjectileWeapon, String classIcon) {
         boolean haveAllNeededInfo = !templateName.equals("") && tfClass != null && !name.equals("");
         if (haveAllNeededInfo) {
-            addTemplate(templateName, tfClass, name, classIcon);
+            addTemplate(templateName, tfClass, name, customProjectileWeapon, classIcon);
             return true;
         }
         return false;

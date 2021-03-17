@@ -517,6 +517,7 @@ WaveSchedule
 			Class Demoman
 			Name "Demoman"
 			Skill Easy
+			//CustomProjectileWeapon "TF_WEAPON_GRENADELAUNCHER"
 		}
 
 		T_TFBot_Demoman_Knight
@@ -543,6 +544,7 @@ WaveSchedule
 			Skill Expert
 			WeaponRestrictions PrimaryOnly
 			Attributes HoldFireUntilFullReload
+			//CustomProjectileWeapon "TF_WEAPON_GRENADELAUNCHER"
 			ItemAttributes
 			{
 				ItemName "TF_WEAPON_GRENADELAUNCHER"

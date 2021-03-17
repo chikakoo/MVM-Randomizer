@@ -395,6 +395,7 @@ WaveSchedule
 			Attributes MiniBoss
 			Attributes AlwaysCrit
 			WeaponRestrictions PrimaryOnly
+			//CustomProjectileWeapon "The Loose Cannon"
 			
 			ItemAttributes 
 			{

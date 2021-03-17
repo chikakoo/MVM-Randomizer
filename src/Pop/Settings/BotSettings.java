@@ -121,8 +121,9 @@ public class BotSettings {
                 BotSetting newBotSetting = BotSetting.getDefaultBotSetting(tfClass, template, isGiantBot);
                 addBotSetting(tfClass, isGiantBot, newBotSetting);
             } else {
-                // Class icons are NOT saved - so we must set it from the template we've retrieved
+                // Class icons and projectile weapons are NOT saved - so we must set it from the template we've retrieved
                 existingBotSetting.getTemplate().setClassIcon(template.getClassIcon());
+                existingBotSetting.getTemplate().setCustomProjectileWeapon(template.getCustomProjectileWeapon());
             }
         }
     }

@@ -45,6 +45,12 @@ public class BotTemplate {
         }
     }
 
+    private transient String customProjectileWeapon;
+    public String getCustomProjectileWeapon() { return customProjectileWeapon; }
+    public void setCustomProjectileWeapon(String customProjectileWeapon) {
+        this.customProjectileWeapon = customProjectileWeapon;
+    }
+
     /**
      * Default constructor
      */
@@ -63,11 +69,12 @@ public class BotTemplate {
     /**
      * Constructor
      */
-    public BotTemplate(String templateName, TFClasses tfClass, String name, boolean isGiant, String classIcon) {
+    public BotTemplate(String templateName, TFClasses tfClass, String name, boolean isGiant, String customProjectileWeapon, String classIcon) {
         this.templateName = templateName;
         this.tfClass = tfClass;
         this.name = name;
         this.isGiant = isGiant;
+        this.customProjectileWeapon = customProjectileWeapon;
         setClassIcon(classIcon);
     }
 
