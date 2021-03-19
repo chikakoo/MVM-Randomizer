@@ -83,7 +83,7 @@ public enum Maps implements RandomizableEnum, JsonSerializableEnum {
         return
             map.equals(Maps.BIGROCK) ||
             map.equals(Maps.COALTOWN) ||
-            map.equals(Maps.DECOY)||
+            map.equals(Maps.DECOY) ||
             map.equals(Maps.MANNHATTAN) ||
             map.equals(Maps.MANNWORKS) ||
             map.equals(Maps.ROTTENBURG);

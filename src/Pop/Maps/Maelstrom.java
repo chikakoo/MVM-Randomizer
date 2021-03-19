@@ -16,7 +16,7 @@ public class Maelstrom extends Map {
         popfileName = "maelstrom_rc1";
 
         giantBotSpawnLocations.clear();
-        giantBotSpawnLocations.add(SpawnLocations.SPAWN_BOT_MAELSTROM_GIANT);
+        giantBotSpawnLocations.add(SpawnLocations.SPAWN_BOT);
 
         tankRoutes.add(TankRoutes.MAELSTORM_1);
         tankRoutes.add(TankRoutes.MAELSTORM_2);

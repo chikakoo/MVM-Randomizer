@@ -61,28 +61,14 @@ public class Affinity extends Map {
     @Override
     public PopObject createDoneOutputObject() {
         PopObject doneOutput = new PopObject("DoneOutput");
-        doneOutput.addAttribute("Target", customEndWaveOutputName);
+        doneOutput.addAttribute("Target", "wave_finished");
         doneOutput.addAttribute("Action", "trigger");
 
         return doneOutput;
     }
 
     /**
-     * Sets up the gates opening and adjusts where the bots spawn from
-     * @param waveNumber - the wave number
-     */
-    @Override
-    public void setUpForWave(int waveNumber) {
-        boolean useLowerRoute = PopRandomizer.generateBoolean();
-        if (useLowerRoute) {
-            customEndWaveOutputName = "wave_finished_next_routeLower";
-        } else {
-            customEndWaveOutputName = "wave_finished_next_routeUpper";
-        }
-    }
-
-    /**
-     * Sets tags for the bot
+     * Potentially set tags for bots spawning at the flank location; this makes them follow a specific path on the map
      * @param tfBot - the bot to get the tags for
      * @param spawnLocations - the list of locations the bot can spawn from
      * @return The tags
@@ -91,7 +77,7 @@ public class Affinity extends Map {
     public void setBotTags(TFBot tfBot, ArrayList<SpawnLocations> spawnLocations) {
         // This map only has one spawn location, so just get it
         SpawnLocations spawnLocation = spawnLocations.get(0);
-        if (spawnLocation.equals(SpawnLocations.SPAWN_BOT_AFFINITY_FLANK)) {
+        if (spawnLocation.equals(SpawnLocations.SPAWN_BOT_AFFINITY_FLANK) && PopRandomizer.generateBoolean()) {
             tfBot.tags.add("start_flank");
             tfBot.tags.add("start_flank_upper");
         }

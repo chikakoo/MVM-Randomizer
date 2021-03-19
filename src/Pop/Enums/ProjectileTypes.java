@@ -1,6 +1,5 @@
 package Pop.Enums;
 
-import Pop.Bot.Weapons.RocketLauncherWeapon;
 import Pop.GUI.OutputConsole;
 import Pop.PopRandomizer;
 
@@ -149,7 +148,7 @@ public enum ProjectileTypes {
                 return "fire";
             default:
                 OutputConsole.addMessage("WARNING: Tried to get damage type for non-existent class: \"" + this.toString() + "\". Defaulting to bullet...");
-                return "class_projectile_bullet";
+                return "bullet";
         }
     }
 

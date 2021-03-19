@@ -33,7 +33,7 @@ public enum SpawnLocations {
     SPAWN_BOT_TEIEN_LOWER("spawnbot_lower"),
 
     // Maelstrom
-    SPAWN_BOT_MAELSTROM_GIANT("spawnbot_giant"),
+    //SPAWN_BOT_MAELSTROM_GIANT("spawnbot_giant"), // In the map file, but causes bots to get stuck/not spawn
 
     // Museum
     SPAWN_BOT_MUSEUM_RIGHT("spawnbot_right"),
@@ -58,6 +58,7 @@ public enum SpawnLocations {
     SPAWN_BOT_MANNDARIN_INVASION("spawnbot_invasion"),
 
     // Affinity
+    SPAWN_BOT_AFFINITY_SENTRY_BUSTER("botSpawn_buster"),
     SPAWN_BOT_AFFINITY_MAIN("botSpawn_main"),
     SPAWN_BOT_AFFINITY_FLANK("botSpawn_flank"),
     SPAWN_BOT_AFFINITY_UPPER("botSpawn_upper"),

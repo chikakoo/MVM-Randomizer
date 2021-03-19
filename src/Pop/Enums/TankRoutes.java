@@ -1,10 +1,5 @@
 package Pop.Enums;
 
-import Pop.PopRandomizer;
-
-/**
- * Created by Lionel on 1/18/2018.
- */
 public enum TankRoutes {
     DECOY("boss_path_a1"), // and boss-path_b1
     BIGROCK("boss_path-a1"),// and boss_path_1
