@@ -1,6 +1,7 @@
 package Pop.Bot;
 import Pop.Bot.Cosmetics.Cosmetic;
 import Pop.Bot.Weapons.*;
+import Pop.Enums.ProjectileTypes;
 import Pop.Enums.TFClasses;
 import Pop.Enums.WeaponRestrictions;
 
@@ -18,22 +19,22 @@ public class RandomSoldier extends RandomBot {
         baseHealth = 200;
 
         primaryWeaponList = new ArrayList<>(Arrays.asList(
-            new HitscanWeapon("Upgradeable TF_WEAPON_ROCKETLAUNCHER", "Rocket Launcher"),
-            new HitscanWeapon("Festive Rocket Launcher 2011", "Festive Rocket Launcher"),
-            new HitscanWeapon("The Original"),
-            new HitscanWeapon("The Direct Hit"),
-            new HitscanWeapon("The Black Box"),
-            new HitscanWeapon( "Festive Black Box"),
-            new HitscanWeapon("The Liberty Launcher"),
-            new HitscanWeapon( "The Air Strike"),
-            new NonHitscanWeapon("The Cow Mangler 5000", "Cow Mangler"),
+            new RocketLauncherWeapon("Upgradeable TF_WEAPON_ROCKETLAUNCHER", "Rocket Launcher"),
+            new RocketLauncherWeapon("Festive Rocket Launcher 2011", "Festive Rocket Launcher"),
+            new RocketLauncherWeapon("The Original"),
+            new RocketLauncherWeapon("The Direct Hit"),
+            new RocketLauncherWeapon("The Black Box"),
+            new RocketLauncherWeapon( "Festive Black Box"),
+            new RocketLauncherWeapon("The Liberty Launcher"),
+            new RocketLauncherWeapon( "The Air Strike"),
+            new NonHitscanWeapon("The Cow Mangler 5000", "Cow Mangler", ProjectileTypes.COW_MANGLER),
             new BeggarsBazooka("The Beggar's Bazooka"),
             new RocketJumper("Rocket Jumper")
         ));
 
         secondaryWeaponList = new ArrayList<>(Arrays.asList(
             new AllClassShotgun("Soldier's Shotgun", "TF_WEAPON_SHOTGUN_SOLDIER"),
-            new NonHitscanWeapon("The Righteous Bison", "Bison"),
+            new NonHitscanWeapon("The Righteous Bison", "Bison", ProjectileTypes.BISON),
             new HornItem("The Buff Banner"),
             new HornItem("Festive Buff Banner"),
             new HornItem("The Battalion's Backup"),

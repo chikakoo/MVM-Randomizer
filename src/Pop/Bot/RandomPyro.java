@@ -2,6 +2,7 @@ package Pop.Bot;
 import Pop.Bot.Cosmetics.Cosmetic;
 import Pop.Bot.Weapons.Phlogistinator;
 import Pop.Bot.Weapons.*;
+import Pop.Enums.ProjectileTypes;
 import Pop.Enums.TFClasses;
 
 import java.util.*;
@@ -31,11 +32,11 @@ public class RandomPyro extends RandomBot {
 
         secondaryWeaponList = new ArrayList<>(Arrays.asList(
             new AllClassShotgun("Pyro's Shotgun", "TF_WEAPON_SHOTGUN_PYRO"),
-            new HitscanWeapon("The Flare Gun"),
-            new HitscanWeapon( "Festive Flare Gun"),
-            new HitscanWeapon("The Detonator"),
-            new HitscanWeapon("The Manmelter"),
-            new HitscanWeapon( "The Scorch Shot"),
+            new HitscanWeapon("The Flare Gun", ProjectileTypes.FLARE),
+            new HitscanWeapon( "Festive Flare Gun", ProjectileTypes.FLARE),
+            new HitscanWeapon("The Detonator", ProjectileTypes.FLARE),
+            new HitscanWeapon("The Manmelter", ProjectileTypes.FLARE),
+            new HitscanWeapon( "The Scorch Shot", ProjectileTypes.FLARE),
             new Weapon("The Thermal Thruster"),
             new Weapon("The Gas Passer")
             //"Festive Shotgun 2014",

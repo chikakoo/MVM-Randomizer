@@ -61,6 +61,12 @@ public class Weapon {
     }
 
     /**
+     * The default projectile type - this is used when trying to exclude the default type from
+     * being chosen at random
+     */
+    protected ProjectileTypes defaultProjectileType = ProjectileTypes.NONE;
+
+    /**
      *  Whether this weapon can have a custom projectile model
      */
     protected boolean canHaveCustomProjectileModel = false;
@@ -88,7 +94,6 @@ public class Weapon {
      */
     protected ItemAttributes itemAttributes;
     public ItemAttributes getItemAttributes() {
-        this.tryAddRandomProjectileType();
         return itemAttributes;
     }
 
@@ -109,11 +114,32 @@ public class Weapon {
 
     /**
      * Constructor
+     * @param itemName - The name of the item - also sets the displayName and itemAttributeItemName to this value.
+     *                 It will replace the string "The " with the empty string.
+     * @param defaultProjectileType - The default projectile type of the weapon
+     */
+    public Weapon(String itemName, ProjectileTypes defaultProjectileType) {
+        String displayName = itemName.replace("The ", "");
+        setWeaponProperties(itemName, displayName, 100, defaultProjectileType);
+    }
+
+    /**
+     * Constructor
      * @param itemName - The name of the item - also sets the itemAttributeItemName to this value
      * @param displayName - The name to be used if the bot is named after this weapon
      */
     public Weapon(String itemName, String displayName) {
         setWeaponProperties(itemName, displayName, 100);
+    }
+
+    /**
+     * Constructor
+     * @param itemName - The name of the item - also sets the itemAttributeItemName to this value
+     * @param displayName - The name to be used if the bot is named after this weapon
+     * @param defaultProjectileType - The default projectile type of the weapon
+     */
+    public Weapon(String itemName, String displayName, ProjectileTypes defaultProjectileType) {
+        setWeaponProperties(itemName, displayName, 100, defaultProjectileType);
     }
 
     /**
@@ -139,16 +165,31 @@ public class Weapon {
 
     /**
      * Sets the weapon properties - a shared method by all the constructors
+     * Includes setting the random projectile type
      * @param itemName - The name of the item - also sets the itemAttributeItemName to this value
      * @param displayName - The name to be used if the bot is named after this weapon
      * @param weight - The odds that this weapon will be chosen relative to the others
      */
     private void setWeaponProperties(String itemName, String displayName, int weight) {
+        setWeaponProperties(itemName, displayName, weight, ProjectileTypes.NONE);
+    }
+
+    /**
+     * Sets the weapon properties - a shared method by all the constructors
+     * Includes setting the random projectile type
+     * @param itemName - The name of the item - also sets the itemAttributeItemName to this value
+     * @param displayName - The name to be used if the bot is named after this weapon
+     * @param weight - The odds that this weapon will be chosen relative to the others
+     * @param defaultProjectileType - The default projectile type of the weapon
+     */
+    private void setWeaponProperties(String itemName, String displayName, int weight, ProjectileTypes defaultProjectileType) {
         this.itemName = itemName;
         this.displayName = displayName;
         this.itemAttributeItemName = itemName;
         this.itemAttributes = new ItemAttributes(itemAttributeItemName);
         this.weight = weight;
+        this.defaultProjectileType = defaultProjectileType;
+        this.tryAddRandomProjectileType();
     }
 
     /**

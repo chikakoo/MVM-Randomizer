@@ -9,17 +9,16 @@ public class HuntsmanWeapon extends Weapon {
      * @param itemName - The name of the item - also sets the itemAttributeItemName to this value
      */
     public HuntsmanWeapon(String itemName) {
-        super(itemName);
+        super(itemName, ProjectileTypes.ARROW);
         this.weaponProjectileType = WeaponProjectileTypes.HUNTSMAN;
     }
 
     /**
      * Constructor
-     * @param itemName - The name of the weapon
-     * @param displayName - The name to be used if the bot is named after this weapon
+     * @param itemName - The name of the item - also sets the itemAttributeItemName to this value
      */
-    public HuntsmanWeapon(String itemName, String displayName) {
-        super(itemName, displayName);
+    public HuntsmanWeapon(String itemName, ProjectileTypes defaultProjectileType) {
+        super(itemName, defaultProjectileType);
         this.weaponProjectileType = WeaponProjectileTypes.HUNTSMAN;
     }
 
@@ -29,6 +28,6 @@ public class HuntsmanWeapon extends Weapon {
      */
     @Override
     protected ProjectileTypes getRandomProjectileType() {
-        return ProjectileTypes.getRandomHuntsmanProjectile();
+        return ProjectileTypes.getRandomHuntsmanProjectile(this.defaultProjectileType);
     }
 }

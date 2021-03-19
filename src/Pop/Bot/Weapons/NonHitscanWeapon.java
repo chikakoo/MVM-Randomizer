@@ -15,6 +15,16 @@ public class NonHitscanWeapon extends Weapon {
 
     /**
      * Constructor
+     * @param itemName - The name of the item - also sets the itemAttributeItemName to this value
+     * @param defaultProjectileType - The default projectile type of the weapon
+     */
+    public NonHitscanWeapon(String itemName, ProjectileTypes defaultProjectileType) {
+        super(itemName, defaultProjectileType);
+        this.weaponProjectileType = WeaponProjectileTypes.NON_HITSCAN;
+    }
+
+    /**
+     * Constructor
      * @param itemName - The name of the weapon
      * @param displayName - The name to be used if the bot is named after this weapon
      */
@@ -24,11 +34,22 @@ public class NonHitscanWeapon extends Weapon {
     }
 
     /**
+     * Constructor
+     * @param itemName - The name of the weapon
+     * @param displayName - The name to be used if the bot is named after this weapon
+     * @param defaultProjectileType - The default projectile type of the weapon
+     */
+    public NonHitscanWeapon(String itemName, String displayName, ProjectileTypes defaultProjectileType) {
+        super(itemName, displayName, defaultProjectileType);
+        this.weaponProjectileType = WeaponProjectileTypes.NON_HITSCAN;
+    }
+
+    /**
      * Gets a random non-hitscan projectile type
      * @return null
      */
     @Override
     protected ProjectileTypes getRandomProjectileType() {
-        return ProjectileTypes.getRandomNonHitscanWeaponProjectile();
+        return ProjectileTypes.getRandomNonHitscanWeaponProjectile(this.defaultProjectileType);
     }
 }

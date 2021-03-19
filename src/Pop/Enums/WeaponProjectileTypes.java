@@ -7,5 +7,6 @@ public enum WeaponProjectileTypes {
     NONE,
     HITSCAN,
     NON_HITSCAN,
-    HUNTSMAN
+    HUNTSMAN,
+    ROCKET_LAUNCHER
 }

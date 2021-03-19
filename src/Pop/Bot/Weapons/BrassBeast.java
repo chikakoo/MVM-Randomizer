@@ -13,15 +13,6 @@ public class BrassBeast extends Weapon {
     }
 
     /**
-     * Constructor
-     * @param itemName - The name of the weapon
-     * @param displayName - The name to be used if the bot is named after this weapon
-     */
-    public BrassBeast(String itemName, String displayName) {
-        super(itemName, displayName);
-    }
-
-    /**
      * Sets the item attributes of this weapon
      */
     public void addMovementSpeedBonus() {

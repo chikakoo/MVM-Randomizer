@@ -1,5 +1,7 @@
 package Pop.Bot.Weapons;
 
+import Pop.Enums.ProjectileTypes;
+
 public class GrenadeLauncher extends NonHitscanWeapon {
     /**
      * Constructor
@@ -7,6 +9,16 @@ public class GrenadeLauncher extends NonHitscanWeapon {
      */
     public GrenadeLauncher(String itemName) {
         super(itemName);
+        this.canHaveCustomProjectileModel = true;
+    }
+
+    /**
+     * Constructor
+     * @param itemName - The name of the weapon
+     * @param defaultProjectileType - The default projectile type of the weapon
+     */
+    public GrenadeLauncher(String itemName, ProjectileTypes defaultProjectileType) {
+        super(itemName, defaultProjectileType);
         this.canHaveCustomProjectileModel = true;
     }
 

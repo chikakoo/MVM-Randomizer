@@ -115,7 +115,7 @@ public class RandomHeavy extends RandomBot {
             new Cosmetic("The Bunsen Brave"),
             new Cosmetic("The Gridiron Guardian"),
             new Cosmetic("The Tungsten Toque"),
-            new Cosmetic("The Bear Necessities"),
+            //new Cosmetic("The Bear Necessities"), // Glitchy
             new Cosmetic("The Gabe Glasses"),
             new Cosmetic("The Katyusha"),
             new Cosmetic("The Tsarboosh"),
@@ -173,7 +173,7 @@ public class RandomHeavy extends RandomBot {
     /**
      * Adjusts the movespeed penalty on the brass beast so that the standard bots don't just stand there
      */
-    protected void fixBrassBeast() {
+    private void fixBrassBeast() {
         if (!isGiant && primaryWeapon instanceof BrassBeast) {
             ((BrassBeast)primaryWeapon).addMovementSpeedBonus();
         }

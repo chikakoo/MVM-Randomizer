@@ -1,6 +1,7 @@
 package Pop.Bot;
 import Pop.Bot.Cosmetics.Cosmetic;
 import Pop.Bot.Weapons.*;
+import Pop.Enums.ProjectileTypes;
 import Pop.Enums.TFClasses;
 
 import java.util.*;
@@ -17,11 +18,11 @@ public class RandomMedic extends RandomBot {
         baseHealth = 150;
 
         primaryWeaponList = new ArrayList<>(Arrays.asList(
-            new HitscanWeapon("TF_WEAPON_SYRINGEGUN_MEDIC", "Syringe Gun"),
-            new HitscanWeapon( "The Blutsauger"),
-            new HitscanWeapon("The Overdose"),
-            new NonHitscanWeapon("The Crusader's Crossbow", "Crossbow"),
-            new NonHitscanWeapon( "Festive Crusader's Crossbow", "Festive Crossbow")
+            new HitscanWeapon("TF_WEAPON_SYRINGEGUN_MEDIC", "Syringe Gun", ProjectileTypes.SYRINGE),
+            new HitscanWeapon( "The Blutsauger", ProjectileTypes.SYRINGE),
+            new HitscanWeapon("The Overdose", ProjectileTypes.SYRINGE),
+            new NonHitscanWeapon("The Crusader's Crossbow", "Crossbow", ProjectileTypes.CROSSBOW_SYRINGE),
+            new NonHitscanWeapon( "Festive Crusader's Crossbow", "Festive Crossbow", ProjectileTypes.FESTIVE_CROSSBOW_SYRINGE)
         ));
 
         secondaryWeaponList = new ArrayList<>(Arrays.asList(

@@ -8,17 +8,7 @@ public class LooseCannon extends GrenadeLauncher {
      * @param itemName - The name of the weapon
      */
     public LooseCannon(String itemName) {
-        super(itemName);
-        setExtraProperties();
-    }
-
-    /**
-     * Constructor
-     * @param itemName - The name of the weapon
-     * @param displayName - The name to be used if the bot is named after this weapon
-     */
-    public LooseCannon(String itemName, String displayName) {
-        super(itemName, displayName);
+        super(itemName, ProjectileTypes.CANNONBALL);
         setExtraProperties();
     }
 

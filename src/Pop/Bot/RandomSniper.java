@@ -1,6 +1,7 @@
 package Pop.Bot;
 import Pop.Bot.Cosmetics.Cosmetic;
 import Pop.Bot.Weapons.*;
+import Pop.Enums.ProjectileTypes;
 import Pop.Enums.SkillLevels;
 import Pop.Enums.TFClasses;
 
@@ -26,7 +27,7 @@ public class RandomSniper extends RandomBot {
             new HitscanWeapon("Shooting Star"),
             new HitscanWeapon("The Hitman's Heatmaker"),
             new HuntsmanWeapon("The Huntsman"),
-            new HuntsmanWeapon("Festive Huntsman"),
+            new HuntsmanWeapon("Festive Huntsman", ProjectileTypes.FESTIVE_ARROW),
             new HuntsmanWeapon("The Fortified Compound")
             //"The Machina", // Support snipers can't use these
             //"The Classic" // They don't know how to use this
