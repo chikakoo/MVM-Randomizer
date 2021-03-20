@@ -37,14 +37,57 @@ public class WaveItemModel extends AbstractTableModel {
      * Adds a new row to the table with some default values
      */
     public void addRow() {
+        int waveNumber = waves.size() + 1;
+
+        Range currencyRange = new Range(400, 600);
+        if (waveNumber > 1) {
+            WaveSetting previousWave = waves.get(waveNumber - 2); // because -1 is the current one
+            currencyRange = new Range(previousWave.getCurrencyRange());
+        }
+
+        int lowSpawn = (int) (Math.ceil(waveNumber / 2d) + 1);
+        int highSpawn = (int) (Math.ceil((waveNumber + 1) / 2d) + 1);
+
+        int supportPercent = 35;
+        if (waveNumber == 1) {
+            supportPercent = 10;
+        } else if (waveNumber < 4) {
+            supportPercent = 20;
+        }
+
+        int giantPercent = 50;
+        if (waveNumber == 3) {
+            giantPercent = 10;
+        } else if (waveNumber < 5) {
+            giantPercent = 15;
+        } else if (waveNumber == 5) {
+            giantPercent = 20;
+        } else if (waveNumber < 9) {
+            giantPercent = 40;
+        } else if (waveNumber == 9) {
+            giantPercent = 45;
+        }
+
+        int maxGiants = 0;
+        if (waveNumber > 1) {
+            maxGiants = (int)(Math.ceil((waveNumber - 1) / 6)) + 1;
+        }
+
+        int percentTanks = 15;
+        if (waveNumber == 1) {
+            percentTanks = 0;
+        } else if (waveNumber < 10) {
+            percentTanks = 10;
+        }
+
         waves.add(new WaveSetting(
-            new Range(400, 600), // currency
-            new Range(2, 3), // spawns
+            currencyRange, // currency
+            new Range(lowSpawn, highSpawn), // spawns
             55, // mission%
-            35, // support%
-            15, // giant%
-            2, // max giants
-            10 // tank%
+            supportPercent, // support%
+            giantPercent, // giant%
+            maxGiants, // max giants
+            percentTanks // tank%
         ));
         fireTableDataChanged();
     }
@@ -75,6 +118,15 @@ public class WaveItemModel extends AbstractTableModel {
         }
 
         fireTableDataChanged();
+    }
+
+    /**
+     * Sets the table values back to defaults by clearing the waves and resetting it back
+     */
+    public void setRowsToDefaults() {
+        int currentSize = waves.size();
+        waves.clear();
+        resizeTable(currentSize);
     }
 
     /**

@@ -27,6 +27,7 @@ public class WavePanel extends JPanel {
     private JMenuItem moveUpMenuItem = new JMenuItem("move up");
     private JMenuItem duplicateBelowItem = new JMenuItem("duplicate row to below row");
     private JMenuItem duplicateAboveItem = new JMenuItem("duplicate row to above row");
+    private JMenuItem setDefaultValues = new JMenuItem("set default values");
 
     /**
      * Getters for all the settings
@@ -90,6 +91,8 @@ public class WavePanel extends JPanel {
         contextMenu.addSeparator();
         contextMenu.add(duplicateBelowItem);
         contextMenu.add(duplicateAboveItem);
+        contextMenu.addSeparator();
+        contextMenu.add(setDefaultValues);
 
         disableMenuItemsRequiringRowSelection();
 
@@ -97,6 +100,7 @@ public class WavePanel extends JPanel {
         moveUpMenuItem.addActionListener(new MoveUpMenuItemListener());
         duplicateBelowItem.addActionListener(new DuplicateBelowMenuItemListener());
         duplicateAboveItem.addActionListener(new DuplicateAboveMenuItemListener());
+        setDefaultValues.addActionListener(new SetDefaultValuesMenuItemListener());
 
         waveTable.setComponentPopupMenu(contextMenu);
     }
@@ -169,6 +173,13 @@ public class WavePanel extends JPanel {
         }
     }
 
+    private class SetDefaultValuesMenuItemListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            tableModel.setRowsToDefaults();
+        }
+    }
+
     /**
      * Listener for when rows in the table are selected
      */
@@ -218,6 +229,7 @@ public class WavePanel extends JPanel {
         moveUpMenuItem.setEnabled(true);
         duplicateBelowItem.setEnabled(true);
         duplicateAboveItem.setEnabled(true);
+        setDefaultValues.setEnabled(true);
     }
 
     /**
