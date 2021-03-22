@@ -142,7 +142,48 @@ public enum SpawnLocations {
     SPAWN_BOT_CASINO_CITY_CENTER("spawnbot_center"),
     SPAWN_BOT_CASINO_CITY_LEFT("spawnbot_left"),
     SPAWN_BOT_CASINO_CITY_RIGHT("spawnbot_right"),
-    SPAWN_BOT_CASINO_CITY_CHIPS("spawnbot_chips");
+    SPAWN_BOT_CASINO_CITY_CHIPS("spawnbot_chips"),
+
+    // Skullcove
+    SPAWN_BOT_SKULLCOVE_ENGINEER("spawnbot_mission_engy"),
+    SPAWN_BOT_SKULLCOVE_LEFT("spawnbot_left"),
+    SPAWN_BOT_SKULLCOVE_RIGHT("spawnbot_right"),
+    SPAWN_BOT_SKULLCOVE_ALL("spawnbot_all"),
+
+    // Oxidize
+    SPAWN_BOT_OXIDIZE_SENTRY_BUSTER("spawnbot_mission_sentry_buster"),
+    SPAWN_BOT_OXIDIZE_FLANKERS("flankers"),
+    SPAWN_BOT_OXIDIZE_CHIEF("spawnbot_chief"),
+
+    // Guardian Caster
+    SPAWN_BOT_GUARDIAN_CASTER_GATE("spawnbot_gate"),
+    SPAWN_BOT_GUARDIAN_CASTER_TOP("spawnbot_top"),
+    SPAWN_BOT_GUARDIAN_CASTER_MONEY("spawnbot_money"),
+
+    // Potassium
+    SPAWN_BOT_POTASSIUM_LEFT("spawnbot_left"),
+
+    // Sharp
+    SPAWN_BOT_SHARP_SECONDARY("spawnbot_secondary"),
+    SPAWN_BOT_SHARP_INVASION("spawnbot_invasion"),
+    SPAWN_BOT_SHARP_LEFT("spawnbot_left"),
+    SPAWN_BOT_SHARP_MIDDLE("spawnbot_middle"),
+    SPAWN_BOT_SHARP_RIGHT("spawnbot_right"),
+
+    // Trainyard
+    SPAWN_BOT_TRAINYARD_SENTRY_BUSTER("spawnbot_mission_sentrybuster"),
+    SPAWN_BOT_TRAINYARD_GATEBOT("gatebot"),
+    SPAWN_BOT_TRAINYARD_GATEBOT_LEFT("gatebot_left"),
+    SPAWN_BOT_TRAINYARD_GATEBOT_MIDDLE("gatebot_middle"),
+    SPAWN_BOT_TRAINYARD_GATEBOT_RIGHT("gatebot_right"),
+    SPAWN_BOT_TRAINYARD_LEFT("spawnbot_left"),
+    SPAWN_BOT_TRAINYARD_MIDDLE("spawnbot_middle"),
+    SPAWN_BOT_TRAINYARD_RIGHT("spawnbot_right"),
+    SPAWN_BOT_TRAINYARD_BOSS("spawnbot_boss"), // Also gatebot_boss, but probabaly won't want that
+
+    // Sanctum Fortress
+    SPAWN_BOT_SANCTUM_FORTRESS_SENTRY_BUSTER("spawnbot_sentrybuster"),
+    SPAWN_BOT_SANCTUM_FORTRESS_SPECIAL_BOMB("spawnbot_specialbomb");
 
     /**
      * The attribute for spawn location value

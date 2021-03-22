@@ -40,7 +40,17 @@ public enum TankRoutes {
     COAST_ROCK_ALT("tankpath_alt"),
     CASINO_CITY_1("tank_path_a_1"),
     CASINO_CITY_2("tank_path_b_1"),
-    CASINO_CITY_SENTRY("tank_path_sentrytank");
+    CASINO_CITY_SENTRY("tank_path_sentrytank"),
+    SKULLCOVE_1("tank_path_left"),
+    SKULLCOVE_2("tank_path_right"),
+    SEQUOIA("boss_path_a1"),
+    OXIDIZE("tank_path_a_10"),
+    GUARDIAN_CASTER("path_tank_1"),
+    SHARP("tank_path_a_1"),
+    TRAINYARD_LL("tank_path_LL_1"),
+    TRAINYARD_RL("tank_path_RL_1"),
+    TRAINYARD_LU("tank_path_LU_1"),
+    TRAINYARD_RU("tank_path_RU_1");
 
     /**
      * The attribute for the class value

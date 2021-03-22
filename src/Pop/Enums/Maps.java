@@ -32,7 +32,7 @@ public enum Maps implements RandomizableEnum, JsonSerializableEnum {
     ATOMGRAD("Atomgrad"),
     SPACEPOST("Spacepost"),
     SNOWFLAKE("Snowflake"),
-    AFFINITY("Affinity"), // Spawns sometimes don't work
+    AFFINITY("Affinity"),
     MANNDARIN("Manndarin"),
     OILRIG("Oilrig"),
     SADDLE("Saddle"),
@@ -44,7 +44,16 @@ public enum Maps implements RandomizableEnum, JsonSerializableEnum {
     SHIVER_PEAK("Shiver Peak"),
     CONDEMNED("Condemned"),
     COAST_ROCK("Coast Rock"),
-    CASINO_CITY("Casino City");
+    CASINO_CITY("Casino City"),
+    SKULLCOVE("Skull Cove"),
+    SEQUOIA("Sequoia"),
+    OXIDIZE("Oxidize"),
+    GUARDIAN_CASTER("Guardian Caster"),
+    TRAINYARD("Trainyard"),
+    POTASSIUM("Potassium"),
+    HIDEOUT("Hideout"),
+    SHARP("Sharp"),
+    SANCTUM_FORTRESS("Sanctum Fortress");
 
     /**
      * The value of the enum

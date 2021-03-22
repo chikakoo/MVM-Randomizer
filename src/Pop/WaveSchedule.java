@@ -119,6 +119,8 @@ public class WaveSchedule extends PopObjectRepresentation {
             wave.generateRandom(waveNumber);
             generateRandomMissionsForWave(waveNumber);
             addWave(wave);
+
+            MVMRandomizer.currentMap.afterWaveAdded(wave);
         }
     }
 

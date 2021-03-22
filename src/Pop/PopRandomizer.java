@@ -85,4 +85,17 @@ public class PopRandomizer {
         int index = generateRandomValue(list.size());
         return list.get(index);
     }
+
+    /**
+     * Returns a random item from the given list and removes it from that list
+     * @param list - the list to get the random item out of
+     * @param <E> - the type of the list
+     * @return the random item
+     */
+    public static <E> E getAndRemoveRandomElement(ArrayList<E> list) {
+        int index = generateRandomValue(list.size());
+        E item = list.get(index);
+        list.remove(index);
+        return item;
+    }
 }

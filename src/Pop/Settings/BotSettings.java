@@ -89,6 +89,18 @@ public class BotSettings {
     }
 
     /**
+     * Wave 666 mode is where all waves are combined into one single long wave, with delays between where waves would
+     * normally end
+     */
+    private boolean wave666Mode;
+    public boolean isWave666Mode() {
+        return wave666Mode;
+    }
+    public void setWave666Mode(boolean wave666Mode) {
+        this.wave666Mode = wave666Mode;
+    }
+
+    /**
      * Constructor
      */
     public BotSettings() {

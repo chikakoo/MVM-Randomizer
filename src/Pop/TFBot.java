@@ -92,6 +92,7 @@ public class TFBot extends PopObjectRepresentation {
      * The bot's scale
      */
     protected double scale = 1.0;
+    public double getScale() { return scale; }
     public void setScale(double scale) { this.scale = scale; }
 
     /**
@@ -109,6 +110,15 @@ public class TFBot extends PopObjectRepresentation {
     }
     public boolean hasAttribute(String attribute) {
         return attributes.contains(attribute);
+    }
+
+    /**
+     * Behavior modifiers to include on the bot
+     */
+    protected ArrayList<String> behaviorModifiers = new ArrayList<>();
+    public void addBehaviorModifier(String modifierToAdd)
+    {
+        behaviorModifiers.add(modifierToAdd);
     }
 
     protected ArrayList<ModifierAttribute> characterAttributes = new ArrayList<>();
@@ -247,6 +257,10 @@ public class TFBot extends PopObjectRepresentation {
                 popObject.addAttribute("Attributes", attribute);
             }
 
+            for (String modifier : behaviorModifiers) {
+                popObject.addAttribute("BehaviorModifiers", modifier);
+            }
+
             for (ItemAttributes item : itemAttributeSets) {
                 popObject.addObject(item.getPopObject());
             }
@@ -271,12 +285,20 @@ public class TFBot extends PopObjectRepresentation {
                 popObject.addAttribute("ClassIcon", getClassIconForPopFile());
             }
 
+            if (scale != 1) {
+                popObject.addAttribute("Scale", Double.toString(scale));
+            }
+
             if (!weaponRestrictions.equals(WeaponRestrictions.NONE)) {
                 popObject.addAttribute("WeaponRestrictions", weaponRestrictions.toString());
             }
 
             for (String attribute : attributes) {
                 popObject.addAttribute("Attributes", attribute);
+            }
+
+            for (String modifier : behaviorModifiers) {
+                popObject.addAttribute("BehaviorModifiers", modifier);
             }
 
             for (ItemAttributes item : itemAttributeSets) {

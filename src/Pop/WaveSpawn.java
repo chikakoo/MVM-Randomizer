@@ -16,11 +16,29 @@ public class WaveSpawn extends PopObjectRepresentation {
      */
     private ArrayList<SpawnLocations> spawnLocations = new ArrayList();
     public ArrayList<SpawnLocations> getSpawnLocations() { return spawnLocations; }
+    public void setSpawnLocations(ArrayList<SpawnLocations> spawnLocations) { this.spawnLocations = spawnLocations; }
+
+    /**
+     * The start wave output object - not used by most maps
+     */
+    private PopObject startWaveOutput;
+    public void setStartWaveOutput(PopObject startWaveOutput) {
+        this.startWaveOutput = startWaveOutput;
+    }
+
+    /**
+     * The start wave output object - not used by most maps
+     */
+    private PopObject firstSpawnOutput;
+    public void setFirstSpawnOutput(PopObject firstSpawnOutput) {
+        this.firstSpawnOutput = firstSpawnOutput;
+    }
 
     /**
      * The name of the wave
      */
     private String waveSpawnName = "";
+    public String getWaveSpawnName() { return this.waveSpawnName; }
     public void setWaveSpawnName(String waveSpawnName) {
         this.waveSpawnName = "\"" + waveSpawnName + "\"";
     }
@@ -29,16 +47,19 @@ public class WaveSpawn extends PopObjectRepresentation {
      * The total number of bots in this set of bots
      */
     private int totalCount = 10;
+    public void setTotalCount(int totalCount) { this.totalCount = totalCount; }
 
     /**
      * The max number of bots that can be alive
      */
     private int maxActive = 5;
+    public void setMaxActive(int maxActive) { this.maxActive = maxActive; }
 
     /**
      * The max number of bots that can spawn at once
      */
     private int spawnCount = 2;
+    public void setSpawnCount(int spawnCount) { this.spawnCount = spawnCount; }
 
     /**
      * The amount of time to wait before spawning the first bot
@@ -65,6 +86,7 @@ public class WaveSpawn extends PopObjectRepresentation {
      * The total amount of money to be dropped by these bots
      */
     private int totalCurrency = 400;
+    public int getTotalCurrency() { return totalCurrency; }
     public void setTotalCurrency(int totalCurrency) { this.totalCurrency = totalCurrency; }
 
     /**
@@ -74,9 +96,21 @@ public class WaveSpawn extends PopObjectRepresentation {
     public boolean isSupport() { return support.getValue(); }
 
     /**
+     * Whether these bots are limited support - overrides the above setting
+     */
+    private boolean isLimitedSupport;
+    public void setLimitedSupport(boolean isLimitedSupport) { this.isLimitedSupport = isLimitedSupport; }
+
+    /**
      * The bot type to spawn
      */
     private Squad squad = new Squad();
+
+    /**
+     * Whether to hide the icon - this will override the squad object with what's entered here
+     */
+    private PopObject squadOverride;
+    public void setSquadOverride(PopObject squadOverride) { this.squadOverride = squadOverride; }
 
     /**
      * Whether this WaveSpawn contains a giant
@@ -128,6 +162,9 @@ public class WaveSpawn extends PopObjectRepresentation {
 
         PopObject popObject = new PopObject(name);
 
+        popObject.addObject(startWaveOutput);
+        popObject.addObject(firstSpawnOutput);
+
         if (!waveSpawnName.equals("")) {
             popObject.addAttribute("Name", waveSpawnName);
         }
@@ -146,7 +183,10 @@ public class WaveSpawn extends PopObjectRepresentation {
             popObject.addAttribute("TotalCurrency", Integer.toString(totalCurrency));
         }
 
-        if (support.getValue()) {
+        if (isLimitedSupport) {
+            popObject.addAttribute("Support", "Limited");
+        }
+        else if (support.getValue()) {
             popObject.addAttribute("Support", support.toString());
         }
 
@@ -154,7 +194,11 @@ public class WaveSpawn extends PopObjectRepresentation {
             popObject.addAttribute("WaitForAllSpawned", waitForAllSpawned);
         }
 
-        popObject.addObjectRepresentation(squad);
+        if (squadOverride != null) {
+            popObject.addObject(squadOverride);
+        } else {
+            popObject.addObjectRepresentation(squad);
+        }
 
         return popObject;
     }
@@ -228,6 +272,10 @@ public class WaveSpawn extends PopObjectRepresentation {
 
         MVMRandomizer.currentMap.setBotTags(tfBot, spawnLocations);
         MVMRandomizer.currentMap.setBotTags(tfBot);
+        MVMRandomizer.currentMap.adjustBotAttributes(tfBot);
+
+        MVMRandomizer.currentMap.changeSpawnLocationFromTags(tfBot.tags, spawnLocations);
+
         fixSpawnCount();
     }
 
@@ -253,9 +301,12 @@ public class WaveSpawn extends PopObjectRepresentation {
 
         totalCurrency = 0;
 
-        spawnLocations = MVMRandomizer.currentMap.getRandomNormalBotLocations();
+        spawnLocations = MVMRandomizer.currentMap.getRandomSupportBotLocations();
         MVMRandomizer.currentMap.setBotTags(supportBot, this);
         MVMRandomizer.currentMap.setBotTags(supportBot);
+        MVMRandomizer.currentMap.adjustBotAttributes(supportBot);
+
+        MVMRandomizer.currentMap.changeSpawnLocationFromTags(supportBot.tags, spawnLocations);
     }
 
     /**

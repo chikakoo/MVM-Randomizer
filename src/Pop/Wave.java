@@ -10,7 +10,8 @@ public class Wave extends PopObjectRepresentation {
     /**
      * Defines a set of bots to spawn during this wave
      */
-    private ArrayList<PopObjectRepresentation> waveSpawns = new ArrayList<>();
+    private ArrayList<WaveSpawn> waveSpawns = new ArrayList<>();
+    public ArrayList<WaveSpawn> getWaveSpawns() { return waveSpawns; }
 
     /**
      * Whether the wave has any spawned bots yet
@@ -23,10 +24,11 @@ public class Wave extends PopObjectRepresentation {
     private int numberOfGiantSpawns;
 
     /**
-     * Pop objects for the wave start and done objects
+     * Pop objects for the wave start, done, and init objects
      */
     private PopObject startWaveOutputObject;
     private PopObject endWaveOutputObject;
+    private PopObject initWaveOutputObject;
 
     /**
      * Constructor
@@ -35,6 +37,7 @@ public class Wave extends PopObjectRepresentation {
         this.name = "Wave";
         startWaveOutputObject = MVMRandomizer.currentMap.createStartWaveOutputObject();
         endWaveOutputObject = MVMRandomizer.currentMap.createDoneOutputObject();
+        initWaveOutputObject = MVMRandomizer.currentMap.createInitWaveOutputObject();
     }
 
     /**
@@ -46,11 +49,14 @@ public class Wave extends PopObjectRepresentation {
 
         popObject.addObject(startWaveOutputObject);
         popObject.addObject(endWaveOutputObject);
+        popObject.addObject(initWaveOutputObject);
 
         popObject.addAttribute("Checkpoint", "Yes");
 
         populateWaveSpawnsIfEmpty();
-        popObject.addObjectRepresentations(waveSpawns);
+
+        ArrayList<PopObjectRepresentation> waveSpawnRepresentation = new ArrayList<>(waveSpawns);
+        popObject.addObjectRepresentations(waveSpawnRepresentation);
 
         return popObject;
     }
@@ -86,7 +92,8 @@ public class Wave extends PopObjectRepresentation {
 
         for(int i = 0; i < numberOfWaveSpawns; i++) {
             boolean isTankWave = waveShouldHaveTanks && (tankWaveNumber == i + 1);
-            generateWaveSpawn(waveNumber, currencyPerWave, isTankWave);
+            boolean isLastWaveSpawn = i == numberOfWaveSpawns - 1;
+            generateWaveSpawn(waveNumber, currencyPerWave, isTankWave, isLastWaveSpawn);
         }
 
         generateSupports(waveNumber);
@@ -98,7 +105,7 @@ public class Wave extends PopObjectRepresentation {
      * @param currencyPerWave - the amount of currency per wave
      * @param isTankWave - whether this wave has tanks
      */
-    private void generateWaveSpawn(int waveNumber, int currencyPerWave, boolean isTankWave) {
+    private void generateWaveSpawn(int waveNumber, int currencyPerWave, boolean isTankWave, boolean isLastWaveSpawn) {
         WaveSpawn waveSpawn = new WaveSpawn(false);
 
         if (isTankWave) {
@@ -128,6 +135,7 @@ public class Wave extends PopObjectRepresentation {
         }
 
         waveSpawns.add(waveSpawn);
+        MVMRandomizer.currentMap.setUpForWaveSpawn(waveSpawn, waveSpawnNumber, isLastWaveSpawn);
     }
 
     /**

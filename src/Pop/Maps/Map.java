@@ -201,6 +201,24 @@ public class Map {
                 return new CoastRock();
             case CASINO_CITY:
                 return new CasinoCity();
+            case SKULLCOVE:
+                return new Skullcove();
+            case SEQUOIA:
+                return new Sequoia();
+            case OXIDIZE:
+                return new Oxidize();
+            case GUARDIAN_CASTER:
+                return new GuardianCaster();
+            case TRAINYARD:
+                return new Trainyard();
+            case POTASSIUM:
+                return new Potassium();
+            case HIDEOUT:
+                return new Hideout();
+            case SHARP:
+                return new Sharp();
+            case SANCTUM_FORTRESS:
+                return new SanctumFotress();
             default:
                 return new Map();
         }
@@ -244,10 +262,26 @@ public class Map {
     }
 
     /**
+     * Creates the object for InitWaveOutput - this is unique for each wave - null if it shouldn't be created
+     * @return the created object
+     */
+    public PopObject createInitWaveOutputObject() {
+        return null;
+    }
+
+    /**
      * Gets a random location for a normal bot
      * @return a list of random spawn locations
      */
     public ArrayList<SpawnLocations> getRandomNormalBotLocations() {
+        return getRandomSpawnLocation(normalBotSpawnLocations);
+    }
+
+    /**
+     * Gets a random location for a support bot - normally identical to the normal bot locations
+     * @return a list of random spawn locations
+     */
+    public ArrayList<SpawnLocations> getRandomSupportBotLocations() {
         return getRandomSpawnLocation(normalBotSpawnLocations);
     }
 
@@ -288,9 +322,21 @@ public class Map {
 
     /**
      * Add attributes to the bot - only used by specific maps
+     * @param tfBot  - the bot to adjust the attributes of
+     */
+    public void adjustBotAttributes(TFBot tfBot) { }
+
+    /**
+     * Add attributes to the bot - only used by specific maps
      * @param popObject - the object to add the attributes to
      */
     public void addGateBotAttributes(PopObject popObject) { }
+
+    /**
+     * Add attributes to the bot - only used by specific maps
+     * @param tfBot - the bot to add the attributes to
+     */
+    public void addMissionBotAttributes(TFBot tfBot) { }
 
     /**
      * Returns whether the map has a tank
@@ -314,6 +360,23 @@ public class Map {
      * @param waveNumber - the wave number
      */
     public void setUpForWave(int waveNumber) {
+        // No code here, overridden by the relevant maps
+    }
+
+    /**
+     * Performs any necessary setup for a given wave after it's been created
+     * @param wave - the wave
+     */
+    public void afterWaveAdded(Wave wave) {
+        // No code here, overridden by the relevant maps
+    }
+
+    /**
+     * Performs any necessary setup for a given wave spawn number
+     * @param waveSpawnNumber - the wave spawn
+     * @param isLastWaveSpawn - whether this is the final wave spawn
+     */
+    public void setUpForWaveSpawn(WaveSpawn waveSpawn, int waveSpawnNumber, boolean isLastWaveSpawn) {
         // No code here, overridden by the relevant maps
     }
 
@@ -343,6 +406,23 @@ public class Map {
      */
     public void setBotTags(TFBot tfBot, WaveSpawn waveSpawn)
     {
+        // No code here, overridden by the relevant maps
+    }
+
+    /**
+     * Sets tags for mission bots
+     * @param tfBot - the bot to get the tags for
+     */
+    public void setMissionBotTags(TFBot tfBot) {
+        // No code here, overridden by the relevant maps
+    }
+
+    /**
+     * Changes spawn locations based on the given tags
+     * @param tags - The tags
+     * @param spawnLocations - The spawn locations to modify
+     */
+    public void changeSpawnLocationFromTags(ArrayList<String> tags, ArrayList<SpawnLocations> spawnLocations) {
         // No code here, overridden by the relevant maps
     }
 }

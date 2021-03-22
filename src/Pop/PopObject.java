@@ -55,7 +55,9 @@ public class PopObject extends PopObjectMember {
      * @param popObjectRepresentation - the popObjectRepresentation
      */
     public void addObjectRepresentation(PopObjectRepresentation popObjectRepresentation) {
-        members.add(popObjectRepresentation.getPopObject());
+        if (popObjectRepresentation != null) {
+            members.add(popObjectRepresentation.getPopObject());
+        }
     }
 
     /**

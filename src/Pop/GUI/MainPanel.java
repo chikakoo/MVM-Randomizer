@@ -290,6 +290,8 @@ public class MainPanel extends JPanel {
         generateButtonsPanel.add(setUpGenerateButton());
         generateButtonsPanel.add(Box.createRigidArea(new Dimension(5, 0)));
         generateButtonsPanel.add(setUpGenerateHighlanderButton());
+        generateButtonsPanel.add(Box.createRigidArea(new Dimension(5, 0)));
+        generateButtonsPanel.add(setUpGenerateWave666Button());
 
         mainContents.add(generateButtonsPanel);
     }
@@ -349,6 +351,37 @@ public class MainPanel extends JPanel {
             MVMRandomizerGUI.updateSettings();
             MVMRandomizer.generate();
             MVMRandomizer.botSettings.setHighlanderMode(false);
+        }
+    }
+
+    /**
+     * Sets up the generate wave 666 button
+     * @return - the wave 666 button
+     */
+    private JButton setUpGenerateWave666Button() {
+        JButton generateWave666Button = new JButton("Generate Wave 666");
+        generateWave666Button.setToolTipText("Combines all waves into a single really long wave, with delays in the middle.");
+        generateWave666Button.addActionListener(new GenerateWave666ButtonListener());
+        return generateWave666Button;
+    }
+
+    /**
+     * The action listener for the generate button
+     */
+    private class GenerateWave666ButtonListener implements ActionListener {
+        /**
+         * Opens windows explorer to the current directory
+         * @param e - (Unused) the action event
+         */
+        @Override
+        public void actionPerformed(ActionEvent e)
+        {
+            beforePopFileGeneration();
+
+            MVMRandomizer.botSettings.setWave666Mode(true);
+            MVMRandomizerGUI.updateSettings();
+            MVMRandomizer.generate();
+            MVMRandomizer.botSettings.setWave666Mode(false);
         }
     }
 
