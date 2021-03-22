@@ -21,18 +21,6 @@ public class Sequoia extends Map {
     }
 
     /**
-     * Add gatebot attributes to the bot
-     * @param popObject - the object to add the attributes to
-     */
-    @Override
-    public void addGateBotAttributes(PopObject popObject) {
-        popObject.addAttribute("BehaviorModifiers", "push");
-        popObject.addAttribute("Attributes", "IgnoreFlag");
-        popObject.addAttribute("Tag", "nav_prefer_gate1_flank");
-        popObject.addAttribute("Tag", "bot_gatebot");
-    }
-
-    /**
      * Sets tags for the bot
      * @param tfBot - the bot to get the tags for
      */
@@ -40,10 +28,6 @@ public class Sequoia extends Map {
     public void setBotTags(TFBot tfBot) {
         if (PopRandomizer.generateBoolean()) {
             tfBot.tags.add("nav_prefer_flank_right");
-        }
-
-        if (tfBot.getIsGiant()) {
-            tfBot.tags.add("bot_giant");
         }
     }
 
@@ -54,7 +38,7 @@ public class Sequoia extends Map {
     @Override
     public void setMissionBotTags(TFBot tfBot) {
         BotTemplate template = tfBot.getBotTemplate();
-        if (template != null && template.getTemplateName() == "T_TFBot_SentryBuster") {
+        if (template != null && template.getTemplateName().equals("T_TFBot_SentryBuster")) {
             tfBot.tags.add("bot_sentrybuster");
         }
     }

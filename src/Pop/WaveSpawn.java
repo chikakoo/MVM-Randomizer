@@ -14,7 +14,7 @@ public class WaveSpawn extends PopObjectRepresentation {
     /**
      * The place to spawn the bots
      */
-    private ArrayList<SpawnLocations> spawnLocations = new ArrayList();
+    private ArrayList<SpawnLocations> spawnLocations = new ArrayList<>();
     public ArrayList<SpawnLocations> getSpawnLocations() { return spawnLocations; }
     public void setSpawnLocations(ArrayList<SpawnLocations> spawnLocations) { this.spawnLocations = spawnLocations; }
 
@@ -40,7 +40,7 @@ public class WaveSpawn extends PopObjectRepresentation {
     private String waveSpawnName = "";
     public String getWaveSpawnName() { return this.waveSpawnName; }
     public void setWaveSpawnName(String waveSpawnName) {
-        this.waveSpawnName = "\"" + waveSpawnName + "\"";
+        this.waveSpawnName = waveSpawnName;
     }
 
     /**
@@ -166,7 +166,7 @@ public class WaveSpawn extends PopObjectRepresentation {
         popObject.addObject(firstSpawnOutput);
 
         if (!waveSpawnName.equals("")) {
-            popObject.addAttribute("Name", waveSpawnName);
+            popObject.addAttribute("Name", "\"" + waveSpawnName + "\"");
         }
 
         for(SpawnLocations spawnLocation : spawnLocations) {
@@ -301,7 +301,7 @@ public class WaveSpawn extends PopObjectRepresentation {
 
         totalCurrency = 0;
 
-        spawnLocations = MVMRandomizer.currentMap.getRandomSupportBotLocations();
+        spawnLocations = MVMRandomizer.currentMap.getRandomNormalBotLocations();
         MVMRandomizer.currentMap.setBotTags(supportBot, this);
         MVMRandomizer.currentMap.setBotTags(supportBot);
         MVMRandomizer.currentMap.adjustBotAttributes(supportBot);

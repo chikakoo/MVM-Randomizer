@@ -211,7 +211,7 @@ public class ClassDistributionModel extends AbstractTableModel {
         int weight = classDistrubtionItem.getWeight();
         if (type.equals(ClassDistrubutionType.SUPPORT)) {
             String className = classDistrubtionItem.getClassName();
-            boolean isMissionBot = className == "Engineer" || className == "Sniper" || className == "Spy";
+            boolean isMissionBot = className.equals("Engineer") || className.equals("Sniper") || className.equals("Spy");
             if (isMissionBot) {
                 return calculateMissionBotWeightPercentage(weight);
             }

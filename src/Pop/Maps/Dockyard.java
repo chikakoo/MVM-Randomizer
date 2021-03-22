@@ -128,18 +128,6 @@ public class Dockyard extends Map {
     }
 
     /**
-     * Add gatebot attributes to the bot
-     * @param popObject - the object to add the attributes to
-     */
-    @Override
-    public void addGateBotAttributes(PopObject popObject) {
-        popObject.addAttribute("BehaviorModifiers", "push");
-        popObject.addAttribute("Attributes", "IgnoreFlag");
-        popObject.addAttribute("Tag", "nav_prefer_gate1_flank");
-        popObject.addAttribute("Tag", "bot_gatebot");
-    }
-
-    /**
      * Sets tags for the bot - flags giant bots so that they won't get stunned by capturing gates
      * Also tags sentry busters because that's what the other files do for some reason
      * @param tfBot - the bot to get the tags for
@@ -147,10 +135,6 @@ public class Dockyard extends Map {
     @Override
     public void setBotTags(TFBot tfBot)
     {
-        if (tfBot.getIsGiant()) {
-            tfBot.tags.add("bot_giant");
-        }
-
         BotTemplate template = tfBot.getBotTemplate();
         if (template != null && template.getTemplateName().equals("T_TFBot_SentryBuster")) {
             tfBot.tags.add("bot_sentrybuster");

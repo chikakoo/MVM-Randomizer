@@ -165,7 +165,7 @@ public abstract class RandomBot extends TFBot {
             addRandomProjectileModelForTemplatedBot();
         }
 
-        if (!isMissionBot) {
+        if (!isMissionBot && MVMRandomizer.currentMap.usesGateBots()) {
             isGateBot = true;
         }
     }

@@ -55,13 +55,13 @@ public class Condemned extends Map {
 
     /**
      * Add gatebot attributes to the bot
-     * @param popObject - the object to add the attributes to
+     * @param tfBot - the object to add the attributes to
      */
     @Override
-    public void addGateBotAttributes(PopObject popObject) {
+    public void addGateBotAttributes(TFBot tfBot) {
         String gateToFlank = PopRandomizer.generateNumberInRange(1, 6) + "";
-        popObject.addAttribute("Tag", "\"nav_prefer_gate" + gateToFlank + "_flank\"");
-        popObject.addAttribute("Tag", "\"bot_gatebot\"");
+        tfBot.tags.add("nav_prefer_gate" + gateToFlank + "_flank");
+        tfBot.tags.add("bot_gatebot");
     }
 
     /**
@@ -72,6 +72,6 @@ public class Condemned extends Map {
      */
     @Override
     public void setBotTags(TFBot tfBot, ArrayList<SpawnLocations> spawnLocations) {
-        tfBot.tags.add("\"nav_avoid_pit\"");
+        tfBot.tags.add("nav_avoid_pit");
     }
 }

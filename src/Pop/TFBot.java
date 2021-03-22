@@ -228,6 +228,14 @@ public class TFBot extends PopObjectRepresentation {
         PopObject popObject = new PopObject(name);
         handleHighlanderMode();
 
+        if (isGateBot) {
+            MVMRandomizer.currentMap.addGateBotAttributes(this);
+        }
+
+        if (MVMRandomizer.currentMap.usesGateBots()) {
+            MVMRandomizer.currentMap.adjustGateBotMapAttributes(this);
+        }
+
         if (template == null) {
             if (health > 0) {
                 popObject.addAttribute("Health", Integer.toString(health));
@@ -236,82 +244,54 @@ public class TFBot extends PopObjectRepresentation {
             popObject.addAttribute("Class", tfClass.getDisplayString());
             popObject.addAttribute("Name", "\"" + botName + "\"");
             popObject.addAttribute("Skill", skillLevel.toString());
-
-            if (classIcon != null && !classIcon.equals("")) {
-                popObject.addAttribute("ClassIcon", getClassIconForPopFile());
-            }
-
-            if (scale != 1) {
-                popObject.addAttribute("Scale", Double.toString(scale));
-            }
-
-            for (String item : items) {
-                popObject.addAttribute("Item", "\"" + item + "\"");
-            }
-
-            if (!weaponRestrictions.equals(WeaponRestrictions.NONE)) {
-                popObject.addAttribute("WeaponRestrictions", weaponRestrictions.toString());
-            }
-
-            for (String attribute : attributes) {
-                popObject.addAttribute("Attributes", attribute);
-            }
-
-            for (String modifier : behaviorModifiers) {
-                popObject.addAttribute("BehaviorModifiers", modifier);
-            }
-
-            for (ItemAttributes item : itemAttributeSets) {
-                popObject.addObject(item.getPopObject());
-            }
-
-            if (characterAttributes.size() > 0) {
-                PopObject characterAttributesPopObject = new PopObject("CharacterAttributes");
-                for (ModifierAttribute characterAttribute : characterAttributes) {
-                    characterAttributesPopObject.addAttribute(
-                        characterAttribute.getAttribute(),
-                        characterAttribute.getValue());
-                }
-                popObject.addObject(characterAttributesPopObject);
-            }
         } else {
             popObject.addAttribute("Template", template.getTemplateName());
 
             if (templateOverrideSkillLevel) {
                 popObject.addAttribute("Skill", skillLevel.toString());
             }
+        }
 
-            if (classIcon != null && !classIcon.equals("")) {
-                popObject.addAttribute("ClassIcon", getClassIconForPopFile());
-            }
+        if (classIcon != null && !classIcon.equals("")) {
+            popObject.addAttribute("ClassIcon", getClassIconForPopFile());
+        }
 
-            if (scale != 1) {
-                popObject.addAttribute("Scale", Double.toString(scale));
-            }
+        if (scale != 1) {
+            popObject.addAttribute("Scale", Double.toString(scale));
+        }
 
-            if (!weaponRestrictions.equals(WeaponRestrictions.NONE)) {
-                popObject.addAttribute("WeaponRestrictions", weaponRestrictions.toString());
-            }
+        if (!weaponRestrictions.equals(WeaponRestrictions.NONE)) {
+            popObject.addAttribute("WeaponRestrictions", weaponRestrictions.toString());
+        }
 
-            for (String attribute : attributes) {
-                popObject.addAttribute("Attributes", attribute);
-            }
+        for (String attribute : attributes) {
+            popObject.addAttribute("Attributes", attribute);
+        }
 
-            for (String modifier : behaviorModifiers) {
-                popObject.addAttribute("BehaviorModifiers", modifier);
-            }
+        for (String modifier : behaviorModifiers) {
+            popObject.addAttribute("BehaviorModifiers", modifier);
+        }
 
-            for (ItemAttributes item : itemAttributeSets) {
-                popObject.addObject(item.getPopObject());
-            }
+        for (String item : items) {
+            popObject.addAttribute("Item", "\"" + item + "\"");
         }
 
         for (String tag : tags) {
             popObject.addAttribute("Tag", tag);
         }
 
-        if (isGateBot) {
-            MVMRandomizer.currentMap.addGateBotAttributes(popObject);
+        for (ItemAttributes item : itemAttributeSets) {
+            popObject.addObject(item.getPopObject());
+        }
+
+        if (characterAttributes.size() > 0) {
+            PopObject characterAttributesPopObject = new PopObject("CharacterAttributes");
+            for (ModifierAttribute characterAttribute : characterAttributes) {
+                characterAttributesPopObject.addAttribute(
+                        characterAttribute.getAttribute(),
+                        characterAttribute.getValue());
+            }
+            popObject.addObject(characterAttributesPopObject);
         }
 
         return popObject;

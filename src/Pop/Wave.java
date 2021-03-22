@@ -129,7 +129,7 @@ public class Wave extends PopObjectRepresentation {
         if (waveSpawnNumber > 1) {
             // waveSpawn.setWaitForAllSpawned("wave " + (waveSpawnNumber - 1)); //TODO: use this?
 
-            int previousWaitBeforeStarting = ((WaveSpawn)waveSpawns.get(waveSpawnNumber - 2)).getWaitBeforeStarting();
+            int previousWaitBeforeStarting = (waveSpawns.get(waveSpawnNumber - 2)).getWaitBeforeStarting();
             int waitBeforeStarting = previousWaitBeforeStarting + PopRandomizer.generateNumberInRange(5, 15);
             waveSpawn.setWaitBeforeStarting(waitBeforeStarting);
         }
@@ -139,7 +139,7 @@ public class Wave extends PopObjectRepresentation {
     }
 
     /**
-     * Generate supports, currently a 35% chance, or 100 % if the map is Manhattan
+     * Generate supports, currently a 35% chance, or 100% if the map is Manhattan
      * @param waveNumber - the current wave number
      */
     private void generateSupports(int waveNumber) {

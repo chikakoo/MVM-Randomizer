@@ -55,36 +55,12 @@ public class Trainyard extends Map {
     }
 
     /**
-     * Gets a random location for a support bot - normally identical to the normal bot locations
-     * @return a list of random spawn locations
-     */
-    public ArrayList<SpawnLocations> getRandomSupportBotLocations() {
-        return getRandomSpawnLocation(normalBotSpawnLocations);
-    }
-
-    /**
-     * Add gatebot attributes to the bot
-     * @param popObject - the object to add the attributes to
-     */
-    @Override
-    public void addGateBotAttributes(PopObject popObject) {
-        popObject.addAttribute("BehaviorModifiers", "push");
-        popObject.addAttribute("Attributes", "IgnoreFlag");
-        popObject.addAttribute("Tag", "nav_prefer_gate1_flank");
-        popObject.addAttribute("Tag", "bot_gatebot");
-    }
-
-    /**
      * Sets tags for the bot - flags giant bots so that they won't get stunned by capturing gates
      * @param tfBot - the bot to get the tags for
      */
     @Override
     public void setBotTags(TFBot tfBot)
     {
-        if (tfBot.getIsGiant()) {
-            tfBot.tags.add("bot_giant");
-        }
-
         switch(PopRandomizer.generateNumberInRange(1, 4)) {
             case 1:
                 tfBot.tags.add("bot_flank");

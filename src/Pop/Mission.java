@@ -85,7 +85,6 @@ public class Mission extends PopObjectRepresentation {
         popObject.addAttribute("DesiredCount", Integer.toString(desiredCount));
 
         MVMRandomizer.currentMap.setMissionBotTags(tfBot);
-        MVMRandomizer.currentMap.addMissionBotAttributes(tfBot);
         popObject.addObjectRepresentation(tfBot);
 
         return popObject;

@@ -278,14 +278,6 @@ public class Map {
     }
 
     /**
-     * Gets a random location for a support bot - normally identical to the normal bot locations
-     * @return a list of random spawn locations
-     */
-    public ArrayList<SpawnLocations> getRandomSupportBotLocations() {
-        return getRandomSpawnLocation(normalBotSpawnLocations);
-    }
-
-    /**
      * Gets a random location for a giant bot
      * @return a list of random spawn locations
      */
@@ -328,15 +320,25 @@ public class Map {
 
     /**
      * Add attributes to the bot - only used by specific maps
-     * @param popObject - the object to add the attributes to
+     * @param tfBot - the object to add the attributes to
      */
-    public void addGateBotAttributes(PopObject popObject) { }
+    public void addGateBotAttributes(TFBot tfBot) {
+        tfBot.addBehaviorModifier("Push");
+        tfBot.addAttribute("IgnoreFlag");
+        tfBot.tags.add("nav_prefer_gate1_flank");
+        tfBot.tags.add("bot_gateBot");
+    }
 
     /**
-     * Add attributes to the bot - only used by specific maps
-     * @param tfBot - the bot to add the attributes to
+     * Adjusts the attributes of a bot on a gatebot map
+     * Only called if the map uses gate bots
+     * @param tfBot - the object to add the attributes to
      */
-    public void addMissionBotAttributes(TFBot tfBot) { }
+    public void adjustGateBotMapAttributes(TFBot tfBot) {
+        if (tfBot.getIsGiant()) {
+            tfBot.tags.add("bot_giant");
+        }
+    }
 
     /**
      * Returns whether the map has a tank

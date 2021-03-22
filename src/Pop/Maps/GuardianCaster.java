@@ -49,24 +49,8 @@ public class GuardianCaster extends Map {
      * @return the created object
      */
     public PopObject createInitWaveOutputObject() {
-        ArrayList<String> initTargets = new ArrayList<>(
-            Arrays.asList(
-                "wave_pathmodels_bottom",
-                "wave_pathmodels_bottom_l",
-                "wave_pathmodels_both",
-                "wave_pathmodels_both_ll",
-                "wave_pathmodels_both_al",
-                "wave_pathmodels_both_rr",
-                "wave_pathmodels_both_la",
-                "wave_pathmodels_both_ar"
-            )
-        );
-        String initTarget = PopRandomizer.randomElement(initTargets);
-
-        initTarget = "wave_pathmodels_both"; //TODO: delete the above if this is okay
-
         PopObject initWaveOutput = new PopObject("InitWaveOutput");
-        initWaveOutput.addAttribute("Target", initTarget);
+        initWaveOutput.addAttribute("Target", "wave_pathmodels_both");
         initWaveOutput.addAttribute("Action", "Trigger");
 
         return initWaveOutput;
@@ -78,15 +62,6 @@ public class GuardianCaster extends Map {
      */
     @Override
     public ArrayList<SpawnLocations> getRandomNormalBotLocations() {
-        return getNormalOrGiantBotLocations(normalBotSpawnLocations);
-    }
-
-    /**
-     * Gets a random location for a normal bot
-     * @return a list of random spawn locations
-     */
-    @Override
-    public ArrayList<SpawnLocations> getRandomSupportBotLocations() {
         return getNormalOrGiantBotLocations(normalBotSpawnLocations);
     }
 
@@ -122,7 +97,7 @@ public class GuardianCaster extends Map {
     @Override
     public void setMissionBotTags(TFBot tfBot) {
         BotTemplate template = tfBot.getBotTemplate();
-        if (template != null && template.getTemplateName() == "T_TFBot_SentryBuster") {
+        if (template != null && template.getTemplateName().equals("T_TFBot_SentryBuster")) {
             tfBot.tags.add("bot_sentrybuster");
         }
     }
@@ -135,7 +110,7 @@ public class GuardianCaster extends Map {
     @Override
     public void setBotTags(TFBot tfBot) {
         BotTemplate template = tfBot.getBotTemplate();
-        if (template != null && template.getTemplateName() == "T_TFBot_SentryBuster") {
+        if (template != null && template.getTemplateName().equals("T_TFBot_SentryBuster")) {
             return;
         }
 
@@ -185,7 +160,7 @@ public class GuardianCaster extends Map {
         String lastWaveSpawn = "";
         int totalCurrency = 0;
         for (WaveSpawn waveSpawn : wave.getWaveSpawns()) {
-            String waveSpawnName = waveSpawn.getWaveSpawnName().replace("\"", "");
+            String waveSpawnName = waveSpawn.getWaveSpawnName();
             if (waveSpawnName != null && !waveSpawnName.equals("")) {
                 lastWaveSpawn = waveSpawnName;
             }
@@ -216,8 +191,8 @@ public class GuardianCaster extends Map {
 
     /**
      * Performs any necessary setup for a given wave spawn number
-     * Clears the smoke event if it's being used
-     * Creates a smoke vent at a 25% chance
+     * Clears the event if it's the last wave spawn
+     * Has a 33% chance of starting a new event if NOT the last wave spawn
      * @param waveSpawnNumber - the wave spawn
      * @param isLastWaveSpawn - whether this is the final wave spawn
      */
@@ -228,16 +203,6 @@ public class GuardianCaster extends Map {
             endActiveHazard(waveSpawn);
         } else if (!isHazardActive && !isLastWaveSpawn && PopRandomizer.generateBooleanFromPercentage(33)) {
             startRandomHazard(waveSpawn);
-        }
-    }
-
-    /**
-     * Sets bot scale to be 1.7 if it's greater than that
-     * @param tfBot  - the bot to adjust the attributes of
-     */
-    public void adjustBotAttributes(TFBot tfBot) {
-        if (tfBot.getScale() > 1.7 || (tfBot.getIsGiant() && tfBot.getBotTemplate() != null)) {
-            tfBot.setScale(1.7);
         }
     }
 
@@ -254,7 +219,7 @@ public class GuardianCaster extends Map {
      * @param waveSpawn - the wave spawn
      */
     private void startRandomHazard(WaveSpawn waveSpawn) {
-        String hazardName = "";
+        String hazardName;
         if (PopRandomizer.generateBoolean()) {
             hazardName = "toxic";
             usingToxicHazard = true;
@@ -310,5 +275,15 @@ public class GuardianCaster extends Map {
             hazardName = "toxic";
         }
         return hazardName;
+    }
+
+    /**
+     * Sets bot scale to be 1.7 if it's greater than that
+     * @param tfBot - the bot to adjust the attributes of
+     */
+    public void adjustBotAttributes(TFBot tfBot) {
+        if (tfBot.getScale() > 1.7 || (tfBot.getIsGiant() && tfBot.getBotTemplate() != null)) {
+            tfBot.setScale(1.7);
+        }
     }
 }
