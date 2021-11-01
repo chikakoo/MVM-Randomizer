@@ -166,9 +166,6 @@ public enum SpawnLocations {
     // Sharp
     SPAWN_BOT_SHARP_SECONDARY("spawnbot_secondary"),
     SPAWN_BOT_SHARP_INVASION("spawnbot_invasion"),
-    SPAWN_BOT_SHARP_LEFT("spawnbot_left"),
-    SPAWN_BOT_SHARP_MIDDLE("spawnbot_middle"),
-    SPAWN_BOT_SHARP_RIGHT("spawnbot_right"),
 
     // Trainyard
     SPAWN_BOT_TRAINYARD_SENTRY_BUSTER("spawnbot_mission_sentrybuster"),
