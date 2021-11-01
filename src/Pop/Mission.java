@@ -118,11 +118,16 @@ public class Mission extends PopObjectRepresentation {
     }
 
     /**
-     * Sets the initial cooldown, cooldown time, and number of spawns
+     * Sets the initial cooldown and cooldown time
      */
     private void setRandomMissionValues() {
         initialCooldown = PopRandomizer.generateNumberInRange(10, 60);
         cooldownTime = PopRandomizer.generateNumberInRange(20, 60);
+
+        if (MVMRandomizer.botSettings.isWave666Mode()) {
+            initialCooldown *= PopRandomizer.generateNumberInRange(2, 10);
+            cooldownTime *= 2;
+        }
     }
 
     /**

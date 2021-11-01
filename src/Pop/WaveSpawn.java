@@ -35,6 +35,14 @@ public class WaveSpawn extends PopObjectRepresentation {
     }
 
     /**
+     * The done output object - not used by most maps
+     */
+    private PopObject doneOutput;
+    public void setDoneOutput(PopObject doneOutput) {
+        this.doneOutput = doneOutput;
+    }
+
+    /**
      * The name of the wave
      */
     private String waveSpawnName = "";
@@ -47,6 +55,7 @@ public class WaveSpawn extends PopObjectRepresentation {
      * The total number of bots in this set of bots
      */
     private int totalCount = 10;
+    public int getTotalCount() { return totalCount; }
     public void setTotalCount(int totalCount) { this.totalCount = totalCount; }
 
     /**
@@ -59,6 +68,7 @@ public class WaveSpawn extends PopObjectRepresentation {
      * The max number of bots that can spawn at once
      */
     private int spawnCount = 2;
+    public int getSpawnCount() { return spawnCount; }
     public void setSpawnCount(int spawnCount) { this.spawnCount = spawnCount; }
 
     /**
@@ -80,6 +90,31 @@ public class WaveSpawn extends PopObjectRepresentation {
     public void setWaitForAllSpawned(String waitForAllSpawned)
     {
         this.waitForAllSpawned =  "\"" + waitForAllSpawned + "\"";;
+    }
+
+    /**
+     * The name of the wave to wait for everything to die before spawning this set
+     */
+    private String waitForAllDead = "";
+    public void setWaitForAllDead(String waitForAllDead)
+    {
+        this.waitForAllDead =  "\"" + waitForAllDead + "\"";
+    }
+
+    /**
+     * The sound to play before the wave spawn starts
+     */
+    private String startWaveWarningSound = "";
+    public void setStartWaveWarningSound(String startWaveWarningSound) {
+        this.startWaveWarningSound = "\"" + startWaveWarningSound + "\"";
+    }
+
+    /**
+     * The sound to play after the first wave spawn happens
+     */
+    private String firstSpawnWarningSound = "";
+    public void setFirstSpawnWarningSound(String firstSpawnWarningSound) {
+        this.firstSpawnWarningSound = "\"" + firstSpawnWarningSound + "\"";
     }
 
     /**
@@ -105,6 +140,7 @@ public class WaveSpawn extends PopObjectRepresentation {
      * The bot type to spawn
      */
     private Squad squad = new Squad();
+    public Squad getSquad() { return squad; }
 
     /**
      * Whether to hide the icon - this will override the squad object with what's entered here
@@ -164,6 +200,7 @@ public class WaveSpawn extends PopObjectRepresentation {
 
         popObject.addObject(startWaveOutput);
         popObject.addObject(firstSpawnOutput);
+        popObject.addObject(doneOutput);
 
         if (!waveSpawnName.equals("")) {
             popObject.addAttribute("Name", "\"" + waveSpawnName + "\"");
@@ -179,6 +216,22 @@ public class WaveSpawn extends PopObjectRepresentation {
         popObject.addAttribute("WaitBeforeStarting", Integer.toString(waitBeforeStarting));
         popObject.addAttribute("WaitBetweenSpawns", Integer.toString(waitBetweenSpawns));
 
+        if (!waitForAllSpawned.equals("")) {
+            popObject.addAttribute("WaitForAllSpawned", waitForAllSpawned);
+        }
+
+        if (!waitForAllDead.equals("")) {
+            popObject.addAttribute("WaitForAllDead", waitForAllDead);
+        }
+
+        if (!startWaveWarningSound.equals("")) {
+            popObject.addAttribute("StartWaveWarningSound", startWaveWarningSound);
+        }
+
+        if (!firstSpawnWarningSound.equals("")) {
+            popObject.addAttribute("FirstSpawnWarningSound", firstSpawnWarningSound);
+        }
+
         if (totalCurrency > 0) {
             popObject.addAttribute("TotalCurrency", Integer.toString(totalCurrency));
         }
@@ -188,10 +241,6 @@ public class WaveSpawn extends PopObjectRepresentation {
         }
         else if (support.getValue()) {
             popObject.addAttribute("Support", support.toString());
-        }
-
-        if (!waitForAllSpawned.equals("")) {
-            popObject.addAttribute("WaitForAllSpawned", waitForAllSpawned);
         }
 
         if (squadOverride != null) {
@@ -210,9 +259,22 @@ public class WaveSpawn extends PopObjectRepresentation {
     private PopObject getPopObjectForTankWaveSpawn() {
         PopObject popObject = new PopObject(name);
 
+        if (!waveSpawnName.equals("")) {
+            popObject.addAttribute("Name", "\"" + waveSpawnName + "\"");
+        }
+
         popObject.addAttribute("TotalCount", Integer.toString(totalCount));
         popObject.addAttribute("WaitBeforeStarting", Integer.toString(waitBeforeStarting));
         popObject.addAttribute("WaitBetweenSpawns", Integer.toString(waitBetweenSpawns));
+
+        if (!waitForAllDead.equals("")) {
+            popObject.addAttribute("WaitForAllDead", waitForAllDead);
+        }
+
+        if (!startWaveWarningSound.equals("")) {
+            popObject.addAttribute("StartWaveWarningSound", startWaveWarningSound);
+        }
+
         popObject.addAttribute("TotalCurrency", Integer.toString(totalCurrency));
 
         PopObject firstSpawnOutput = new PopObject("FirstSpawnOutput");
@@ -262,9 +324,7 @@ public class WaveSpawn extends PopObjectRepresentation {
         }
 
         adjustCounts(tfBot);
-        if (maxActive == totalCount) {
-            maxActive++;
-        }
+        fixSpawnCount();
 
         spawnLocations = tfBot.getIsGiant() ?
             MVMRandomizer.currentMap.getRandomGiantBotLocations() :
@@ -273,10 +333,7 @@ public class WaveSpawn extends PopObjectRepresentation {
         MVMRandomizer.currentMap.setBotTags(tfBot, spawnLocations);
         MVMRandomizer.currentMap.setBotTags(tfBot);
         MVMRandomizer.currentMap.adjustBotAttributes(tfBot);
-
         MVMRandomizer.currentMap.changeSpawnLocationFromTags(tfBot.tags, spawnLocations);
-
-        fixSpawnCount();
     }
 
     /**

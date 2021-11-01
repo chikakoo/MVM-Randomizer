@@ -73,6 +73,7 @@ public class Wave extends PopObjectRepresentation {
 
     /**
      * Generates a random representation of this object
+     * @param waveNumber - the current wave number
      */
     public void generateRandom(int waveNumber) {
         int numberOfWaveSpawns = MVMRandomizer.waveSettings.getNumberOfWaveSpawnsForWave(waveNumber);
@@ -91,9 +92,10 @@ public class Wave extends PopObjectRepresentation {
         int currencyPerWave = totalCurrency.intValue() / numberOfWaveSpawns;
 
         for(int i = 0; i < numberOfWaveSpawns; i++) {
+            int waveSpawnNumber = i + 1;
             boolean isTankWave = waveShouldHaveTanks && (tankWaveNumber == i + 1);
             boolean isLastWaveSpawn = i == numberOfWaveSpawns - 1;
-            generateWaveSpawn(waveNumber, currencyPerWave, isTankWave, isLastWaveSpawn);
+            generateWaveSpawn(waveNumber, waveSpawnNumber, currencyPerWave, isTankWave, isLastWaveSpawn);
         }
 
         generateSupports(waveNumber);
@@ -102,11 +104,23 @@ public class Wave extends PopObjectRepresentation {
     /**
      * Generates a set of bots to spawn in the wave
      * @param waveNumber - the current wave number
+     * @param waveSpawnNumber - the current wave spawn number
      * @param currencyPerWave - the amount of currency per wave
      * @param isTankWave - whether this wave has tanks
      */
-    private void generateWaveSpawn(int waveNumber, int currencyPerWave, boolean isTankWave, boolean isLastWaveSpawn) {
+    private void generateWaveSpawn(int waveNumber, int waveSpawnNumber, int currencyPerWave, boolean isTankWave, boolean isLastWaveSpawn) {
         WaveSpawn waveSpawn = new WaveSpawn(false);
+        boolean isWave666Mode = MVMRandomizer.botSettings.isWave666Mode();
+
+        if (waveSpawnNumber == 1 && isWave666Mode) {
+            numberOfGiantSpawns = 0;
+
+            if (waveNumber > 1) {
+                int firstSpawnId = PopRandomizer.generateNumberInRange(1, 12); // There are 12 of these sounds
+                waveSpawn.setStartWaveWarningSound("vo/mvm_get_to_upgrade01.mp3");
+                waveSpawn.setFirstSpawnWarningSound("vo/mvm_wave_start" + String.format("%02d", firstSpawnId) + ".mp3");
+            }
+        }
 
         if (isTankWave) {
             waveSpawn.generateRandomTanks();
@@ -122,14 +136,24 @@ public class Wave extends PopObjectRepresentation {
             waveHasBots = true;
         }
 
-        int waveSpawnNumber = waveSpawns.size() + 1;
-        waveSpawn.setWaveSpawnName("wave# " + waveNumber + "-" + waveSpawnNumber);
+        waveSpawn.setWaveSpawnName(getWaveSpawnName(waveNumber, waveSpawnNumber));
         waveSpawn.setTotalCurrency(currencyPerWave);
 
-        if (waveSpawnNumber > 1) {
-            // waveSpawn.setWaitForAllSpawned("wave " + (waveSpawnNumber - 1)); //TODO: use this?
+        if (isWave666Mode)
+        {
+            // Wait for all previous bots to be dead before spawning the next set
+            if (waveNumber > 1) {
+                waveSpawn.setWaitForAllDead(getWaveSpawnName(waveNumber - 1, 0));
 
-            int previousWaitBeforeStarting = (waveSpawns.get(waveSpawnNumber - 2)).getWaitBeforeStarting();
+                // Set a delay on the next groups of bots
+                if (waveSpawnNumber == 1) {
+                    waveSpawn.setWaitBeforeStarting(PopRandomizer.generateNumberInRange(15, 30));
+                }
+            }
+        }
+
+        if (waveSpawnNumber > 1) {
+            int previousWaitBeforeStarting = (waveSpawns.get(waveSpawns.size() - 1)).getWaitBeforeStarting();
             int waitBeforeStarting = previousWaitBeforeStarting + PopRandomizer.generateNumberInRange(5, 15);
             waveSpawn.setWaitBeforeStarting(waitBeforeStarting);
         }
@@ -139,17 +163,36 @@ public class Wave extends PopObjectRepresentation {
     }
 
     /**
-     * Generate supports, currently a 35% chance, or 100% if the map is Manhattan
+     * Gets the wave spawn name
+     * @param waveNumber - the wave number
+     * @param waveSpawnNumber - the wave spawn number
+     * @return The wave spawn name
+     */
+    private String getWaveSpawnName(int waveNumber, int waveSpawnNumber)
+    {
+        if (MVMRandomizer.botSettings.isWave666Mode()) {
+            return "wave# " + waveNumber;
+        }
+        return "wave# " + waveNumber + "-" + waveSpawnNumber;
+    }
+
+    /**
+     * Generate supports based on the map settings
      * @param waveNumber - the current wave number
      */
     private void generateSupports(int waveNumber) {
-        if (MVMRandomizer.currentMap.usesGateBots() ||
-                MVMRandomizer.currentMap.usesChipBots() ||
+        if (MVMRandomizer.botSettings.isWave666Mode() && waveNumber > 1) {
+            return;
+        }
+
+        if (MVMRandomizer.currentMap.shouldForceGenerateSupports() ||
                 MVMRandomizer.waveSettings.shouldGenerateSupports(waveNumber)) {
             WaveSpawn waveSpawn = new WaveSpawn();
             waveSpawn.generateSupports();
             waveSpawn.setWaitBeforeStarting(0);
             waveSpawns.add(waveSpawn);
+
+            MVMRandomizer.currentMap.setUpForSupportWaveSpawn(waveSpawn);
         }
     }
 }

@@ -3,6 +3,7 @@ package Pop.Maps;
 import Pop.*;
 import Pop.Bot.BotTemplate;
 import Pop.Enums.SpawnLocations;
+import Pop.Enums.TFClasses;
 import Pop.Enums.TankRoutes;
 
 import java.util.ArrayList;
@@ -14,6 +15,12 @@ public class GuardianCaster extends Map {
      */
     private boolean usingSmokeHazard = false;
     private boolean usingToxicHazard = false;
+
+    /**
+     * The last nav tag assigned to the bot
+     * Used with squads with medics so they match
+     */
+    private String currentBotNavTag;
 
     /**
      * Constructor
@@ -114,18 +121,30 @@ public class GuardianCaster extends Map {
             return;
         }
 
-        if (tfBot.getIsGiant()) {
-            tfBot.tags.add("bot_giant");
-        }
-
-        tfBot.tags.add("bot_gatebot");
-        tfBot.addBehaviorModifier("Push");
-        tfBot.addAttribute("IgnoreFlag");
+        setGateBotInfo(tfBot);
 
         ArrayList<String> tags = new ArrayList<>(
                 Arrays.asList("nav_prefer_top_right", "nav_prefer_top_left", "nav_prefer_left", "nav_prefer_right"));
         String tag = PopRandomizer.randomElement(tags);
+        currentBotNavTag = tag;
         tfBot.tags.add(tag);
+    }
+
+    /**
+     * Sets the gatebot info on the bot
+     * @param tfBot - the bot
+     */
+    private void setGateBotInfo(TFBot tfBot) {
+        if (tfBot.getIsGiant()) {
+            tfBot.tags.add("bot_giant");
+        }
+
+        if (!tfBot.getTFClass().equals(TFClasses.MEDIC)) {
+            tfBot.tags.add("bot_gatebot");
+        }
+
+        tfBot.addBehaviorModifier("Push");
+        tfBot.addAttribute("IgnoreFlag");
     }
 
     /**
@@ -193,6 +212,7 @@ public class GuardianCaster extends Map {
      * Performs any necessary setup for a given wave spawn number
      * Clears the event if it's the last wave spawn
      * Has a 33% chance of starting a new event if NOT the last wave spawn
+     * Handles setting up squads for medic wave spawns
      * @param waveSpawnNumber - the wave spawn
      * @param isLastWaveSpawn - whether this is the final wave spawn
      */
@@ -204,6 +224,41 @@ public class GuardianCaster extends Map {
         } else if (!isHazardActive && !isLastWaveSpawn && PopRandomizer.generateBooleanFromPercentage(33)) {
             startRandomHazard(waveSpawn);
         }
+
+        ArrayList<TFBot> tfBotsInWaveSpawn = waveSpawn.getSquad().getTFBots();
+        if (tfBotsInWaveSpawn.size() == 1 && tfBotsInWaveSpawn.get(0).getTFClass().equals(TFClasses.MEDIC)) {
+            TFBot medicSquadBot = TFBot.generateRandomForMedicSquad();
+            setGateBotInfo(medicSquadBot);
+            medicSquadBot.tags.add(currentBotNavTag);
+            tfBotsInWaveSpawn.add(0, medicSquadBot);
+            fixMedicWaveSpawnCounts(waveSpawn);
+        }
+    }
+
+    /**
+     * Fix the medic wave spawn counts so they line up
+     * @param waveSpawn - the wave spawn to correct
+     */
+    private void fixMedicWaveSpawnCounts(WaveSpawn waveSpawn) {
+        int spawnCount = waveSpawn.getSpawnCount();
+        if (spawnCount % 2 != 0) { // We need an even number, since there's 2 bots per squad
+            spawnCount++;
+        }
+
+        int totalCount = waveSpawn.getTotalCount();
+        int spawnMultiplier = (int)Math.ceil((double)totalCount / spawnCount);
+
+        totalCount = spawnCount * spawnMultiplier;
+
+        // We don't want to reduce the number of giants, so we'll just add bots for the giants to heal instead
+        if (waveSpawn.getHasGiant()) {
+            totalCount *= 2;
+            spawnCount *= 2;
+        }
+
+        waveSpawn.setTotalCount(totalCount);
+        waveSpawn.setMaxActive(spawnCount);
+        waveSpawn.setSpawnCount(spawnCount);
     }
 
     /**

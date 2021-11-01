@@ -183,7 +183,11 @@ public enum SpawnLocations {
 
     // Sanctum Fortress
     SPAWN_BOT_SANCTUM_FORTRESS_SENTRY_BUSTER("spawnbot_sentrybuster"),
-    SPAWN_BOT_SANCTUM_FORTRESS_SPECIAL_BOMB("spawnbot_specialbomb");
+    SPAWN_BOT_SANCTUM_FORTRESS_SPECIAL_BOMB("spawnbot_specialbomb"),
+
+    // Constant
+    SPAWN_BOT_CONSTANT_BOMB_PURGATORY("bomb_purgatory"),
+    SPAWN_BOT_CONSTANT_FLANKER("spawnbot_flank");
 
     /**
      * The attribute for spawn location value

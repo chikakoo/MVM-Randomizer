@@ -5,7 +5,7 @@ import Pop.PopRandomizer;
 /**
  * A list of maps
  */
-public enum Maps implements RandomizableEnum, JsonSerializableEnum {
+public enum Maps implements JsonSerializableEnum {
     DEFAULT("Random"),
     COALTOWN("Coaltown"),
     DECOY("Decoy"),
@@ -66,22 +66,6 @@ public enum Maps implements RandomizableEnum, JsonSerializableEnum {
      */
     Maps(String map) {
         this.map = map;
-    }
-
-    /**
-     * Generates a random value for this enum
-     * @return the generated value
-     */
-    public static Maps GenerateRandomValue() {
-        int index;
-        Maps map = Maps.DEFAULT;
-
-        while (map.equals(Maps.DEFAULT)) {
-            index = PopRandomizer.generateRandomValue(values().length);
-            map = values()[index];
-        }
-
-        return map;
     }
 
     /**

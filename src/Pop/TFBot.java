@@ -315,11 +315,16 @@ public class TFBot extends PopObjectRepresentation {
             weaponRestrictions = WeaponRestrictions.MELEE_ONLY;
         }
 
-        if (this instanceof RandomBot) {
+        if (this.getBotTemplate() == null && this instanceof RandomBot) {
             // Rename the bot in case they are named after a different weapon
-            ((RandomBot)this).setRandomBotName();
+            this.setRandomBotName();
         }
     }
+
+    /**
+     * Here so the above works properly - this is overridden in RandomBot
+     */
+    protected void setRandomBotName() {}
 
     /**
      * Returns whether the bot is using any of the bow weapons
@@ -369,6 +374,15 @@ public class TFBot extends PopObjectRepresentation {
     public static RandomBot generateRandom(int waveNumber, boolean canGenerateGiants, boolean includeSpies) {
         boolean generateGiant = canGenerateGiants && MVMRandomizer.waveSettings.shouldGenerateGiantBot(waveNumber);
         return RandomBot.generateBot(generateGiant, includeSpies);
+    }
+
+    /**
+     * Generates a bot to use with a medic squad
+     * Uses another medic if none could be retrieved
+     * @return the generated bot
+     */
+    public static RandomBot generateRandomForMedicSquad() {
+        return RandomBot.generateBotForMedicSquad();
     }
 
     /**

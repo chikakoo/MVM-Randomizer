@@ -57,6 +57,8 @@ public class MVMRandomizer {
 
             if (MVMRandomizer.botSettings.isHighlanderMode()) {
                 OutputConsole.addMessage("Generated highlander file: " + getFileName());
+            } else if (MVMRandomizer.botSettings.isWave666Mode()) {
+                OutputConsole.addMessage("Generated wave 666 file: " + getFileName());
             } else {
                 OutputConsole.addMessage("Generated file: " + getFileName());
             }

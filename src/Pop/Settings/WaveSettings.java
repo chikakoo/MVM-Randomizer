@@ -60,6 +60,9 @@ public class WaveSettings {
      */
     public boolean shouldGenerateMission(int waveNumber) {
         if (!isWaveNumberValid(waveNumber)) { return false; }
+        if (MVMRandomizer.botSettings.isWave666Mode() && waveNumber > 1) {
+            return false;
+        }
 
         WaveSetting waveSetting = waves.get(waveNumber - 1);
         return PopRandomizer.generateBooleanFromPercentage(waveSetting.getPercentMissions());
@@ -71,7 +74,7 @@ public class WaveSettings {
      * @return True if the wave should generate supports; false otherwise
      */
     public boolean shouldGenerateSupports(int waveNumber) {
-        if (!isWaveNumberValid(waveNumber)) { return false; }
+        if (!isWaveNumberValid(waveNumber) || MVMRandomizer.botSettings.isWave666Mode()) { return false; }
 
         WaveSetting waveSetting = waves.get(waveNumber - 1);
         return PopRandomizer.generateBooleanFromPercentage(waveSetting.getPercentSupport());

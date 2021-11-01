@@ -111,14 +111,20 @@ public class WaveSchedule extends PopObjectRepresentation {
         Mission sentryBusterMission = Mission.createSentryBusterMission(NUMBER_OF_WAVES);
         missions.add(sentryBusterMission);
 
+        Wave wave = new Wave();
+        boolean isWave666Mode = MVMRandomizer.botSettings.isWave666Mode();
         for (int i = 0; i < NUMBER_OF_WAVES; i++) {
             int waveNumber = i + 1;
             MVMRandomizer.currentMap.setUpForWave(waveNumber);
 
-            Wave wave = new Wave();
-            wave.generateRandom(waveNumber);
-            generateRandomMissionsForWave(waveNumber);
-            addWave(wave);
+            if (i > 0 && isWave666Mode) {
+                wave.generateRandom(waveNumber);
+            } else {
+                wave = new Wave();
+                wave.generateRandom(waveNumber);
+                generateRandomMissionsForWave(waveNumber);
+                addWave(wave);
+            }
 
             MVMRandomizer.currentMap.afterWaveAdded(wave);
         }

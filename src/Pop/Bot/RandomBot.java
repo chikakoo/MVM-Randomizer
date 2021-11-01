@@ -9,6 +9,7 @@ import Pop.Bot.Weapons.WeaponModel;
 import Pop.Bot.Weapons.WeaponModels;
 import Pop.BotModifiers.BotModifiers;
 import Pop.Enums.*;
+import Pop.GUI.OutputConsole;
 import Pop.Settings.BotSetting;
 
 import java.util.ArrayList;
@@ -97,6 +98,21 @@ public abstract class RandomBot extends TFBot {
             bot.generateStandardBot();
         }
 
+        return bot;
+    }
+
+    /**
+     * Generates a bot to use with a medic squad
+     * Uses another medic if none could be retrieved
+     * @return the generated bot
+     */
+    public static RandomBot generateBotForMedicSquad() {
+        RandomBot bot = RandomBot.getBotFromEnum(MVMRandomizer.botSettings.getBotClassForMedicSquad());
+        if (bot == null) {
+            OutputConsole.addMessage("ERROR: Could not generate a bot for medic squad! Using medic...");
+            bot = RandomBot.getBotFromEnum(TFClasses.MEDIC);
+        }
+        bot.generateStandardBot();
         return bot;
     }
 
@@ -425,6 +441,7 @@ public abstract class RandomBot extends TFBot {
      * If the main weapon has a custom projectile, then use the name of that projectile
      * Prefixes "Giant" if the bot is a giant
      */
+    @Override
     public void setRandomBotName() {
         botName = isGiant ? "Giant " : "";
 

@@ -338,6 +338,25 @@ public class BotSettings {
     }
 
     /**
+     * Gets a random bot class intended to be used with a medic squad
+     * This will exlcude Engineer, Medic, and Spy
+     * @return - the retrieved class
+     */
+    public TFClasses getBotClassForMedicSquad() {
+        ArrayList<WeightedItem> weightedItems = new ArrayList<>(Arrays.asList(
+                new WeightedItem<>(TFClasses.DEMOMAN, standardBotDistributions.getDemomanPercentage()),
+                new WeightedItem<>(TFClasses.HEAVY, standardBotDistributions.getHeavyPercentage()),
+                new WeightedItem<>(TFClasses.PYRO, standardBotDistributions.getPyroPercentage()),
+                new WeightedItem<>(TFClasses.SCOUT, standardBotDistributions.getScoutPercentage()),
+                new WeightedItem<>(TFClasses.SOLDIER, standardBotDistributions.getSoldierPercentage()),
+                new WeightedItem<>(TFClasses.SNIPER, standardBotDistributions.getSniperPercentage())
+        ));
+
+        WeightedItemCollection<TFClasses> weightedItemCollection = new WeightedItemCollection(weightedItems);
+        return weightedItemCollection.getRandomItem();
+    }
+
+    /**
      * Gets a random giant bot class - takes weights into consideration
      * @param includeSpy - whether to include spy
      * @return - the retrieved class

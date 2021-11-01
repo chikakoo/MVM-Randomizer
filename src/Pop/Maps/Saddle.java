@@ -2,6 +2,7 @@ package Pop.Maps;
 
 import Pop.Enums.SpawnLocations;
 import Pop.Enums.TankRoutes;
+import Pop.MVMRandomizer;
 import Pop.PopObject;
 
 import java.util.ArrayList;
@@ -10,6 +11,18 @@ import java.util.ArrayList;
  * (Community) Saddle
  */
 public class Saddle extends Map {
+    /**
+     * Custom start/stop/init wave attribute names
+     */
+    private String customStartWaveOutputName;
+    private String customEndWaveOutputName;
+
+    /**
+     * The highest init wave output we should be including - this is so the appropriate doors are open
+     * if you fail the wave
+     */
+    private int maxInitWaveOutputNumber;
+
     /**
      * Constructor
      */
@@ -35,7 +48,7 @@ public class Saddle extends Map {
 
         if (customStartWaveOutputName != null) {
             startWaveOutput.addAttribute("Target", customStartWaveOutputName);
-            startWaveOutput.addAttribute("Action", "trigger");
+            startWaveOutput.addAttribute("Action", "Trigger");
         }
 
         return startWaveOutput;
@@ -49,14 +62,32 @@ public class Saddle extends Map {
     public PopObject createDoneOutputObject() {
         PopObject doneOutput = new PopObject("DoneOutput");
         doneOutput.addAttribute("Target", "wave_finished_relay");
-        doneOutput.addAttribute("Action", "trigger");
+        doneOutput.addAttribute("Action", "Trigger");
 
         if (customEndWaveOutputName != null) {
             doneOutput.addAttribute("Target", customEndWaveOutputName);
-            doneOutput.addAttribute("Action", "trigger");
+            doneOutput.addAttribute("Action", "Trigger");
         }
 
         return doneOutput;
+    }
+
+    /**
+     * Creates the object for InitWaveOutput - this ensures that the doors stay open if you lose
+     * @return the created object - null if none should be created
+     */
+    public PopObject createInitWaveOutputObject() {
+        if (maxInitWaveOutputNumber < 1) {
+            return null;
+        }
+
+        PopObject initWaveOutput = new PopObject("InitWaveOutput");
+        for (int i = 1; i <= maxInitWaveOutputNumber; i++)
+        {
+            initWaveOutput.addAttribute("Target", "wave_stop_clock_relay" + i);
+            initWaveOutput.addAttribute("Action", "Trigger");
+        }
+        return initWaveOutput;
     }
 
     /**
@@ -65,15 +96,21 @@ public class Saddle extends Map {
      */
     @Override
     public void setUpForWave(int waveNumber) {
+        if (MVMRandomizer.botSettings.isWave666Mode()) { // Force all the gates open
+            waveNumber = 5;
+        }
+
         tankRoutes.clear();
         if (waveNumber > 4) {
             tankRoutes.add(TankRoutes.SADDLE);
         }
 
         if (waveNumber != 1) { // The first wave doesn't need to open any of the gates
-            String outputNumberString = getOutputNumberForGivenWave(waveNumber);
+            int outputNumber = getOutputNumberForGivenWave(waveNumber);
+            String outputNumberString = outputNumber + "";
             customStartWaveOutputName = "wave_" + outputNumberString + "_start_clock_relay";
             customEndWaveOutputName = "wave_stop_clock_relay" + outputNumberString;
+            maxInitWaveOutputNumber = outputNumber - 1;
         } else {
             customStartWaveOutputName = null;
             customEndWaveOutputName = null;
@@ -87,17 +124,17 @@ public class Saddle extends Map {
      * @param waveNumber - the wave number
      * @return The output number
      */
-    private String getOutputNumberForGivenWave(int waveNumber) {
+    private int getOutputNumberForGivenWave(int waveNumber) {
         switch (waveNumber) {
             case 1:
             case 2:
-                return "1";
+                return 1;
             case 3:
-                return "2";
+                return 2;
             case 4:
-                return "3"; // Note that 3 is the same as 2 in terms of functionality
+                return 3; // Note that 3 is the same as 2 in terms of functionality
             default:
-                return "4";
+                return 4;
         }
     }
 

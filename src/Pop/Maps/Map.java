@@ -80,12 +80,6 @@ public class Map {
     }
 
     /**
-     * Custom start/stop wave attribute names - only currently used by Saddle
-     */
-    protected String customStartWaveOutputName;
-    protected String customEndWaveOutputName;
-
-    /**
      * Whether this map uses gate bots - used to determine whether to always generate a support
      */
     protected boolean usesGateBots = false;
@@ -96,6 +90,14 @@ public class Map {
      */
     protected boolean usesChipBots = false;
     public boolean usesChipBots() { return usesChipBots; }
+
+    /**
+     * Whether we should force generate support bots
+     * @return True or false - this checks gate and chip bot settings
+     */
+    public boolean shouldForceGenerateSupports() {
+        return usesGateBots || usesChipBots;
+    }
 
     /**
      * Constructor
@@ -244,7 +246,7 @@ public class Map {
     public PopObject createStartWaveOutputObject() {
         PopObject startWaveOutput = new PopObject("StartWaveOutput");
         startWaveOutput.addAttribute("Target", "wave_start_relay");
-        startWaveOutput.addAttribute("Action", "trigger");
+        startWaveOutput.addAttribute("Action", "Trigger");
 
         return startWaveOutput;
     }
@@ -256,7 +258,7 @@ public class Map {
     public PopObject createDoneOutputObject() {
         PopObject doneOutput = new PopObject("DoneOutput");
         doneOutput.addAttribute("Target", "wave_finished_relay");
-        doneOutput.addAttribute("Action", "trigger");
+        doneOutput.addAttribute("Action", "Trigger");
 
         return doneOutput;
     }
@@ -374,11 +376,20 @@ public class Map {
     }
 
     /**
-     * Performs any necessary setup for a given wave spawn number
-     * @param waveSpawnNumber - the wave spawn
+     * Performs any necessary setup for a given wave spawn
+     * @param waveSpawn - the wave spawn
+     * @param waveSpawnNumber - the wave spawn number
      * @param isLastWaveSpawn - whether this is the final wave spawn
      */
     public void setUpForWaveSpawn(WaveSpawn waveSpawn, int waveSpawnNumber, boolean isLastWaveSpawn) {
+        // No code here, overridden by the relevant maps
+    }
+
+    /**
+     * Performs any necessary setup for a given support wave spawn
+     * @param waveSpawn - the wave spawn
+     */
+    public void setUpForSupportWaveSpawn(WaveSpawn waveSpawn) {
         // No code here, overridden by the relevant maps
     }
 

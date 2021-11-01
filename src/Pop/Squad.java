@@ -9,8 +9,8 @@ public class Squad extends PopObjectRepresentation {
     /**
      * The list of bots in the squad
      */
-    private ArrayList<PopObjectRepresentation> tfBots = new ArrayList();
-    public ArrayList<PopObjectRepresentation> getTFBots() { return tfBots; }
+    private ArrayList<TFBot> tfBots = new ArrayList();
+    public ArrayList<TFBot> getTFBots() { return tfBots; }
 
     /**
      * Constructor
@@ -35,7 +35,7 @@ public class Squad extends PopObjectRepresentation {
         PopObject popObject = new PopObject(name);
 
         populateSquadIfEmpty();
-        popObject.addObjectRepresentations(tfBots);
+        popObject.addObjectRepresentations(new ArrayList<>(tfBots));
 
         return popObject;
     }
