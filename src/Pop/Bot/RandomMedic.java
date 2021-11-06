@@ -107,7 +107,7 @@ public class RandomMedic extends RandomBot {
             new Cosmetic("The Shaman's Skull"),
             new Cosmetic("Teutonkahmun"),
             new Cosmetic("The Trepanabotomizer"),
-            new Cosmetic("The Nunhood"),
+            //new Cosmetic("The Nunhood"), // Glitchy looking
             new Cosmetic("The Ruffled Ruprecht"),
             new Cosmetic("The Fashionable Megalomaniac"),
             new Cosmetic("Heer's Helmet"),

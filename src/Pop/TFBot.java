@@ -63,6 +63,7 @@ public class TFBot extends PopObjectRepresentation {
      * - Returns it in all lowercase if it's not a mission or a support bot
      * - Returns it in all caps if it's a mission or support bot
      * - In either case, switches the case of the first character if the bot always crits (to separate the crit bots)
+     * - Finally, swap the casing of the last character if the bot is a giant
      * @return - The class icon string
      */
     private String getClassIconForPopFile() {
@@ -83,6 +84,14 @@ public class TFBot extends PopObjectRepresentation {
             } else {
                 classIconForPopFile = classIconForPopFile.substring(0, 1).toUpperCase() + classIconForPopFile.substring(1);
             }
+        }
+
+        if (isGiant) {
+            Character lastCharacter = classIconForPopFile.charAt(classIconForPopFile.length() - 1);
+            String lastCharString = Character.isUpperCase(lastCharacter)
+                ? lastCharacter.toString().toLowerCase()
+                : lastCharacter.toString().toUpperCase();
+            classIconForPopFile = classIconForPopFile.substring(0, classIconForPopFile.length() - 1) + lastCharString;
         }
 
         return classIconForPopFile;
