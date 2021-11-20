@@ -148,7 +148,7 @@ public class AllClassCosmeticLists {
             new Cosmetic("Duck Billed Hatypus"),
             //"Prehistoric Pullover", // Glitchy looking
             new Cosmetic("Arkham Cowl"),
-            new Cosmetic("A Well Wrapped Hat"),
+            new Cosmetic("A Well Wrapped Hat", "A Well Wrapped"),
             new Cosmetic("The Chill Chullo"),
             new Cosmetic("The Patriot Peak"),
             new Cosmetic("Bedouin Bandana"),

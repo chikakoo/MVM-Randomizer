@@ -24,7 +24,7 @@ public class RandomSniper extends RandomBot {
             new HitscanWeapon("The AWPer Hand"),
             new HitscanWeapon("The Sydney Sleeper"),
             new HitscanWeapon( "The Bazaar Bargain"),
-            new HitscanWeapon("Shooting Star"),
+            //new HitscanWeapon("Shooting Star"), // This is a machina
             new HitscanWeapon("The Hitman's Heatmaker"),
             new HuntsmanWeapon("The Huntsman"),
             new HuntsmanWeapon("Festive Huntsman", ProjectileTypes.FESTIVE_ARROW),

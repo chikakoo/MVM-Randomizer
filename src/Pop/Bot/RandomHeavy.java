@@ -50,7 +50,7 @@ public class RandomHeavy extends RandomBot {
             new Weapon("Apoco-Fists", "Apoco-Fist"),
             new Weapon("The Killing Gloves of Boxing", "Boxing"),
             new Weapon("Gloves of Running Urgently MvM", "Running Urgently"),
-            new Weapon("The Bread Bite"),
+            //new Weapon("The Bread Bite"), // Same as the Gloves of Running Urgently
             new Weapon("Warrior's Spirit"),
             new Weapon("Fists of Steel"),
             new Weapon("The Eviction Notice"),
