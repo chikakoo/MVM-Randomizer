@@ -22,11 +22,11 @@ public abstract class StickyLauncherBase extends Weapon {
 
     /**
      * Sets it up so that these weapons have a custom projectile model
-     * Also adds the fire rate and clip rate bonus so that they will actually be dangerous
+     * Also adds the fire rate and clip size bonus so that they will actually be dangerous
      */
     private void setExtraProperties() {
         this.canHaveCustomProjectileModel = true;
         itemAttributes.add("fire rate bonus", "1");
-        itemAttributes.add("clip rate bonus", "10");
+        itemAttributes.add("clip size bonus", "10");
     }
 }
