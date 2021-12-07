@@ -125,6 +125,11 @@ public class WaveSpawn extends PopObjectRepresentation {
     public void setTotalCurrency(int totalCurrency) { this.totalCurrency = totalCurrency; }
 
     /**
+     * Whether the wave spawn has RandomSpawn 1 set to spawn the bots at any spawn point with the same name
+     */
+    private PopBoolean randomSpawns;
+
+    /**
      * Whether these bots are support
      */
     private PopBoolean support = new PopBoolean(false);
@@ -177,6 +182,10 @@ public class WaveSpawn extends PopObjectRepresentation {
     public WaveSpawn(boolean hasTank) {
         this.name = "WaveSpawn";
         this.hasTank = hasTank;
+
+        if (MVMRandomizer.waveSettings.shouldUseRandomSpawns()) {
+            this.randomSpawns = new PopBoolean(true);
+        }
     }
 
     /**
@@ -213,6 +222,11 @@ public class WaveSpawn extends PopObjectRepresentation {
         popObject.addAttribute("TotalCount", Integer.toString(totalCount));
         popObject.addAttribute("MaxActive", Integer.toString(maxActive));
         popObject.addAttribute("SpawnCount", Integer.toString(spawnCount));
+
+        if (randomSpawns != null) {
+            popObject.addAttribute("RandomSpawn", randomSpawns.toString());
+        }
+
         popObject.addAttribute("WaitBeforeStarting", Integer.toString(waitBeforeStarting));
         popObject.addAttribute("WaitBetweenSpawns", Integer.toString(waitBetweenSpawns));
 

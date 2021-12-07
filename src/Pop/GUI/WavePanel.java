@@ -20,6 +20,7 @@ public class WavePanel extends JPanel {
     /**
      * GUI Componenets
      */
+    private IntegerFieldPanel percentRandomSpawn = new IntegerFieldPanel("% random spawn:", new Dimension(30, 20));
     private AutoSelectTable waveTable;
     private WaveItemModel tableModel;
     private JPopupMenu contextMenu;
@@ -32,6 +33,7 @@ public class WavePanel extends JPanel {
     /**
      * Getters for all the settings
      */
+    public int getPercentRandomSpawn() { return percentRandomSpawn.getValue(); }
     public ArrayList<WaveSetting> getWaveSettings() { return tableModel.getWaves(); }
 
     /**
@@ -54,6 +56,7 @@ public class WavePanel extends JPanel {
         upperPanel.setMaximumSize(upperPanel.getPreferredSize());
         upperPanel.setLayout(new BoxLayout(upperPanel, BoxLayout.Y_AXIS));
 
+        upperPanel.add(percentRandomSpawn);
         this.add(upperPanel, BorderLayout.NORTH);
         this.add(tankScrollPane, BorderLayout.SOUTH);
         applySettings();
@@ -63,6 +66,8 @@ public class WavePanel extends JPanel {
      * Applies the current settings to the panel
      */
     public void applySettings() {
+        percentRandomSpawn.setValue(MVMRandomizer.waveSettings.getPercentRandomSpawn());
+
         tableModel.clear();
         for (WaveSetting waveSetting : MVMRandomizer.waveSettings.getWaves()) {
             tableModel.addRow(waveSetting);

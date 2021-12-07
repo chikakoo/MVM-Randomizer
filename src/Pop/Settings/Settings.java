@@ -144,6 +144,8 @@ public class Settings {
      * @parent the parent component that's calling this function
      */
     public static void saveSettings(JComponent parent) {
+        MVMRandomizerGUI.updateSettings();
+
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setCurrentDirectory(new File(".\\Saved Settings"));
 

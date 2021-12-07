@@ -9,6 +9,16 @@ import java.util.ArrayList;
  */
 public class WaveSettings {
     /**
+     * The percentage that each WaveSpawn will have RandomSpawn 1
+     * Has a default value of 35 (fallback in case the settings don't have the value
+     */
+    private Integer percentRandomSpawn;
+    public Integer getPercentRandomSpawn() {
+        return percentRandomSpawn == null ? 35 : percentRandomSpawn;
+    }
+    public void setPercentRandomSpawn(Integer percentRandomSpawn) { this.percentRandomSpawn = percentRandomSpawn; }
+
+    /**
      * Settings for each individual wave
      */
     private ArrayList<WaveSetting> waves = new ArrayList<>();
@@ -20,8 +30,9 @@ public class WaveSettings {
      * @param waveSettings - the object to copy settings from
      */
     public void copySettings(WaveSettings waveSettings) {
-        waves = new ArrayList<>();
+        this.percentRandomSpawn = waveSettings.getPercentRandomSpawn();
 
+        waves = new ArrayList<>();
         for (WaveSetting currentWaveSetting : waveSettings.getWaves()) {
             WaveSetting newWaveSetting = new WaveSetting();
             newWaveSetting.copySettings(currentWaveSetting);
@@ -66,6 +77,14 @@ public class WaveSettings {
 
         WaveSetting waveSetting = waves.get(waveNumber - 1);
         return PopRandomizer.generateBooleanFromPercentage(waveSetting.getPercentMissions());
+    }
+
+    /**
+     * Gets whether this wave should set RandomSpawn 1
+     * @return True if the wave should set RandomSpawn 1, false otherwise
+     */
+    public boolean shouldUseRandomSpawns() {
+        return PopRandomizer.generateBooleanFromPercentage(percentRandomSpawn);
     }
 
     /**

@@ -98,6 +98,7 @@ public class MVMRandomizerGUI extends JFrame {
         MVMRandomizer.waveScheduleSettings.setNumberOfWaves(MainPanel.getNumberOfWaves());
 
         updateWavePanelTable(); // Ensures that there are the correct number of waves if they were recently changed
+        MVMRandomizer.waveSettings.setPercentRandomSpawn((wavePanel.getPercentRandomSpawn()));
         MVMRandomizer.waveSettings.setWaves(wavePanel.getWaveSettings());
 
         // Note that the map settings table will update them as they're being edited - no need to do anything here
