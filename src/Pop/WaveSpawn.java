@@ -337,7 +337,6 @@ public class WaveSpawn extends PopObjectRepresentation {
             computeMaxActive();
         }
 
-        adjustCounts(tfBot);
         fixSpawnCount();
 
         spawnLocations = tfBot.getIsGiant() ?
@@ -382,20 +381,12 @@ public class WaveSpawn extends PopObjectRepresentation {
 
     /**
      * Adjusts the spawn count to be > 0 and less than or equal to the max active count
-     * @param tfBot
      */
-    private void adjustCounts(RandomBot tfBot) {
-        if (!tfBot.getIsGiant() && spawnCount < 1) {
+    private void fixSpawnCount() {
+        if (spawnCount < 1) {
             spawnCount = 1;
         }
 
-        fixSpawnCount();
-    }
-
-    /**
-     * Adjusts the spawn count if it is too high
-     */
-    private void fixSpawnCount() {
         if (spawnCount > maxActive) {
             spawnCount = maxActive;
         }

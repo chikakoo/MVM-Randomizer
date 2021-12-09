@@ -25,8 +25,8 @@ public class BotSettingsItemModel extends AbstractTableModel {
     private String[] columnNames = {
         "Bot Name", "Template Name",
         "Weight #", "Weight %",
-        "Low Spawn Range", "High Spawn Range",
-        "Low Spawn #", "High Spawn #",
+        "Low Total", "High Total",
+        "Low Spawn", "High Spawn",
         "Is Standard/Support?" // Changed appropriately in the initialize functions
     };
 
@@ -46,7 +46,7 @@ public class BotSettingsItemModel extends AbstractTableModel {
         } else {
             initializeForStandard();
         }
-
+        
         fireTableStructureChanged(); // For the column name change
         fireTableDataChanged();
     }

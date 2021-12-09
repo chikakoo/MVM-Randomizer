@@ -146,6 +146,8 @@ public class BotPanel extends JPanel {
             giantButton.isSelected(),
             supportButton.isSelected(),
             TFClasses.getByStringName((String)tfClassComboBox.getSelectedItem()));
+
+        botSettingsTable.getTableHeader().setToolTipText("Total is number of bots in the WaveSpawn; Spawn is number of bots that spawn at once");
     }
 
     /**
