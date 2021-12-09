@@ -41,7 +41,6 @@ public class BotSetting {
 
     /**
      * The range of the amount of bots that can be spawned for this bot for standard spawning
-     * This also affects giants
      */
     private Range standardSpawnRange;
     public Range getStandardSpawnRange() {
@@ -52,7 +51,19 @@ public class BotSetting {
     }
 
     /**
-     * The range of the amount of bots that can be spawned for this bot for support spawning
+     * The range of the amount of bots that can spawn at once for standard spawning
+     */
+    private Range standardSpawnNumber;
+    public Range getStandardSpawnNumber() {
+        return standardSpawnNumber;
+    }
+    public void setStandardSpawnNumber(Range standardSpawnNumber) {
+        this.standardSpawnNumber = standardSpawnNumber;
+    }
+
+    /**
+     * The range of the amount of support bots that can be spawned
+     * Relevant when limited support is on (see Guardian Caster for an example)
      */
     private Range supportSpawnRange;
     public Range getSupportSpawnRange() {
@@ -60,6 +71,17 @@ public class BotSetting {
     }
     public void setSupportSpawnRange(Range supportSpawnRange) {
         this.supportSpawnRange = supportSpawnRange;
+    }
+
+    /**
+     * The range of the amount of support bots that can spawn at once
+     */
+    private Range supportSpawnNumber;
+    public Range getSupportSpawnNumber() {
+        return supportSpawnNumber;
+    }
+    public void setSupportSpawnNumber(Range supportSpawnNumber) {
+        this.supportSpawnNumber = supportSpawnNumber;
     }
 
     /**
@@ -99,6 +121,8 @@ public class BotSetting {
             int supportWeight,
             Range standardSpawnRange,
             Range supportSpawnRange,
+            Range standardSpawnNumber,
+            Range supportSpawnNumber,
             boolean isStandard,
             boolean isSupport) {
         this.template = template;
@@ -106,6 +130,8 @@ public class BotSetting {
         this.supportWeight = supportWeight;
         this.standardSpawnRange = standardSpawnRange;
         this.supportSpawnRange = supportSpawnRange;
+        this.standardSpawnNumber = standardSpawnNumber;
+        this.supportSpawnNumber = supportSpawnNumber;
         this.isStandard = isStandard;
         this.isSupport = isSupport;
     }
@@ -126,6 +152,7 @@ public class BotSetting {
             template,
             100, 100,
             new Range(spawnRange), RandomBot.SUPPORT_SPAWN_RANGE,
+            getDefaultStandardSpawnNumber(isGiantBot), getDefaultSupportSpawnNumber(isGiantBot),
             true, !isGiantBot
         );
 
@@ -134,6 +161,40 @@ public class BotSetting {
         }
 
         return newBotSetting;
+    }
+
+    /**
+     * Gets the default spawn number for non-support bots
+     * @param isGiantBot - whether the bot is giant
+     * @return - the default spawn number range
+     */
+    public static Range getDefaultStandardSpawnNumber(boolean isGiantBot) {
+        return isGiantBot ? new Range(1, 2): new Range(3, 7);
+    }
+
+    /**
+     * Gets the default spawn number for support bots
+     * @param isGiantBot - whether the bot is giant
+     * @return - the default spawn number range
+     */
+    public static Range getDefaultSupportSpawnNumber(boolean isGiantBot) {
+        return isGiantBot ? new Range(1, 1): new Range(2, 2);
+    }
+
+    /**
+     * Sets the default spawn numbers for standard and support if the values are null or have a range of 0
+     * (which would break things!)
+     * @param isGiantBot - whether the bot is giant
+     * @return - the default spawn number range
+     */
+    public void setDefaultSpawnNumbersIfNeeded(boolean isGiantBot) {
+        if (standardSpawnNumber == null || supportSpawnNumber.sum() == 0) {
+            setStandardSpawnNumber(getDefaultStandardSpawnNumber(isGiantBot));
+        }
+
+        if (supportSpawnNumber == null || supportSpawnNumber.sum() == 0) {
+            setSupportSpawnNumber(getDefaultSupportSpawnNumber(isGiantBot));
+        }
     }
 
     /**
@@ -146,6 +207,8 @@ public class BotSetting {
         supportWeight = botSetting.getSupportWeight();
         standardSpawnRange = new Range(botSetting.getStandardSpawnRange());
         supportSpawnRange = new Range(botSetting.getSupportSpawnRange());
+        standardSpawnNumber = new Range(botSetting.getStandardSpawnNumber());
+        supportSpawnNumber = new Range(botSetting.getSupportSpawnNumber());
         isStandard = botSetting.getIsStandard();
         isSupport = botSetting.getIsSupport();
     }

@@ -110,6 +110,10 @@ public class MVMRandomizerGUI extends JFrame {
         MVMRandomizer.botSettings.setGiantBotDistributions(botPanel.getGiantBotDistributions());
         MVMRandomizer.botSettings.setSupportBotDistributions(botPanel.getSupportBotDistributions());
 
+        MVMRandomizer.randomBotSettings.setStandardNormalSpawnNumberRange(randomBotPanel.getStandardNormalBotSpawnNumber());
+        MVMRandomizer.randomBotSettings.setStandardGiantSpawnNumberRange(randomBotPanel.getStandardGiantBotSpawnNumber());
+        MVMRandomizer.randomBotSettings.setSupportNormalSpawnNumberRange(randomBotPanel.getSupportNormalBotSpawnNumber());
+        MVMRandomizer.randomBotSettings.setSupportGiantSpawnNumberRange(randomBotPanel.getSupportGiantBotSpawnNumber());
         MVMRandomizer.randomBotSettings.setPercentAttributes(randomBotPanel.getPercentAttributes());
         MVMRandomizer.randomBotSettings.setMaxAttributes(randomBotPanel.getMaxNumberOfAttributes());
         MVMRandomizer.randomBotSettings.setPercentCosmetic(randomBotPanel.getPercentCosmetic());

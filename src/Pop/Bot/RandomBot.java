@@ -46,6 +46,21 @@ public abstract class RandomBot extends TFBot {
     }
     public void setSpawnRange(Range spawnRange) { this.spawnRange = spawnRange; }
 
+    protected Range spawnNumber;
+    public Range getSpawnNumber() {
+        // Use defaults if nothing is actually set for the bot
+        if (spawnNumber == null || spawnNumber.sum() == 0) {
+            OutputConsole.addMessage(
+                "Bot spawn number not found - using defaults: name - " + botName + "; is support - " + isSupportBot);
+
+            return isSupportBot ?
+                BotSetting.getDefaultSupportSpawnNumber(isGiant) :
+                BotSetting.getDefaultStandardSpawnNumber(isGiant);
+        }
+
+        return spawnNumber;
+    }
+
     /**
      * All lists of weapons for the bot
      */
@@ -172,11 +187,15 @@ public abstract class RandomBot extends TFBot {
         if (generateCustomBot) {
             generateCustomBot();
             spawnRange = isGiant ? new Range(1, 1) : new Range(2, 5);
+            spawnNumber = isGiant ?
+                MVMRandomizer.randomBotSettings.getSupportGiantSpawnNumberRange() :
+                MVMRandomizer.randomBotSettings.getSupportNormalSpawnNumberRange();
         } else {
             BotSetting botSetting = MVMRandomizer.botSettings.getRandomSupportBotSetting(tfClass);
             template = botSetting.getTemplate();
             classIcon = template.getClassIcon();
-            spawnRange = botSetting.getSupportSpawnRange();
+            spawnRange = botSetting.getSupportSpawnRange(); // Used by missions and GD Caster
+            spawnNumber = botSetting.getSupportSpawnNumber();
             adjustWeaponAttributesForTemplatedBots();
             addRandomProjectileModelForTemplatedBot();
         }
@@ -187,7 +206,7 @@ public abstract class RandomBot extends TFBot {
     }
 
     /**
-     * Generates a random bot that isn't based on a template
+     * Generates a random non-giant bot
      * @return the random bot
      */
     public void generateStandardBot() {
@@ -219,6 +238,9 @@ public abstract class RandomBot extends TFBot {
                 spawnRange = RandomBot.HARD_SPAWN_RANGE;
         }
 
+        spawnNumber = isGiant ?
+            MVMRandomizer.randomBotSettings.getStandardGiantSpawnNumberRange() :
+            MVMRandomizer.randomBotSettings.getStandardNormalSpawnNumberRange();
         classIcon = "random_" + tfClass.getDisplayString().toLowerCase();
         generateRandomWeapons();
         generateRandomCosmetic();
@@ -236,6 +258,7 @@ public abstract class RandomBot extends TFBot {
      */
     private void generateCustomGiantBot() {
         isGiant = true;
+        spawnNumber = MVMRandomizer.randomBotSettings.getStandardGiantSpawnNumberRange();
         health = PopRandomizer.generateNumberInRange(2000, 4000);
         skillLevel = SkillLevels.EXPERT;
 
@@ -530,6 +553,7 @@ public abstract class RandomBot extends TFBot {
         template = botSetting.getTemplate();
         classIcon = template.getClassIcon();
         spawnRange = botSetting.getStandardSpawnRange();
+        spawnNumber = botSetting.getStandardSpawnNumber();
         adjustWeaponAttributesForTemplatedBots();
         addRandomProjectileModelForTemplatedBot();
     }
@@ -559,6 +583,7 @@ public abstract class RandomBot extends TFBot {
         template = botSetting.getTemplate();
         classIcon = template.getClassIcon();
         spawnRange = botSetting.getStandardSpawnRange();
+        spawnNumber = botSetting.getStandardSpawnNumber();
         adjustWeaponAttributesForTemplatedBots();
         addRandomProjectileModelForTemplatedBot();
     }

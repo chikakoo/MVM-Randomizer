@@ -327,14 +327,14 @@ public class WaveSpawn extends PopObjectRepresentation {
 
         hasGiant = tfBot.getIsGiant();
         totalCount = PopRandomizer.generateNumberInRange(tfBot.getSpawnRange());
+        spawnCount = PopRandomizer.generateNumberInRange(tfBot.getSpawnNumber());
+
         if (tfBot.getIsGiant()) {
             waitBetweenSpawns = PopRandomizer.generateNumberInRange(30, 45);
             maxActive = totalCount;
-            spawnCount = PopRandomizer.generateNumberInRange(1, 2);
         } else {
             waitBetweenSpawns = PopRandomizer.generateNumberInRange(10, 25);
             computeMaxActive();
-            computeSpawnCount();
         }
 
         adjustCounts(tfBot);
@@ -353,7 +353,6 @@ public class WaveSpawn extends PopObjectRepresentation {
     /**
      * Generate supports for the wave
      * Currently sets max active to some value within the spawn range
-     * SpawnCount uses the default value, which is currently 2
      * Does nothing if there are no supports possible to generate
      */
     public void generateSupports() {
@@ -365,6 +364,7 @@ public class WaveSpawn extends PopObjectRepresentation {
 
         support = new PopBoolean(true);
         maxActive = PopRandomizer.generateNumberInRange(supportBot.getSpawnRange());
+        spawnCount = PopRandomizer.generateNumberInRange(supportBot.getSpawnNumber());
         fixSpawnCount();
 
         waitBetweenSpawns = PopRandomizer.generateNumberInRange(20, 40);
@@ -381,12 +381,12 @@ public class WaveSpawn extends PopObjectRepresentation {
     }
 
     /**
-     * Adjusts the spawn and total counts to be more reasonable
+     * Adjusts the spawn count to be > 0 and less than or equal to the max active count
      * @param tfBot
      */
     private void adjustCounts(RandomBot tfBot) {
-        if (!tfBot.getIsGiant() && spawnCount < 3) {
-            spawnCount = 3;
+        if (!tfBot.getIsGiant() && spawnCount < 1) {
+            spawnCount = 1;
         }
 
         fixSpawnCount();
@@ -420,12 +420,5 @@ public class WaveSpawn extends PopObjectRepresentation {
         } else {
             maxActive = PopRandomizer.generateNumberInRange(oneThirdOfTotalCount, halfOfTotalCount);
         }
-    }
-
-    /**
-     * Computes how many bots will spawn at a time
-     */
-    private void computeSpawnCount() {
-        spawnCount = PopRandomizer.generateNumberInRange(3, 7);
     }
 }

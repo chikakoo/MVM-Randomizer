@@ -63,4 +63,12 @@ public class Range {
             range2 :
             range1;
     }
+
+    /**
+     * Gets the sum of the range
+     * @return - the sum
+     */
+    public int sum() {
+        return upperBound + lowerBound;
+    }
 }

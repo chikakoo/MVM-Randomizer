@@ -1,6 +1,7 @@
 package Pop.GUI;
 
 import Pop.MVMRandomizer;
+import Pop.Range;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,6 +13,10 @@ public class RandomBotPanel extends JPanel {
     /**
      * GUI Components
      */
+    private RangePanel standardNormalBotSpawnNumberPanel = new RangePanel("Standard Normal Spawn #", new Dimension(30, 20));
+    private RangePanel standardGiantBotSpawnNumberPanel = new RangePanel("Standard Giant Spawn #", new Dimension(30, 20));
+    private RangePanel supportNormalBotSpawnNumberPanel = new RangePanel("Support Normal Spawn #", new Dimension(30, 20));
+    private RangePanel supportGiantBotSpawnNumberPanel = new RangePanel("Support Giant Spawn #", new Dimension(30, 20));
     private IntegerFieldPanel percentAttributesPanel = new IntegerFieldPanel("% chance of attributes:", new Dimension(30, 20));
     private IntegerFieldPanel maxNumberOfAttributesPanel = new IntegerFieldPanel("Max number of attributes:", new Dimension(30, 20));
     private IntegerFieldPanel percentCosmeticPanel = new IntegerFieldPanel("% chance of cosmetic:", new Dimension(30, 20));
@@ -23,6 +28,10 @@ public class RandomBotPanel extends JPanel {
     /**
      * Getters for the settings
      */
+    public Range getStandardNormalBotSpawnNumber() { return standardNormalBotSpawnNumberPanel.getRange(); }
+    public Range getStandardGiantBotSpawnNumber() { return standardGiantBotSpawnNumberPanel.getRange(); }
+    public Range getSupportNormalBotSpawnNumber() { return supportNormalBotSpawnNumberPanel.getRange(); }
+    public Range getSupportGiantBotSpawnNumber() { return supportGiantBotSpawnNumberPanel.getRange(); }
     public int getPercentAttributes() { return percentAttributesPanel.getValue(); }
     public int getMaxNumberOfAttributes() { return maxNumberOfAttributesPanel.getValue(); }
     public int getPercentCosmetic() { return percentCosmeticPanel.getValue(); }
@@ -39,6 +48,10 @@ public class RandomBotPanel extends JPanel {
 
         Panel randomSettingsPanel = new Panel();
         randomSettingsPanel.setLayout(new BoxLayout(randomSettingsPanel, BoxLayout.Y_AXIS));
+        randomSettingsPanel.add(standardNormalBotSpawnNumberPanel);
+        randomSettingsPanel.add(standardGiantBotSpawnNumberPanel);
+        randomSettingsPanel.add(supportNormalBotSpawnNumberPanel);
+        randomSettingsPanel.add(supportGiantBotSpawnNumberPanel);
         randomSettingsPanel.add(percentAttributesPanel);
         randomSettingsPanel.add(maxNumberOfAttributesPanel);
         randomSettingsPanel.add(percentCosmeticPanel);
@@ -56,6 +69,10 @@ public class RandomBotPanel extends JPanel {
      * Applies all the mvm randomizer fileSettings
      */
     public void applySettings() {
+        standardNormalBotSpawnNumberPanel.setRange(MVMRandomizer.randomBotSettings.getStandardNormalSpawnNumberRange());
+        standardGiantBotSpawnNumberPanel.setRange(MVMRandomizer.randomBotSettings.getStandardGiantSpawnNumberRange());
+        supportNormalBotSpawnNumberPanel.setRange(MVMRandomizer.randomBotSettings.getSupportNormalSpawnNumberRange());
+        supportGiantBotSpawnNumberPanel.setRange(MVMRandomizer.randomBotSettings.getSupportGiantSpawnNumberRange());
         percentAttributesPanel.setValue(MVMRandomizer.randomBotSettings.getPercentAttributes());
         maxNumberOfAttributesPanel.setValue(MVMRandomizer.randomBotSettings.getMaxAttributes());
         percentCosmeticPanel.setValue(MVMRandomizer.randomBotSettings.getPercentCosmetic());

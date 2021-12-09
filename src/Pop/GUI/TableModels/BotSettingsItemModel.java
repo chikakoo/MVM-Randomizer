@@ -26,6 +26,7 @@ public class BotSettingsItemModel extends AbstractTableModel {
         "Bot Name", "Template Name",
         "Weight #", "Weight %",
         "Low Spawn Range", "High Spawn Range",
+        "Low Spawn #", "High Spawn #",
         "Is Standard/Support?" // Changed appropriately in the initialize functions
     };
 
@@ -71,7 +72,7 @@ public class BotSettingsItemModel extends AbstractTableModel {
      */
     private void initializeForStandard() {
         isForSupport = false;
-        columnNames[6] = "Is Standard?";
+        columnNames[8] = "Is Standard?";
     }
 
     /**
@@ -79,7 +80,7 @@ public class BotSettingsItemModel extends AbstractTableModel {
      */
     private void initializeForSupport() {
         isForSupport = true;
-        columnNames[6] = "Is Support?";
+        columnNames[8] = "Is Support?";
     }
 
     /**
@@ -257,7 +258,17 @@ public class BotSettingsItemModel extends AbstractTableModel {
                     bot.getSupportSpawnRange().getUpperBound() :
                     bot.getStandardSpawnRange().getUpperBound();
                 break;
-            case 6: // Is Standard/Support?
+            case 6: // Low Spawn #
+                value = isForSupport ?
+                    bot.getSupportSpawnNumber().getLowerBound() :
+                    bot.getStandardSpawnNumber().getLowerBound();
+                break;
+            case 7: // High Spawn #
+                value = isForSupport ?
+                    bot.getSupportSpawnNumber().getUpperBound() :
+                    bot.getStandardSpawnNumber().getUpperBound();
+                break;
+            case 8: // Is Standard/Support?
                 value = isForSupport ?
                     bot.getIsSupport() :
                     bot.getIsStandard();
@@ -320,7 +331,21 @@ public class BotSettingsItemModel extends AbstractTableModel {
                     bot.getStandardSpawnRange().setUpperBound((int)value);
                 }
                 break;
-            case 6: // Is Standard/Support?
+            case 6: // Low Spawn #
+                if (isForSupport) {
+                    bot.getSupportSpawnNumber().setLowerBound((int)value);
+                } else {
+                    bot.getStandardSpawnNumber().setLowerBound((int)value);
+                }
+                break;
+            case 7: // High Spawn #
+                if (isForSupport) {
+                    bot.getSupportSpawnNumber().setUpperBound((int)value);
+                } else {
+                    bot.getStandardSpawnNumber().setUpperBound((int)value);
+                }
+                break;
+            case 8: // Is Standard/Support?
                 if (isForSupport) {
                     bot.setIsSupport((boolean)value);
                 } else {

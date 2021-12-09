@@ -136,6 +136,13 @@ public class BotSettings {
                 // Class icons and projectile weapons are NOT saved - so we must set it from the template we've retrieved
                 existingBotSetting.getTemplate().setClassIcon(template.getClassIcon());
                 existingBotSetting.getTemplate().setCustomProjectileWeapon(template.getCustomProjectileWeapon());
+
+                // If the spawn number does not exist, we should set it to the defaults (for legacy settings files)
+                if (existingBotSetting.getStandardSpawnNumber() == null ||
+                    existingBotSetting.getStandardSpawnNumber().sum() == 0)
+                {
+                    existingBotSetting.setDefaultSpawnNumbersIfNeeded(isGiantBot);
+                }
             }
         }
     }

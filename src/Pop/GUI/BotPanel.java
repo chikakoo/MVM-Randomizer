@@ -33,10 +33,10 @@ public class BotPanel extends JPanel {
     private AutoSelectTable botSettingsTable;
     private BotSettingsItemModel botSettingsModel;
 
-    JMenuItem setEasySpawnRangeMenuItem = new JMenuItem("Set easy spawn range");
-    JMenuItem setNormalSpawnRangeMenuItem = new JMenuItem("Set normal spawn range");
-    JMenuItem setHardSpawnRangeMenuItem = new JMenuItem("Set hard spawn range");
-    JMenuItem setImpossibleSpawnRangeMenuItem = new JMenuItem("Set impossible spawn range");
+    private JMenuItem setEasySpawnRangeMenuItem = new JMenuItem("Set easy spawn range");
+    private JMenuItem setNormalSpawnRangeMenuItem = new JMenuItem("Set normal spawn range");
+    private JMenuItem setHardSpawnRangeMenuItem = new JMenuItem("Set hard spawn range");
+    private JMenuItem setImpossibleSpawnRangeMenuItem = new JMenuItem("Set impossible spawn range");
 
     private AutoSelectTable standardBotDistributionsTable;
     private AutoSelectTable giantBotDistrubtionsTable;

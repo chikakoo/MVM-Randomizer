@@ -1,9 +1,55 @@
 package Pop.Settings;
 
+import Pop.Range;
+
 /**
  * Settings for randomly generated bots
  */
 public class RandomBotSettings {
+    /**
+     * The range of standard bots that can spawn at a time
+     */
+    private Range standardNormalSpawnNumberRange = new Range(3, 7);
+    public Range getStandardNormalSpawnNumberRange() {
+        return standardNormalSpawnNumberRange;
+    }
+    public void setStandardNormalSpawnNumberRange(Range standardNormalSpawnNumberRange) {
+        this.standardNormalSpawnNumberRange = standardNormalSpawnNumberRange;
+    }
+
+    /**
+     * The range of support bots that can spawn at a time
+     */
+    private Range supportNormalSpawnNumberRange = new Range(2, 2);
+    public Range getSupportNormalSpawnNumberRange() {
+        return supportNormalSpawnNumberRange;
+    }
+    public void setSupportNormalSpawnNumberRange(Range supportNormalSpawnNumberRange) {
+        this.supportNormalSpawnNumberRange = supportNormalSpawnNumberRange;
+    }
+
+    /**
+     * The range of giant standard bots that can spawn at a time
+     */
+    private Range standardGiantSpawnNumberRange = new Range(1, 2);
+    public Range getStandardGiantSpawnNumberRange() {
+        return standardGiantSpawnNumberRange;
+    }
+    public void setStandardGiantSpawnNumberRange(Range standardGiantSpawnNumberRange) {
+        this.standardGiantSpawnNumberRange = standardGiantSpawnNumberRange;
+    }
+
+    /**
+     * The range of giant support bots that can spawn at a time
+     */
+    private Range supportGiantSpawnNumberRange = new Range(1, 1);
+    public Range getSupportGiantSpawnNumberRange() {
+        return supportGiantSpawnNumberRange;
+    }
+    public void setSupportGiantSpawnNumberRange(Range supportGiantSpawnNumberRange) {
+        this.supportGiantSpawnNumberRange = supportGiantSpawnNumberRange;
+    }
+
     /**
      * The odds that the random bots will have additional attributes
      */
@@ -85,6 +131,10 @@ public class RandomBotSettings {
      * @param randomBotSetting - the object to copy settings from
      */
     public void copySettings(RandomBotSettings randomBotSetting) {
+        standardNormalSpawnNumberRange = randomBotSetting.getStandardNormalSpawnNumberRange();
+        supportNormalSpawnNumberRange = randomBotSetting.getSupportNormalSpawnNumberRange();
+        standardGiantSpawnNumberRange = randomBotSetting.getStandardGiantSpawnNumberRange();
+        supportGiantSpawnNumberRange = randomBotSetting.getSupportGiantSpawnNumberRange();
         percentAttributes = randomBotSetting.getPercentAttributes();
         maxAttributes = randomBotSetting.getMaxAttributes();
         percentCosmetic = randomBotSetting.getPercentCosmetic();
