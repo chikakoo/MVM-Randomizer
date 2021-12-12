@@ -373,7 +373,7 @@ public abstract class RandomBot extends TFBot {
 
         boolean hasUnusualEffect = PopRandomizer.generateBooleanFromPercentage(MVMRandomizer.randomBotSettings.getPercentUnusualEffect());
         if (hasUnusualEffect) {
-            int unusualEffect = PopRandomizer.generateNumberInRange(1, 176); // The range of the unusual particle effects in TF2
+            int unusualEffect = PopRandomizer.generateNumberInRange(1, 223); // The range of the unusual particle effects in TF2
             cosmeticAttributes.add("attach particle effect", Integer.toString(unusualEffect));
         }
 
