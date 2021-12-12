@@ -1,5 +1,7 @@
 package Pop.Bot.Weapons;
 
+import Pop.Bot.Weapons.Skins.WeaponSkin;
+import Pop.Bot.Weapons.Skins.WeaponSkins;
 import Pop.Enums.ProjectileTypes;
 import Pop.Enums.WeaponProjectileTypes;
 import Pop.ItemAttributes;
@@ -8,6 +10,7 @@ import Pop.PopRandomizer;
 import Pop.WeightedItemCollection;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Weapon {
     /**
@@ -189,7 +192,22 @@ public class Weapon {
         this.itemAttributes = new ItemAttributes(itemAttributeItemName);
         this.weight = weight;
         this.defaultProjectileType = defaultProjectileType;
+        this.trySwitchWeaponSkin();
         this.tryAddRandomProjectileType();
+    }
+
+    /**
+     * Attempt to switch the weapon skin - this will adjust the name/display name of the weapon
+     * It only applies to weapons with specific names
+     */
+    private void trySwitchWeaponSkin() {
+        //TODO: % chance setting for this here - exit out if it fails
+
+        WeaponSkin skin = WeaponSkins.GetRandomSkinFromWeaponName(this.itemName);
+        if (skin != null) {
+            this.itemName = skin.getWeaponName();
+            this.displayName = skin.getWeaponDisplayName();
+        }
     }
 
     /**
