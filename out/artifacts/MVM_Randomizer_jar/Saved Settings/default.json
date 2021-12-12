@@ -1464,26 +1464,6 @@
         {
           "template": {
             "tfClass": "SOLDIER",
-            "templateName": "T_TFBot_Soldier",
-            "name": "Solider",
-            "isGiant": false
-          },
-          "standardWeight": 100,
-          "supportWeight": 100,
-          "standardSpawnRange": {
-            "lowerBound": 12,
-            "upperBound": 20
-          },
-          "supportSpawnRange": {
-            "lowerBound": 2,
-            "upperBound": 5
-          },
-          "isStandard": true,
-          "isSupport": true
-        },
-        {
-          "template": {
-            "tfClass": "SOLDIER",
             "templateName": "T_TFBot_Soldier_RocketPush_Airblast",
             "name": "Sergeant Bitchass",
             "isGiant": false
