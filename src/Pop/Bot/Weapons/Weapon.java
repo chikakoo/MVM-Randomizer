@@ -189,10 +189,13 @@ public class Weapon {
         this.itemName = itemName;
         this.displayName = displayName;
         this.itemAttributeItemName = itemName;
+
+        this.trySwitchWeaponSkin(); // Must have the item name set before creating the item attributes
+
         this.itemAttributes = new ItemAttributes(itemAttributeItemName);
         this.weight = weight;
         this.defaultProjectileType = defaultProjectileType;
-        this.trySwitchWeaponSkin();
+
         this.tryAddRandomProjectileType();
     }
 
@@ -201,12 +204,11 @@ public class Weapon {
      * It only applies to weapons with specific names
      */
     private void trySwitchWeaponSkin() {
-        //TODO: % chance setting for this here - exit out if it fails
-
         WeaponSkin skin = WeaponSkins.GetRandomSkinFromWeaponName(this.itemName);
         if (skin != null) {
             this.itemName = skin.getWeaponName();
             this.displayName = skin.getWeaponDisplayName();
+            this.itemAttributeItemName = this.itemName;
         }
     }
 

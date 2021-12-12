@@ -1,5 +1,6 @@
 package Pop.Bot.Weapons.Skins;
 
+import Pop.Bot.Weapons.Weapon;
 import Pop.PopRandomizer;
 
 import java.util.ArrayList;
@@ -10,28 +11,34 @@ import java.util.Arrays;
  */
 public class WeaponSkins {
     /**
-     * All the alternate pistols
+     * All the pistols
      */
     private static ArrayList<WeaponSkin> AlternatePistols = new ArrayList<>(Arrays.asList(
-        new WeaponSkin ("concealedkiller_pistol_redrockroscoe", "Red Rock Pistol"),
-        new WeaponSkin ("craftsmann_pistol_homemadeheater", "Heater Pistol"),
-        new WeaponSkin ("teufort_pistol_hickoryholepuncher", "Hickory Pistol"),
-        new WeaponSkin ("teufort_pistol_localhero", "Local Hero Pistol"),
-        new WeaponSkin ("powerhouse_pistol_blackdahlia", "Black Dahlia Pistol"),
-        new WeaponSkin ("powerhouse_pistol_sandstonespecial", "Standstone Pistol"),
-        new WeaponSkin ("harvest_pistol_macabreweb", "Macabre Web Pistol"),
-        new WeaponSkin ("harvest_pistol_nutcracker", "Nutcracker Pistol"),
-        new WeaponSkin ("gentlemanne_pistol_dressedtokill", "Dressed Pistol"),
-        new WeaponSkin ("pyroland_pistol_bluemew", "Blue Mew Pistol"),
-        new WeaponSkin ("pyroland_pistol_shottohell", "Hell Pistol"),
-        new WeaponSkin ("pyroland_pistol_braincandy", "Brain Candy Pistol"),
-        new WeaponSkin ("warbird_pistol_blitzkrieg", "Blitzkrieg Pistol")
+        new WeaponSkin("Upgradeable TF_WEAPON_PISTOL", "Pistol"),
+        new WeaponSkin("TTG Max Pistol", "Lugermorph"),
+        new WeaponSkin("The C.A.P.P.E.R.", "C.A.P.P.E.R"),
+        new WeaponSkin("concealedkiller_pistol_redrockroscoe", "Red Rock Pistol"),
+        new WeaponSkin("craftsmann_pistol_homemadeheater", "Heater Pistol"),
+        new WeaponSkin("teufort_pistol_hickoryholepuncher", "Hickory Pistol"),
+        new WeaponSkin("teufort_pistol_localhero", "Local Hero Pistol"),
+        new WeaponSkin("powerhouse_pistol_blackdahlia", "Black Dahlia Pistol"),
+        new WeaponSkin("powerhouse_pistol_sandstonespecial", "Standstone Pistol"),
+        new WeaponSkin("harvest_pistol_macabreweb", "Macabre Web Pistol"),
+        new WeaponSkin("harvest_pistol_nutcracker", "Nutcracker Pistol"),
+        new WeaponSkin("gentlemanne_pistol_dressedtokill", "Dressed Pistol"),
+        new WeaponSkin("pyroland_pistol_bluemew", "Blue Mew Pistol"),
+        new WeaponSkin("pyroland_pistol_shottohell", "Hell Pistol"),
+        new WeaponSkin("pyroland_pistol_braincandy", "Brain Candy Pistol"),
+        new WeaponSkin("warbird_pistol_blitzkrieg", "Blitzkrieg Pistol")
     ));
 
     /**
-     * All the random Rocket Launchers
+     * All the Rocket Launchers
      */
     private static ArrayList<WeaponSkin> AlternateRocketLaunchers = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Upgradeable TF_WEAPON_ROCKETLAUNCHER", "Rocket Launcher"),
+        new WeaponSkin("Festive Rocket Launcher 2011", "Festive Rocket Launcher"),
+        new WeaponSkin("The Original", "Original"),
         new WeaponSkin("concealedkiller_rocketlauncher_sandcannon", "Sand Cannon Rocket"),
         new WeaponSkin("concealedkiller_rocketlauncher_woodlandwarrior", "Woodland Rocket"),
         new WeaponSkin("craftsmann_rocketlauncher_americanpastoral", "American Rocket"),
@@ -47,9 +54,11 @@ public class WeaponSkins {
     ));
 
     /**
-     * All the random sticky launchers
+     * All the sticky launchers
      */
     private static ArrayList<WeaponSkin> AlternateStickyLaunchers = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Upgradeable TF_WEAPON_PIPEBOMBLAUNCHER", "Sticky Launcher"),
+        new WeaponSkin("Festive Stickybomb Launcher 2011", "Festive Sticky"),
         new WeaponSkin("concealedkiller_stickybomblauncher_suddenflurry", "Flurry Sticky"),
         new WeaponSkin("concealedkiller_stickybomblauncher_carpetbomber", "Carpet Sticky"),
         new WeaponSkin("craftsmann_stickybomblauncher_blastedbombardier", "Bombardier Sticky"),
@@ -66,9 +75,12 @@ public class WeaponSkins {
     ));
 
     /**
-     * All the random revolvers
+     * All the revolvers
      */
     private static ArrayList<WeaponSkin> AlternateRevolvers = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Upgradeable TF_WEAPON_REVOLVER", "Revolver"),
+        new WeaponSkin("Festive Revolver 2014", "Festive Revolver"),
+        new WeaponSkin("TTG Sam Revolver", "Sam Revolver"),
         new WeaponSkin("concealedkiller_revolver_psychedelicslugger", "Psychedelic Revolver"),
         new WeaponSkin("craftsmann_revolver_oldcountry", "Old Country Revolver"),
         new WeaponSkin("teufort_revolver_mayor", "Mayor Revolver"),
@@ -83,9 +95,12 @@ public class WeaponSkins {
     ));
 
     /**
-     * All the random sniper rifles
+     * All the sniper rifles
      */
     private static ArrayList<WeaponSkin> AlternateSniperRifles = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Upgradeable TF_WEAPON_SNIPERRIFLE", "Sniper Rifle"),
+        new WeaponSkin("Festive Sniper Rifle 2011", "Festive Sniper Rifle"),
+        new WeaponSkin("The AWPer Hand", "AWPer Hand"),
         new WeaponSkin("concealedkiller_sniperrifle_purplerange", "Purple Rifle"),
         new WeaponSkin("concealedkiller_sniperrifle_nightowl", "Night Owl Rifle"),
         new WeaponSkin("craftsmann_sniperrifle_lumberfromdownunder", "Lumber Rifle"),
@@ -103,9 +118,11 @@ public class WeaponSkins {
     ));
 
     /**
-     * All the random scatterguns
+     * All the scatterguns
      */
     private static ArrayList<WeaponSkin> AlternateScatterguns = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Upgradeable TF_WEAPON_SCATTERGUN", "Scattergun"),
+        new WeaponSkin("Festive Scattergun 2011", "Festive Scattergun"),
         new WeaponSkin("concealedkiller_scattergun_nightterror", "Night Scattergun"),
         new WeaponSkin("craftsmann_scattergun_tartantorpedo", "Torpedo Scattergun"),
         new WeaponSkin("craftsmann_scattergun_countrycrusher", "Country Scattergun"),
@@ -123,9 +140,13 @@ public class WeaponSkins {
     ));
 
     /**
-     * All the random flamethrowers
+     * All the flamethrowers
      */
     private static ArrayList<WeaponSkin> AlternateFlamethrowers = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Upgradeable TF_WEAPON_FLAMETHROWER", "Flamethrower"),
+        new WeaponSkin("Festive Flamethrower 2011", "Festive Flamethrower"),
+        new WeaponSkin("The Rainblower", "Rainblower"),
+        new WeaponSkin("The Nostromo Napalmer", "Nostromo Napalmer"),
         new WeaponSkin("concealedkiller_flamethrower_forestfire", "Forest Flamethwoer"),
         new WeaponSkin("craftsmann_flamethrower_barnburner", "Barn Flamethrower"),
         new WeaponSkin("teufort_flamethrower_bovineblazemaker", "Bovine Flamethrower"),
@@ -142,9 +163,11 @@ public class WeaponSkins {
     ));
 
     /**
-     * All the random mediguns
+     * All the mediguns
      */
     private static ArrayList<WeaponSkin> AlternateMediguns = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Upgradeable TF_WEAPON_MEDIGUN", "Medigun"),
+        new WeaponSkin("Festive Medigun 2011", "Festive Medigun"),
         new WeaponSkin("concealedkiller_medigun_wrappedreviver", "Wrapped Medigun"),
         new WeaponSkin("concealedkiller_medigun_maskedmender", "Masked Medigun"),
         new WeaponSkin("craftsmann_medigun_reclaimedreanimator", "Reclaimed Medigun"),
@@ -160,9 +183,11 @@ public class WeaponSkins {
     ));
 
     /**
-     * All the random grenade launchers
+     * All the grenade launchers
      */
     private static ArrayList<WeaponSkin> AlternateGrenadeLaunchers = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Upgradeable TF_WEAPON_GRENADELAUNCHER", "Grenade Launcher"),
+        new WeaponSkin("Festive Grenade Launcher", "Festive Launcher"),
         new WeaponSkin("harvest_grenadelauncher_macabreweb", "Macabre Web Grenade"),
         new WeaponSkin("harvest_grenadelauncher_autumn", "Autumn Grenade"),
         new WeaponSkin("gentlemanne_grenadelauncher_topshelf", "Top Shelf Grenade"),
@@ -174,9 +199,11 @@ public class WeaponSkins {
     ));
 
     /**
-     * All the random wrenches
+     * All the wrenches
      */
     private static ArrayList<WeaponSkin> AlternateWrench = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Upgradeable TF_WEAPON_WRENCH", "Wrench"),
+        new WeaponSkin("Festive Wrench 2011", "Festive Wrench"),
         new WeaponSkin("harvest_wrench_boneyard", "Bonehard Wrench"),
         new WeaponSkin("harvest_wrench_autumn", "Autumn Wrench"),
         new WeaponSkin("harvest_wrench_nutcracker", "Nutcracker Wrench"),
@@ -187,9 +214,11 @@ public class WeaponSkins {
     ));
 
     /**
-     * All the random SMGs
+     * All the SMGs
      */
     private static ArrayList<WeaponSkin> AlternateSMGs = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Upgradeable TF_WEAPON_SMG", "SMG"),
+        new WeaponSkin("Festive SMG 2014", "Festive SMG"),
         new WeaponSkin("concealedkiller_smg_woodsywidowmaker", "Woodsy SMG"),
         new WeaponSkin("craftsmann_smg_plaidpotshotter", "Potshotter SMG"),
         new WeaponSkin("teufort_smg_treadplatetormenter", "Plate SMG"),
@@ -202,9 +231,13 @@ public class WeaponSkins {
     ));
 
     /**
-     * All the random knives
+     * All the knives
      */
     private static ArrayList<WeaponSkin> AlternateKnives = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Upgradeable TF_WEAPON_KNIFE", "Knife"),
+        new WeaponSkin("Festive Knife 2011", "Festive Knife"),
+        new WeaponSkin("The Sharp Dresser", "Sharp Dresser"),
+        new WeaponSkin("The Black Rose", "Black Rose"),
         new WeaponSkin("harvest_knife_boneyard", "Boneyard Knife"),
         new WeaponSkin("gentlemanne_knife_topshelf", "Topshelf Knife"),
         new WeaponSkin("gentlemanne_knife_dressedtokill", "Dressed Knife"),
@@ -216,9 +249,12 @@ public class WeaponSkins {
     ));
 
     /**
-     * All the random miniguns
+     * All the miniguns
      */
     private static ArrayList<WeaponSkin> AlternateMiniguns = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Upgradeable TF_WEAPON_MINIGUN", "Minigun"),
+        new WeaponSkin("Festive Minigun 2011", "Festive Minigun"),
+        new WeaponSkin("Iron Curtain", "Iron Curtain"),
         new WeaponSkin("concealedkiller_minigun_kingofthejungle", "Jungle Minigun"),
         new WeaponSkin("craftsmann_minigun_ironwood", "Ironwood Minigun"),
         new WeaponSkin("craftsmann_minigun_antiqueannihilator", "Antique Minigun"),
@@ -237,7 +273,8 @@ public class WeaponSkins {
     ));
 
     /**
-     * All the random shotguns
+     * All the shotguns
+     * Note currently used - if this does get used, need to deal with all the different class names for it
      */
     private static ArrayList<WeaponSkin> AlternateShotguns = new ArrayList<>(Arrays.asList(
         new WeaponSkin("concealedkiller_shotgun_backwoodsboomstick", "Boomstick Shotgun"),
@@ -249,6 +286,128 @@ public class WeaponSkins {
         new WeaponSkin("gentlemanne_shotgun_dressedtokill", "Dressed Shotgun"),
         new WeaponSkin("pyroland_shotgun_flowerpower", "Flower Shotgun"),
         new WeaponSkin("warbird_shotgun_redbear", "Red Bear Shotgun")
+    ));
+
+    /**
+     * All the chargin' targes
+     */
+    private static ArrayList<WeaponSkin> AlternateCharginTarges = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("The Chargin' Targe", "Chargin' Targe"),
+        new WeaponSkin("Festive Targe 2014", "Festive Targe")
+    ));
+
+    /**
+     * All the frontier justices
+     */
+    private static ArrayList<WeaponSkin> AlternateFrontierJustices = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("The Frontier Justice", "Frontier Justice"),
+        new WeaponSkin("Festive Frontier Justice", "Festive Frontier Justice")
+    ));
+
+    /**
+     * All the wranglers
+     */
+    private static ArrayList<WeaponSkin> AlternateWranglers = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("The Wrangler", "Wrangler"),
+        new WeaponSkin("Festive Wrangler", "Festive Wrangler"),
+        new WeaponSkin("The Giger Counter", "Giger Counter")
+    ));
+
+    /**
+     * All the crossbows
+     */
+    private static ArrayList<WeaponSkin> AlternateCrossbows = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("The Crusader's Crossbow", "Crossbow"),
+        new WeaponSkin("Festive Crusader's Crossbow", "Festive Crossbow")
+    ));
+
+    /**
+     * All the backburners
+     */
+    private static ArrayList<WeaponSkin> AlternateBackburners = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("The Backburner", "Backburner"),
+        new WeaponSkin("Festive Backburner 2014", "Festive Backburner")
+    ));
+
+    /**
+     * All the flare guns
+     */
+    private static ArrayList<WeaponSkin> AlternateFlareGuns = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("The Flare Gun", "Flare Gun"),
+        new WeaponSkin("Festive Flare Gun", "Festive Flare Gun")
+    ));
+
+    /**
+     * All the force-a-natures
+     */
+    private static ArrayList<WeaponSkin> AlternateForceANatures = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("The Force-a-Nature", "Force-a-Nature"),
+        new WeaponSkin("Festive Force-a-Nature", "Festive Force-a-Nature")
+    ));
+
+    /**
+     * All the bonks
+     */
+    private static ArrayList<WeaponSkin> AlternateBonks = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Bonk! Atomic Punch", "Bonk"),
+        new WeaponSkin("Festive Bonk 2014", "Festive Bonk")
+    ));
+
+    /**
+     * All the mad milks
+     */
+    private static ArrayList<WeaponSkin> AlternateMadMilks = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Mad Milk", "Mad Milk"),
+        new WeaponSkin("Mutated Milk", "Mutated Milk")
+    ));
+
+    /**
+     * All the huntsmans
+     */
+    private static ArrayList<WeaponSkin> AlternateHuntsmans = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("The Huntsman", "Huntsman"),
+        new WeaponSkin("The Fortified Compound", "Fortified Compound")
+    ));
+
+    /**
+     * All the jarates
+     */
+    private static ArrayList<WeaponSkin> AlternateJarates = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Jarate", "Jarate"),
+        new WeaponSkin("Festive Jarate", "Festive Jarate"),
+        new WeaponSkin("The Self-Aware Beauty Mark", "Beauty Mark")
+    ));
+
+    /**
+     * All the black boxes
+     */
+    private static ArrayList<WeaponSkin> AlternateBlackBoxes = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("The Black Box", "Black Box"),
+        new WeaponSkin("Festive Black Box","Festive Black Box")
+    ));
+
+    /**
+     * All the buff banners
+     */
+    private static ArrayList<WeaponSkin> AlternateBuffBanners = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("The Buff Banner", "Buff Banner"),
+        new WeaponSkin("Festive Buff Banner", "Festive Buff Banner")
+    ));
+
+    /**
+     * All the ambassadors
+     */
+    private static ArrayList<WeaponSkin> AlternateAmbassadors = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("The Ambassador", "Ambassador"),
+        new WeaponSkin("Festive Ambassador", "Festive Ambassador")
+    ));
+
+    /**
+     * All the eternal rewards
+     */
+    private static ArrayList<WeaponSkin> AlternateEternalRewards = new ArrayList<>(Arrays.asList(
+        new WeaponSkin("Your Eternal Reward", "Your Eternal Reward"),
+        new WeaponSkin("The Wanga Prick", "Wanga Prick")
     ));
 
     /**
@@ -313,6 +472,52 @@ public class WeaponSkins {
 //            case "Engineer's Shotgun":
 //                skin = GetRandomSkin(AlternateShotguns);
 //                break;
+
+            case "The Chargin' Targe":
+                skin = GetRandomSkin(AlternateCharginTarges);
+                break;
+            case "The Frontier Justice":
+                skin = GetRandomSkin(AlternateFrontierJustices);
+                break;
+            case "The Wrangler":
+                skin = GetRandomSkin(AlternateWranglers);
+                break;
+            case "The Crusader's Crossbow":
+                skin = GetRandomSkin(AlternateCrossbows);
+                break;
+            case "The Backburner":
+                skin = GetRandomSkin(AlternateBackburners);
+                break;
+            case "The Flare Gun":
+                skin = GetRandomSkin(AlternateFlareGuns);
+                break;
+            case "The Force-a-Nature":
+                skin = GetRandomSkin(AlternateForceANatures);
+                break;
+            case "Bonk! Atomic Punch":
+                skin = GetRandomSkin(AlternateBonks);
+                break;
+            case "Mad Milk":
+                skin = GetRandomSkin(AlternateMadMilks);
+                break;
+            case "The Huntsman":
+                skin = GetRandomSkin(AlternateHuntsmans);
+                break;
+            case "Jarate":
+                skin = GetRandomSkin(AlternateJarates);
+                break;
+            case "The Black Box":
+                skin = GetRandomSkin(AlternateBlackBoxes);
+                break;
+            case "The Buff Banner":
+                skin = GetRandomSkin(AlternateBuffBanners);
+                break;
+            case "The Ambassador":
+                skin = GetRandomSkin(AlternateAmbassadors);
+                break;
+            case "Your Eternal Reward":
+                skin = GetRandomSkin(AlternateEternalRewards);
+                break;
         }
 
         return skin;

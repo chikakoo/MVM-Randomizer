@@ -20,8 +20,8 @@ public class RandomHeavy extends RandomBot {
 
         primaryWeaponList = new ArrayList<>(Arrays.asList(
             new HitscanWeapon("Upgradeable TF_WEAPON_MINIGUN", "Minigun"),
-            new HitscanWeapon("Festive Minigun 2011", "Festive Minigun"),
-            new HitscanWeapon("Iron Curtain"),
+            //new HitscanWeapon("Festive Minigun 2011", "Festive Minigun"), // In skins
+            //new HitscanWeapon("Iron Curtain"), // In skins
             new HitscanWeapon("Natascha"),
             new HitscanWeapon("Tomislav"),
             new HitscanWeapon("The Huo Long Heatmaker", "Huo Long Heater"),

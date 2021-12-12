@@ -21,7 +21,7 @@ public class RandomEngineer extends RandomBot {
         primaryWeaponList = new ArrayList<>(Arrays.asList(
             new Weapon("Engineer's Shotgun", "Shotgun"),
             new Weapon("The Frontier Justice"),
-            new Weapon("Festive Frontier Justice"),
+            //new Weapon("Festive Frontier Justice"), // In skins
             new Weapon("The Widowmaker"),
             new Weapon("The Pomson 6000", "Pomson"),
             new Weapon("The Rescue Ranger")
@@ -31,17 +31,17 @@ public class RandomEngineer extends RandomBot {
 
         secondaryWeaponList = new ArrayList<>(Arrays.asList(
             new Weapon("Upgradeable TF_WEAPON_PISTOL", "Pistol"),
-            new Weapon("TTG Max Pistol", "Max Pistol"),
-            new Weapon("The C.A.P.P.E.R."),
+            //new Weapon("TTG Max Pistol", "Max Pistol"), // In skins
+            //new Weapon("The C.A.P.P.E.R."), // In skins
             new Weapon( "The Wrangler"),
-            new Weapon("Festive Wrangler"),
-            new Weapon("The Giger Counter"),
+            //new Weapon("Festive Wrangler"), // In skins
+            //new Weapon("The Giger Counter"), // In skins
             new Weapon("The Short Circuit")
         ));
 
         meleeWeaponList = new ArrayList<>(Arrays.asList(
             new Weapon( "Upgradeable TF_WEAPON_WRENCH", "Wrench"),
-            new Weapon("Festive Wrench 2011", "Festive Wrench"),
+            //new Weapon("Festive Wrench 2011", "Festive Wrench"), // In skins
             new Weapon( "The Gunslinger"),
             new Weapon( "The Southern Hospitality"),
             new Weapon(  "The Jag"),

@@ -18,9 +18,9 @@ public class RandomScout extends RandomBot {
 
         primaryWeaponList = new ArrayList<>(Arrays.asList(
             new HitscanWeapon("Upgradeable TF_WEAPON_SCATTERGUN", "Scattergun"),
-            new HitscanWeapon("Festive Scattergun 2011", "Festive Scattergun"),
+            //new HitscanWeapon("Festive Scattergun 2011", "Festive Scattergun"), // In skins
             new HitscanWeapon("The Force-a-Nature"),
-            new HitscanWeapon("Festive Force-a-Nature"),
+           // new HitscanWeapon("Festive Force-a-Nature"), // In skins
             new HitscanWeapon("The Shortstop"),
             new HitscanWeapon("The Soda Popper"),
             new HitscanWeapon("Baby Face's Blaster"),
@@ -29,16 +29,16 @@ public class RandomScout extends RandomBot {
 
         secondaryWeaponList = new ArrayList<>(Arrays.asList(
             new HitscanWeapon("Upgradeable TF_WEAPON_PISTOL", "Pistol"),
-            new HitscanWeapon("TTG Max Pistol", "Lugermorph"),
-            new HitscanWeapon("The C.A.P.P.E.R."),
+            //new HitscanWeapon("TTG Max Pistol", "Lugermorph"), // On skins
+            //new HitscanWeapon("The C.A.P.P.E.R."), // On skins
             new HitscanWeapon("The Winger"),
             new HitscanWeapon("Pretty Boy's Pocket Pistol", "Pocket Pistol"),
             new Guillotine("The Flying Guillotine", "Guillotine"),
             new DrinkItem("Bonk! Atomic Punch", "Bonk", 10),
-            new DrinkItem("Festive Bonk 2014", "Festive Bonk", 10),
+            //new DrinkItem("Festive Bonk 2014", "Festive Bonk", 10), // In skins
             new DrinkItem("Crit-a-Cola"),
-            new DrinkItem("Mad Milk"),
-            new DrinkItem("Mutated Milk")
+            new DrinkItem("Mad Milk")
+            //new DrinkItem("Mutated Milk") // In skins
         ));
 
         meleeWeaponList = new ArrayList<>(Arrays.asList(

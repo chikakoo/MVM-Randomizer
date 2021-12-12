@@ -21,13 +21,13 @@ public class RandomMedic extends RandomBot {
             new HitscanWeapon("TF_WEAPON_SYRINGEGUN_MEDIC", "Syringe Gun", ProjectileTypes.SYRINGE),
             new HitscanWeapon( "The Blutsauger", ProjectileTypes.SYRINGE),
             new HitscanWeapon("The Overdose", ProjectileTypes.SYRINGE),
-            new NonHitscanWeapon("The Crusader's Crossbow", "Crossbow", ProjectileTypes.CROSSBOW_SYRINGE),
-            new NonHitscanWeapon( "Festive Crusader's Crossbow", "Festive Crossbow", ProjectileTypes.FESTIVE_CROSSBOW_SYRINGE)
+            new NonHitscanWeapon("The Crusader's Crossbow", "Crossbow", ProjectileTypes.CROSSBOW_SYRINGE)
+            //new NonHitscanWeapon( "Festive Crusader's Crossbow", "Festive Crossbow", ProjectileTypes.FESTIVE_CROSSBOW_SYRINGE) // In skins
         ));
 
         secondaryWeaponList = new ArrayList<>(Arrays.asList(
             new Weapon("Upgradeable TF_WEAPON_MEDIGUN", "Medigun"),
-            new Weapon("Festive Medigun 2011", "Festive Medigun"),
+            //new Weapon("Festive Medigun 2011", "Festive Medigun"), // In skins
             new Weapon("The Kritzkrieg"),
             new Weapon("The Quick-Fix")
             //"The Vaccinator") // Graphical glitch

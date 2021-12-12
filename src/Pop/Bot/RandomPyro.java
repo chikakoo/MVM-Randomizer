@@ -20,11 +20,11 @@ public class RandomPyro extends RandomBot {
 
         primaryWeaponList = new ArrayList<>(Arrays.asList(
             new Weapon("Upgradeable TF_WEAPON_FLAMETHROWER", "Flamethrower"),
-            new Weapon("Festive Flamethrower 2011", "Festive Flamethrower"),
-            new Weapon( "The Rainblower"),
-            new Weapon( "The Nostromo Napalmer"),
-            new Weapon( "The Backburner"),
-            new Weapon( "Festive Backburner 2014", "Festive Backburner"),
+            //new Weapon("Festive Flamethrower 2011", "Festive Flamethrower"), // In skins
+            //new Weapon( "The Rainblower"), // In skins
+            //new Weapon( "The Nostromo Napalmer"), // In skins
+            new Weapon("The Backburner"),
+            //new Weapon("Festive Backburner 2014", "Festive Backburner"), // In skins
             new Weapon("The Degreaser"),
             new Weapon("The Dragon's Fury"),
             new Phlogistinator("The Phlogistinator")
@@ -33,7 +33,7 @@ public class RandomPyro extends RandomBot {
         secondaryWeaponList = new ArrayList<>(Arrays.asList(
             new AllClassShotgun("Pyro's Shotgun", "TF_WEAPON_SHOTGUN_PYRO"),
             new HitscanWeapon("The Flare Gun", ProjectileTypes.FLARE),
-            new HitscanWeapon( "Festive Flare Gun", ProjectileTypes.FLARE),
+            //new HitscanWeapon( "Festive Flare Gun", ProjectileTypes.FLARE), // In skins
             new HitscanWeapon("The Detonator", ProjectileTypes.FLARE),
             new HitscanWeapon("The Manmelter", ProjectileTypes.FLARE),
             new HitscanWeapon( "The Scorch Shot", ProjectileTypes.FLARE),

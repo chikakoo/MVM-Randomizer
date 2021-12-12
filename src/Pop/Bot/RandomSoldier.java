@@ -20,11 +20,11 @@ public class RandomSoldier extends RandomBot {
 
         primaryWeaponList = new ArrayList<>(Arrays.asList(
             new RocketLauncherWeapon("Upgradeable TF_WEAPON_ROCKETLAUNCHER", "Rocket Launcher"),
-            new RocketLauncherWeapon("Festive Rocket Launcher 2011", "Festive Rocket Launcher"),
-            new RocketLauncherWeapon("The Original"),
+            //new RocketLauncherWeapon("Festive Rocket Launcher 2011", "Festive Rocket Launcher"), // In skins
+            //new RocketLauncherWeapon("The Original"), // In skins
             new RocketLauncherWeapon("The Direct Hit"),
             new RocketLauncherWeapon("The Black Box"),
-            new RocketLauncherWeapon( "Festive Black Box"),
+            //new RocketLauncherWeapon("Festive Black Box"), // In skins
             new RocketLauncherWeapon("The Liberty Launcher"),
             new RocketLauncherWeapon( "The Air Strike"),
             new NonHitscanWeapon("The Cow Mangler 5000", "Cow Mangler", ProjectileTypes.COW_MANGLER),
@@ -36,7 +36,7 @@ public class RandomSoldier extends RandomBot {
             new AllClassShotgun("Soldier's Shotgun", "TF_WEAPON_SHOTGUN_SOLDIER"),
             new NonHitscanWeapon("The Righteous Bison", "Bison", ProjectileTypes.BISON),
             new HornItem("The Buff Banner"),
-            new HornItem("Festive Buff Banner"),
+            //new HornItem("Festive Buff Banner"), // In skins
             new HornItem("The Battalion's Backup"),
             new HornItem("The Concheror"),
             new PassiveItem("The Mantreads"),

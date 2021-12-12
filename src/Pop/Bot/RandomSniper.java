@@ -20,26 +20,26 @@ public class RandomSniper extends RandomBot {
 
         primaryWeaponList = new ArrayList<>(Arrays.asList(
             new HitscanWeapon("Upgradeable TF_WEAPON_SNIPERRIFLE", "Sniper Rifle"),
-            new HitscanWeapon("Festive Sniper Rifle 2011", "Festive Sniper Rifle"),
-            new HitscanWeapon("The AWPer Hand"),
+           // new HitscanWeapon("Festive Sniper Rifle 2011", "Festive Sniper Rifle"), // In skins
+            //new HitscanWeapon("The AWPer Hand"), // In skins
             new HitscanWeapon("The Sydney Sleeper"),
             new HitscanWeapon( "The Bazaar Bargain"),
             //new HitscanWeapon("Shooting Star"), // This is a machina
             new HitscanWeapon("The Hitman's Heatmaker"),
             new HuntsmanWeapon("The Huntsman"),
-            new HuntsmanWeapon("Festive Huntsman", ProjectileTypes.FESTIVE_ARROW),
-            new HuntsmanWeapon("The Fortified Compound")
+            new HuntsmanWeapon("Festive Huntsman", ProjectileTypes.FESTIVE_ARROW) // Not in skins due to the proj type
+            //new HuntsmanWeapon("The Fortified Compound") // In skins
             //"The Machina", // Support snipers can't use these
             //"The Classic" // They don't know how to use this
         ));
 
         secondaryWeaponList = new ArrayList<>(Arrays.asList(
             new HitscanWeapon("Upgradeable TF_WEAPON_SMG", "SMG"),
-            new HitscanWeapon("Festive SMG 2014", "Festive SMG"),
+            //new HitscanWeapon("Festive SMG 2014", "Festive SMG"), // In skins
             new HitscanWeapon("The Cleaner's Carbine", "Carbine"),
             new JarItem("Jarate"),
-            new JarItem("Festive Jarate"),
-            new JarItem("The Self-Aware Beauty Mark", "Beauty Mark"),
+            //new JarItem("Festive Jarate"), // In skins
+            //new JarItem("The Self-Aware Beauty Mark", "Beauty Mark"), // In skins
             new PassiveItem("The Razorback"),
             new PassiveItem("Darwin's Danger Shield"),
             new PassiveItem("The Cozy Camper")

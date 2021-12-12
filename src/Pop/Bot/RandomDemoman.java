@@ -20,7 +20,7 @@ public class RandomDemoman extends RandomBot {
 
         primaryWeaponList = new ArrayList<>(Arrays.asList(
             new GrenadeLauncher("Upgradeable TF_WEAPON_GRENADELAUNCHER", "Grenade Launcher"),
-            new GrenadeLauncher("Festive Grenade Launcher", "Festive Launcher"),
+            //new GrenadeLauncher("Festive Grenade Launcher", "Festive Launcher"), // In skins
             new GrenadeLauncher("The Loch-n-Load"),
             new GrenadeLauncher("The Iron Bomber"),
             new LooseCannon( "The Loose Cannon"),
@@ -31,12 +31,12 @@ public class RandomDemoman extends RandomBot {
 
         secondaryWeaponList = new ArrayList<>(Arrays.asList(
             new StickyLauncher("Upgradeable TF_WEAPON_PIPEBOMBLAUNCHER", "Sticky Launcher"),
-            new StickyLauncher("Festive Stickybomb Launcher 2011", "Festive Sticky"),
+            //new StickyLauncher("Festive Stickybomb Launcher 2011", "Festive Sticky"), // In skins
             new QuickieLauncher("The Quickiebomb Launcher", "Quickiebomb"),
             new StickyJumper("Stickybomb Jumper", "Sticky Jumper"),
             new ScottishResistance("The Scottish Resistance"),
             new PassiveItem("The Chargin' Targe"),
-            new PassiveItem("Festive Targe 2014", "Festive Targe"),
+            //new PassiveItem("Festive Targe 2014", "Festive Targe"), // In skins
             new PassiveItem("The Splendid Screen"),
             new PassiveItem("The Tide Turner")
         ));

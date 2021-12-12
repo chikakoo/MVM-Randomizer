@@ -20,10 +20,10 @@ public class RandomSpy extends RandomBot {
 
         primaryWeaponList = new ArrayList<>(Arrays.asList(
             new HitscanWeapon("Upgradeable TF_WEAPON_REVOLVER", "Revolver"),
-            new HitscanWeapon("Festive Revolver 2014", "Festive Revolver"),
-            new HitscanWeapon("TTG Sam Revolver", "Sam Revolver"),
+            //new HitscanWeapon("Festive Revolver 2014", "Festive Revolver"), // In skins
+            //new HitscanWeapon("TTG Sam Revolver", "Sam Revolver"), // In skins
             new HitscanWeapon("The Ambassador"),
-            new HitscanWeapon("Festive Ambassador"),
+            //new HitscanWeapon("Festive Ambassador"), // In skins
             new HitscanWeapon("L'Etranger"),
             new HitscanWeapon("The Enforcer"),
             new HitscanWeapon("The Diamondback")
@@ -41,11 +41,11 @@ public class RandomSpy extends RandomBot {
 
         meleeWeaponList = new ArrayList<>(Arrays.asList(
             new Weapon("Upgradeable TF_WEAPON_KNIFE", "Knife"),
-            new Weapon("Festive Knife 2011", "Festive Knife"),
-            new Weapon("The Sharp Dresser"),
-            new Weapon("The Black Rose"),
+            //new Weapon("Festive Knife 2011", "Festive Knife"), // In skins
+            //new Weapon("The Sharp Dresser"), // In skins
+            //new Weapon("The Black Rose"), // In skins
             new Weapon("Your Eternal Reward"),
-            new Weapon("The Wanga Prick"),
+           // new Weapon("The Wanga Prick"), // In skins
             new Weapon("Conniver's Kunai"),
             new Weapon("The Big Earner"),
             new Weapon("The Spy-cicle")
