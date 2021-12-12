@@ -44,7 +44,7 @@ public class RandomBotPanel extends JPanel {
      * Constructor
      */
     public RandomBotPanel() {
-        this.setLayout(new FlowLayout(FlowLayout.LEFT));
+        this.setLayout(new BorderLayout());
 
         Panel randomSettingsPanel = new Panel();
         randomSettingsPanel.setLayout(new BoxLayout(randomSettingsPanel, BoxLayout.Y_AXIS));
@@ -52,15 +52,18 @@ public class RandomBotPanel extends JPanel {
         randomSettingsPanel.add(standardGiantBotSpawnNumberPanel);
         randomSettingsPanel.add(supportNormalBotSpawnNumberPanel);
         randomSettingsPanel.add(supportGiantBotSpawnNumberPanel);
+        randomSettingsPanel.add(new JSeparator(JSeparator.HORIZONTAL));
         randomSettingsPanel.add(percentAttributesPanel);
         randomSettingsPanel.add(maxNumberOfAttributesPanel);
+        randomSettingsPanel.add(new JSeparator(JSeparator.HORIZONTAL));
         randomSettingsPanel.add(percentCosmeticPanel);
         randomSettingsPanel.add(percentPaintedPanel);
         randomSettingsPanel.add(percentUnusualEffectPanel);
+        randomSettingsPanel.add(new JSeparator(JSeparator.HORIZONTAL));
         randomSettingsPanel.add(percentRandomProjectileModel);
         randomSettingsPanel.add(percentRandomProjectileType);
 
-        this.add(randomSettingsPanel);
+        this.add(randomSettingsPanel, BorderLayout.NORTH);
 
         applySettings();
     }
