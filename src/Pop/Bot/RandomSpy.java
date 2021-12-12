@@ -106,7 +106,20 @@ public class RandomSpy extends RandomBot {
             new Cosmetic("Big Topper"),
             new Cosmetic("Brain-Warming Wear"),
             new Cosmetic("Reader's Choice"),
-            new Cosmetic("The Upgrade")
+            new Cosmetic("The Upgrade"),
+            new Cosmetic("Aristotle"),
+            new Cosmetic("Murderer's Motif"),
+            new Cosmetic("Harry"),
+            new Cosmetic("Shutterbug"),
+            new Cosmetic("Avian Amante"),
+            new Cosmetic("Voodoo Vizier"),
+            new Cosmetic("Bird's Eye Viewer"),
+            new Cosmetic("Crabe de Chapeau"),
+            new Cosmetic("Particulate Protector"),
+            new Cosmetic("Crustaceous Cowl"),
+            new Cosmetic("Computron 5000"),
+            new Cosmetic("Gruesome Gourd"),
+            new Cosmetic("Festive Cover-Up")
         ));
     }
 

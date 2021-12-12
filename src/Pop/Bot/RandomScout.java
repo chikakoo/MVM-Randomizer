@@ -128,7 +128,28 @@ public class RandomScout extends RandomBot {
             new Cosmetic("The Wing Mann"),
             new Cosmetic("Reader's Choice"),
             new Cosmetic("The Lightning Lid"),
-            new Cosmetic("Trucker's Topper")
+            new Cosmetic("Trucker's Topper"),
+            new Cosmetic("Punk's Pomp"),
+            new Cosmetic("Antarctic Eyewear"),
+            new Cosmetic("Hephaistos' Handcraft"),
+            new Cosmetic("The Catcher's Companion"),
+            new Cosmetic("Millennial Mercenary", "Millennial"),
+            new Cosmetic("The Bottle Cap"),
+            new Cosmetic("Speedy Scoundrel"),
+            new Cosmetic("Fuel Injector"),
+            new Cosmetic("Remorseless Raptor"),
+            new Cosmetic("Wild Whip"),
+            new Cosmetic("California Cap"),
+            new Cosmetic("Soda Specs"),
+            new Cosmetic("Tools of the Tourist", "Tourist"),
+            new Cosmetic("The Boom Boxers"),
+            new Cosmetic("Grounded Flyboy"),
+            new Cosmetic("Particulate Protector"),
+            new Cosmetic("Fast Food"),
+            new Cosmetic("Fried Batter"),
+            new Cosmetic("Batter's Beak"),
+            new Cosmetic("Computron 5000"),
+            new Cosmetic("The Corpse Carrier")
         ));
     }
 }

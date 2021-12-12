@@ -145,7 +145,19 @@ public class RandomDemoman extends RandomBot {
             new Cosmetic("Reader's Choice"),
             new Cosmetic("Blast Defense"),
             new Cosmetic("The War Eagle"),
-            new Cosmetic("Hungover Hero")
+            new Cosmetic("Hungover Hero"),
+            new Cosmetic("Melody Of Misery"),
+            new Cosmetic("Antarctic Eyewear"),
+            new Cosmetic("The Frag Proof Fragger", "Frag Proof"),
+            new Cosmetic("Backbreaker's Skullcracker", "Skullcracker"),
+            new Cosmetic("Bobby Bonnet", "Officer"),
+            new Cosmetic("Spiky Viking"),
+            new Cosmetic("Hazard Headgear"),
+            new Cosmetic("Sophisticated Smoker"),
+            new Cosmetic("The Boom Boxers"),
+            new Cosmetic("Helm Helm"),
+            new Cosmetic("Particulate Protector"),
+            new Cosmetic("Death Stare")
         ));
     }
 

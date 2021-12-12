@@ -152,8 +152,36 @@ public class RandomSoldier extends RandomBot {
             new Cosmetic("The Nuke"),
             new Cosmetic("The Shellmet"),
             new Cosmetic("The War Eagle"),
-            new Cosmetic("Brass Bucket")
-            //"The Crit Cloak",
+            new Cosmetic("Brass Bucket"),
+            //"The Crit Cloak", // Glitchy
+            new Cosmetic("The Head Hedge"),
+            new Cosmetic("Private Maggot Muncher", "Maggot Muncher"),
+            new Cosmetic("Sky High Fly Guy", "Sky High"),
+            new Cosmetic("The Tank Top"),
+            new Cosmetic("Vampire Vanquisher"),
+            new Cosmetic("Climbing Commander"),
+            new Cosmetic("The Crack Pot"),
+            new Cosmetic("The Dumb Bell"),
+            new Cosmetic("Bobby Bonnet", "Officer"),
+            new Cosmetic("Dancing Doe"),
+            new Cosmetic("The Peacebreaker"),
+            new Cosmetic("El Zapateador", "Zapateador"),
+            new Cosmetic("Racc Mann"),
+            new Cosmetic("Public Speaker"),
+            new Cosmetic("Bazaar Bauble"),
+            new Cosmetic("Breach and Bomb"),
+            new Cosmetic("Hawk Warrior"),
+            new Cosmetic("Sophisticated Smoker"),
+            new Cosmetic("Calamitous Cauldron"),
+            new Cosmetic("Semi-tame Trapper's Hat", "Semi-tame"),
+            new Cosmetic("War Blunder"),
+            new Cosmetic("Particulate Protector"),
+            new Cosmetic("The Panisher"),
+            new Cosmetic("Roaming Roman"),
+            new Cosmetic("Thousand-Yard Stare"),
+            new Cosmetic("Poopy Doe"),
+            new Cosmetic("War Dog"),
+            new Cosmetic("Elf Defence")
         ));
     }
 

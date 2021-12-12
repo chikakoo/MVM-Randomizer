@@ -158,7 +158,22 @@ public class RandomHeavy extends RandomBot {
             new Cosmetic("Bull Locks"),
             new Cosmetic("The Unshaved Bear"),
             new Cosmetic("Yuri's Revenge"),
-            new Cosmetic("Der Maschinensoldaten-Helm", "Maschinensoldaten-Helm")
+            new Cosmetic("Der Maschinensoldaten-Helm", "Maschinensoldaten"),
+            new Cosmetic("Starboard Crusader"),
+            new Cosmetic("Mann-O-War"),
+            new Cosmetic("Cool Capuchon"),
+            new Cosmetic("Mediterranean Mercenary"),
+            new Cosmetic("Convict Cap"),
+            new Cosmetic("Momma Kiev"),
+            new Cosmetic("Sophisticated Smoker"),
+            new Cosmetic("The Boom Boxers"),
+            new Cosmetic("Mannvich"),
+            new Cosmetic("Particulate Protector"),
+            new Cosmetic("SandMann's Brush", "SandMann"),
+            new Cosmetic("Snack Stack"),
+            new Cosmetic("Two Punch Mann", "Two Punch"),
+            new Cosmetic("Computron 5000"),
+            new Cosmetic("Mooshanka")
         ));
     }
 

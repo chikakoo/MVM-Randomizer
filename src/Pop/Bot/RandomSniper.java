@@ -121,7 +121,20 @@ public class RandomSniper extends RandomBot {
             new Cosmetic("The Classy Capper"),
             new Cosmetic("The Most Dangerous Mane", "Dangerous Mane"),
             new Cosmetic("The Handsome Hitman"),
-            new Cosmetic("Puffy Polar Cap")
+            new Cosmetic("Puffy Polar Cap"),
+            new Cosmetic("Antarctic Eyewear"),
+            new Cosmetic("The Head Hedge"),
+            new Cosmetic("Crocodile Mun-Dee"),
+            new Cosmetic("Highway Star"),
+            new Cosmetic("Scopers Scales", "Scoper's Scales"),
+            new Cosmetic("The Bare Necessities"),
+            new Cosmetic("Elizabeth the Third"),
+            new Cosmetic("The Missing Piece"),
+            new Cosmetic("Winter Wrap Up"),
+            new Cosmetic("Glow from Below"),
+            new Cosmetic("The Killing Tree"),
+            new Cosmetic("Particulate Protector"),
+            new Cosmetic("Wild Brim Slouch", "Wild Brim")
         ));
     }
 

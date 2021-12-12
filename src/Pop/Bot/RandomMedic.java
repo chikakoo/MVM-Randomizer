@@ -124,8 +124,21 @@ public class RandomMedic extends RandomBot {
             new Cosmetic("Colossal Cranium"),
             new Cosmetic("Field Practice"),
             new Cosmetic("Battle Boonie"),
-            new Cosmetic("Coldfront Commander")
+            new Cosmetic("Coldfront Commander"),
             //"The Mann of Reason", // Glitchy looking
+            new Cosmetic("Harry"),
+            new Cosmetic("Mighty Mitre"),
+            new Cosmetic("Miser's Muttonchops", "Muttonchops"),
+            new Cosmetic("Snowcapped"),
+            new Cosmetic("Madmann's Muzzle"),
+            new Cosmetic("Pocket-Medes"),
+            new Cosmetic("Flatliner"),
+            new Cosmetic("Self-Care"),
+            new Cosmetic("Rolfe Copter"),
+            new Cosmetic("Elf Care Provider"),
+            new Cosmetic("Particulate Protector"),
+            new Cosmetic("Computron 5000"),
+            new Cosmetic("Optic Nerve")
         ));
     }
 }
