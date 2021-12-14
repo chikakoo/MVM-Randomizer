@@ -38,7 +38,7 @@ public class RandomPyro extends RandomBot {
             new HitscanWeapon("The Manmelter", ProjectileTypes.FLARE),
             new HitscanWeapon( "The Scorch Shot", ProjectileTypes.FLARE),
             new Weapon("The Thermal Thruster"),
-            new Weapon("The Gas Passer")
+            new JarItem("The Gas Passer")
             //"Festive Shotgun 2014",
             //"The Reserve Shooter",
             //"Panic Attack Shotgun",

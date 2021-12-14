@@ -1,7 +1,7 @@
 package Pop.Bot.Weapons;
 
 /**
- * Covers the flying guillotine and the jar items
+ * Covers the flying guillotine, the gas passer, and the jar items
  */
 public class JarItem extends ConsumableItem {
     /**
