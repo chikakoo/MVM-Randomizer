@@ -1,0 +1,3673 @@
+{
+  "fileSettings": {
+    "popPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Team Fortress 2\\tf\\scripts\\population",
+    "missionName": "custom",
+    "deletingMissions": true
+  },
+  "waveScheduleSettings": {
+    "startingCurrency": {
+      "lowerBound": 0,
+      "upperBound": 0
+    },
+    "numberOfWaves": {
+      "lowerBound": 6,
+      "upperBound": 10
+    }
+  },
+  "waveSettings": {
+    "waves": [
+      {
+        "currencyRange": {
+          "lowerBound": 400,
+          "upperBound": 600
+        },
+        "waveSpawnRange": {
+          "lowerBound": 2,
+          "upperBound": 3
+        },
+        "percentMissions": 0,
+        "percentSupport": 10,
+        "percentGiants": 0,
+        "maxGiants": 0,
+        "percentTanks": 0
+      },
+      {
+        "currencyRange": {
+          "lowerBound": 400,
+          "upperBound": 600
+        },
+        "waveSpawnRange": {
+          "lowerBound": 2,
+          "upperBound": 3
+        },
+        "percentMissions": 0,
+        "percentSupport": 20,
+        "percentGiants": 10,
+        "maxGiants": 1,
+        "percentTanks": 10
+      },
+      {
+        "currencyRange": {
+          "lowerBound": 400,
+          "upperBound": 600
+        },
+        "waveSpawnRange": {
+          "lowerBound": 3,
+          "upperBound": 3
+        },
+        "percentMissions": 0,
+        "percentSupport": 20,
+        "percentGiants": 15,
+        "maxGiants": 1,
+        "percentTanks": 10
+      },
+      {
+        "currencyRange": {
+          "lowerBound": 400,
+          "upperBound": 600
+        },
+        "waveSpawnRange": {
+          "lowerBound": 3,
+          "upperBound": 4
+        },
+        "percentMissions": 0,
+        "percentSupport": 35,
+        "percentGiants": 15,
+        "maxGiants": 1,
+        "percentTanks": 10
+      },
+      {
+        "currencyRange": {
+          "lowerBound": 400,
+          "upperBound": 600
+        },
+        "waveSpawnRange": {
+          "lowerBound": 4,
+          "upperBound": 4
+        },
+        "percentMissions": 0,
+        "percentSupport": 35,
+        "percentGiants": 20,
+        "maxGiants": 1,
+        "percentTanks": 10
+      },
+      {
+        "currencyRange": {
+          "lowerBound": 400,
+          "upperBound": 600
+        },
+        "waveSpawnRange": {
+          "lowerBound": 4,
+          "upperBound": 5
+        },
+        "percentMissions": 0,
+        "percentSupport": 35,
+        "percentGiants": 40,
+        "maxGiants": 1,
+        "percentTanks": 10
+      },
+      {
+        "currencyRange": {
+          "lowerBound": 400,
+          "upperBound": 600
+        },
+        "waveSpawnRange": {
+          "lowerBound": 4,
+          "upperBound": 5
+        },
+        "percentMissions": 0,
+        "percentSupport": 35,
+        "percentGiants": 40,
+        "maxGiants": 1,
+        "percentTanks": 10
+      },
+      {
+        "currencyRange": {
+          "lowerBound": 400,
+          "upperBound": 600
+        },
+        "waveSpawnRange": {
+          "lowerBound": 4,
+          "upperBound": 5
+        },
+        "percentMissions": 0,
+        "percentSupport": 35,
+        "percentGiants": 40,
+        "maxGiants": 2,
+        "percentTanks": 10
+      },
+      {
+        "currencyRange": {
+          "lowerBound": 400,
+          "upperBound": 600
+        },
+        "waveSpawnRange": {
+          "lowerBound": 4,
+          "upperBound": 5
+        },
+        "percentMissions": 0,
+        "percentSupport": 35,
+        "percentGiants": 45,
+        "maxGiants": 2,
+        "percentTanks": 10
+      },
+      {
+        "currencyRange": {
+          "lowerBound": 400,
+          "upperBound": 600
+        },
+        "waveSpawnRange": {
+          "lowerBound": 5,
+          "upperBound": 6
+        },
+        "percentMissions": 0,
+        "percentSupport": 35,
+        "percentGiants": 50,
+        "maxGiants": 2,
+        "percentTanks": 15
+      }
+    ]
+  },
+  "botSettings": {
+    "normalBots": {
+      "DEMOMAN": [
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_Demoman_Captain",
+            "name": "Captain Tavish",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_Demoman_Kamikaze",
+            "name": "Demokaze",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_Demoman_Smasher",
+            "name": "Shieldsmasher",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_Demoman_Lionel",
+            "name": "Dangeresque Demo",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_Demoman",
+            "name": "Demoman",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_Demoman_Knight",
+            "name": "Demoknight",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_Demo_Burst",
+            "name": "Burst Fire Demo",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_SentryBuster",
+            "name": "Sentry Buster",
+            "isGiant": false
+          },
+          "standardWeight": 0,
+          "supportWeight": 0,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        }
+      ],
+      "PYRO": [
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_Pyro_Cat",
+            "name": "Purro",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_Pyro_Hothead",
+            "name": "Hothead",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_Pyro_Dragon",
+            "name": "Elvarg",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_Pyro_Bleeder",
+            "name": "Bloodman",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_Pyro_Lionel",
+            "name": "Puff the Magic Pyro",
+            "isGiant": false
+          },
+          "standardWeight": 50,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 5,
+            "upperBound": 10
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_Pyro_Michelle",
+            "name": "Super Pyro Face",
+            "isGiant": false
+          },
+          "standardWeight": 50,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 5,
+            "upperBound": 10
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_Pyro",
+            "name": "Pyro",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_Pyro_Flaregun",
+            "name": "Flare Pyro",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_ScorchShot",
+            "name": "Pyro Pusher",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_ScorchShot_FastShot",
+            "name": "Fast Scorch Shot",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 5,
+            "upperBound": 10
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        }
+      ],
+      "ENGINEER": [
+        {
+          "template": {
+            "tfClass": "ENGINEER",
+            "templateName": "T_TFBot_Engineer_Fat",
+            "name": "Fat Engie",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": false,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "ENGINEER",
+            "templateName": "T_TFBot_Engineer_Festive_Lionel",
+            "name": "Revengie",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": false,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "ENGINEER",
+            "templateName": "T_TFBot_Engineer_Michelle",
+            "name": "Engineer",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": false,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "ENGINEER",
+            "templateName": "T_TFBot_Engineer_Sentry_Teleporter",
+            "name": "Engineer",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": false,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "ENGINEER",
+            "templateName": "T_TFBot_Engineer_Sentry_Battle_TeleIn",
+            "name": "Engineer",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": false,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "ENGINEER",
+            "templateName": "T_TFBot_Engineer_Sentry_Tele_Battle",
+            "name": "Engineer",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": false,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "ENGINEER",
+            "templateName": "T_TFBot_Engineer_Sentry_Battle",
+            "name": "Engineer",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": false,
+          "isSupport": true
+        }
+      ],
+      "SCOUT": [
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Hotdog",
+            "name": "Bot Dog Vendor",
+            "isGiant": false
+          },
+          "standardWeight": 50,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 5,
+            "upperBound": 10
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Crusader",
+            "name": "Christmas Crusader",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Laugh",
+            "name": "Chucklenuts",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 2
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Snail",
+            "name": "Snail",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Lionel",
+            "name": "Airdogger",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 5,
+            "upperBound": 10
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Michelle",
+            "name": "Soda Popper",
+            "isGiant": false
+          },
+          "standardWeight": 50,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 5,
+            "upperBound": 10
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout",
+            "name": "Scout",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Melee",
+            "name": "Scout",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Fish",
+            "name": "Fish Scout",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_SunStick",
+            "name": "Sun Scout",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Bonk",
+            "name": "Bonk Scout",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Sandman",
+            "name": "Minor League Scout",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Sandman_FastCharge",
+            "name": "Hyper League Scout",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Wrap_Assassin",
+            "name": "Wrap Assassin",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Jumping_Sandman",
+            "name": "Jumping Sandman",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Scattergun_SlowFire",
+            "name": "Slowfire Scout",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_FAN",
+            "name": "Force-A-Nature Scout",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Shortstop",
+            "name": "Shortstop Scout",
+            "isGiant": false
+          },
+          "standardWeight": 20,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 5,
+            "upperBound": 10
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Scout_Winged_Beast",
+            "name": "Winged Beast",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        }
+      ],
+      "HEAVY": [
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavy_Sad",
+            "name": "Clinically Depressed Heavy",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavy_Navi",
+            "name": "Navi",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 5,
+            "upperBound": 10
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavy_Birb",
+            "name": "Heavy Birb",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavy_Tourist",
+            "name": "Tourist",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavy_Laser",
+            "name": "Dr. Octagonapus",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavy_Lionel",
+            "name": "Marathon Runner",
+            "isGiant": false
+          },
+          "standardWeight": 50,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 5,
+            "upperBound": 10
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavy_Michelle",
+            "name": "One Punch Guy",
+            "isGiant": false
+          },
+          "standardWeight": 50,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 5,
+            "upperBound": 10
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavyweapons",
+            "name": "Heavy",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavyweapons_Fist",
+            "name": "Steel Gauntlet",
+            "isGiant": false
+          },
+          "standardWeight": 50,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 5,
+            "upperBound": 10
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavyweapons_Heavyweight_Champ",
+            "name": "Heavyweight Champ",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavyweapons_Heavyweight_Champ_Fast",
+            "name": "Heavyweight Champ",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavyweapons_Gnome",
+            "name": "Heavy Mittens",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavyweapons_Shotgun",
+            "name": "Heavy Shotgun",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavy_IronFist_Airblast",
+            "name": "Steel Gauntlet Pusher",
+            "isGiant": false
+          },
+          "standardWeight": 25,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 5,
+            "upperBound": 10
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Heavy_Flari",
+            "name": "Flari-kun",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        }
+      ],
+      "SOLDIER": [
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Soldier_Doctor",
+            "name": "War Doctor",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Soldier_Airstrike",
+            "name": "Jumper",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Soldier_Army_Of_One",
+            "name": "Army of One",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 4,
+            "upperBound": 8
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Soldier_Lionel",
+            "name": "Colonel Bites",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 4,
+            "upperBound": 8
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Soldier_Michelle",
+            "name": "Sergeant Stomper",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Soldier",
+            "name": "Solider",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Soldier_RocketPush_Airblast",
+            "name": "Sergeant Bitchass",
+            "isGiant": false
+          },
+          "standardWeight": 25,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 4,
+            "upperBound": 8
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Soldier_RocketPush_NoAirblast",
+            "name": "Blast Soldier",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Soldier_Buff_Banner",
+            "name": "Buff Soldier",
+            "isGiant": false
+          },
+          "standardWeight": 25,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 4,
+            "upperBound": 8
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Soldier_Extended_Buff_Banner",
+            "name": "Extended Buff Soldier",
+            "isGiant": false
+          },
+          "standardWeight": 25,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 4,
+            "upperBound": 8
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Soldier_Extended_Concheror",
+            "name": "Extended Conch Soldier",
+            "isGiant": false
+          },
+          "standardWeight": 25,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 4,
+            "upperBound": 8
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Soldier_Extended_Battalion",
+            "name": "Extended Backup Soldier",
+            "isGiant": false
+          },
+          "standardWeight": 25,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 4,
+            "upperBound": 8
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Soldier_RocketShotgun",
+            "name": "Black Box Soldier",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Soldier_Bison",
+            "name": "Bisontron 3000",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        }
+      ],
+      "MEDIC": [
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Medic_Shield",
+            "name": "Tank Medic",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Medic_Huntsman",
+            "name": "Death From Above",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Medic_Mosquito",
+            "name": "Mosquito",
+            "isGiant": false
+          },
+          "standardWeight": 200,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 20,
+            "upperBound": 35
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Medic_Birb",
+            "name": "Medimedes",
+            "isGiant": false
+          },
+          "standardWeight": 50,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 5,
+            "upperBound": 10
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Medic_Michelle",
+            "name": "Swift Life",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Medic",
+            "name": "Uber Medic",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Medic_QuickUber",
+            "name": "Uber Medic",
+            "isGiant": false
+          },
+          "standardWeight": 50,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 5,
+            "upperBound": 10
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Medic_BigHeal",
+            "name": "Quick-Fix Medic",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Medic_QuickFix",
+            "name": "Quick-Fix Medic",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Medic_SlowRecharge",
+            "name": "Uber Medic",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Medic_Vaccinator_Bullet",
+            "name": "Bullet Vaxxer",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Medic_Vaccinator_Blast",
+            "name": "Blast Vaxxer",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Medic_Vaccinator_Fire",
+            "name": "Fire Vaxxer",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        }
+      ],
+      "SPY": [
+        {
+          "template": {
+            "tfClass": "SPY",
+            "templateName": "T_TFBot_Spy_Bighead",
+            "name": "Big Ego Assassin",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SPY",
+            "templateName": "T_TFBot_Spy_Rocket",
+            "name": "Can\u0027t Touch This",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SPY",
+            "templateName": "T_TFBot_Spy_Ninja",
+            "name": "ANBU Spy",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SPY",
+            "templateName": "T_TFBot_Spy_Lionel",
+            "name": "Otter Popper",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SPY",
+            "templateName": "T_TFBot_Spy_Michelle",
+            "name": "Suicide Spy",
+            "isGiant": false
+          },
+          "standardWeight": 75,
+          "supportWeight": 25,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SPY",
+            "templateName": "T_TFBot_Spy",
+            "name": "Spy",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": true
+        }
+      ],
+      "SNIPER": [
+        {
+          "template": {
+            "tfClass": "SNIPER",
+            "templateName": "T_TFBot_Sniper_Candy_Cane",
+            "name": "Cain",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SNIPER",
+            "templateName": "T_TFBot_Sniper_Lionel",
+            "name": "Ostrich Hunter",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SNIPER",
+            "templateName": "T_TFBot_Sniper_Michelle",
+            "name": "Rocketheader",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SNIPER",
+            "templateName": "T_TFBot_Sniper",
+            "name": "Sniper",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SNIPER",
+            "templateName": "T_TFBot_Sniper_Razorback",
+            "name": "Razorback Sniper",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SNIPER",
+            "templateName": "T_TFBot_Sniper_Sydney_Sleeper",
+            "name": "Sydney Sniper",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": true,
+          "isSupport": true
+        },
+        {
+          "template": {
+            "tfClass": "SNIPER",
+            "templateName": "T_TFBot_Sniper_Huntsman",
+            "name": "Bowman",
+            "isGiant": false
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 12,
+            "upperBound": 20
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": true,
+          "isSupport": true
+        }
+      ]
+    },
+    "giantBots": {
+      "DEMOMAN": [
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_Giant_Demoman_Legolas",
+            "name": "Legolas",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_Giant_Demoman_Michelle",
+            "name": "Cap\u0027n Kabuto",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_Giant_Demoman",
+            "name": "Giant Rapid Fire Demoman",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_Giant_Demo_RapidFire",
+            "name": "Giant Rapid Fire Demoman",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_Giant_DemoMan_PrinceTavish",
+            "name": "Giant Demoknight",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_Giant_Demo_Burst",
+            "name": "Giant Burst Fire Demo",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "DEMOMAN",
+            "templateName": "T_TFBot_Giant_Demoman_Samurai",
+            "name": "Samurai Demo",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        }
+      ],
+      "PYRO": [
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_Giant_Pyro",
+            "name": "Giant Pyro",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_Giant_Pyro_Flare_Spammer",
+            "name": "Giant Flare Pyro",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_Giant_Pyro_Flare_Spammer_ScorchShot",
+            "name": "Giant Flare Pyro",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_Giant_Pyro_Pusher",
+            "name": "Giant Airblast Pyro",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "PYRO",
+            "templateName": "T_TFBot_Giant_Pyro_Ass_Blaster",
+            "name": "Ass Blaster",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        }
+      ],
+      "ENGINEER": [
+        {
+          "template": {
+            "tfClass": "ENGINEER",
+            "templateName": "T_TFBot_Giant_Engineer_Lionel",
+            "name": "Engie\u0027s Dad",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 1
+          },
+          "isStandard": false,
+          "isSupport": true
+        }
+      ],
+      "SCOUT": [
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Giant_Scout_Noob",
+            "name": "XxXl33t_Sc0ut69XxX",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Giant_Scout",
+            "name": "Giant Scout",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Giant_Scout_Fast",
+            "name": "Super Scout",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Giant_Scout_FAN",
+            "name": "Force-a-Nature Super Scout",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Giant_Scout_Jumping_Sandman",
+            "name": "Giant Jumping Sandman",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Giant_Scout_Baseball",
+            "name": "Major League Scout",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Giant_Scout_Baseball_Armored",
+            "name": "Armored Sandman Scout",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SCOUT",
+            "templateName": "T_TFBot_Giant_Scout_Bonk",
+            "name": "Giant Bonk Scout",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        }
+      ],
+      "HEAVY": [
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Giant_Heavyweapons",
+            "name": "Giant Heavy",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Giant_Heavyweapons_Deflector",
+            "name": "Giant Deflector Heavy",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Giant_Heavyweapons_Shotgun",
+            "name": "Giant Shotgun Heavy",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Giant_Heavyweapons_BrassBeast",
+            "name": "Giant Heavy",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Giant_Heavyweapons_Natascha",
+            "name": "Giant Heavy",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Giant_Heavyweapons_HealOnKill",
+            "name": "Giant Heavy",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Giant_Heavyweapons_Heater",
+            "name": "Giant Hot Heavy",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Giant_Boxing_Heavy",
+            "name": "Super Heavyweight Champ",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "HEAVY",
+            "templateName": "T_TFBot_Giant_Heavy_Flari",
+            "name": "Flari-sama",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        }
+      ],
+      "SOLDIER": [
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Giant_Soldier",
+            "name": "Giant Soldier",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Giant_Soldier_Crit",
+            "name": "Giant Charged Soldier",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Giant_Soldier_Spammer",
+            "name": "Giant Rapid Fire Soldier",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Giant_Soldier_Spammer_Reload",
+            "name": "Giant Burst Fire Soldier",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Giant_Soldier_Extended_Buff_Banner",
+            "name": "Giant Buff Banner Soldier",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Giant_Soldier_Extended_Concheror",
+            "name": "Giant Concheror Soldier",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Giant_Soldier_Extended_Battalion",
+            "name": "Giant Battalion Soldier ",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Giant_Soldier_RocketShotgun",
+            "name": "Giant Black Box Soldier",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 1
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Giant_Soldier_BurstFire",
+            "name": "Giant Burst Fire Soldier",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Giant_Soldier_SlowBarrage",
+            "name": "Colonel Barrage",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Giant_Soldier_RocketPush",
+            "name": "Giant Blast Soldier",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SOLDIER",
+            "templateName": "T_TFBot_Giant_Soldier_Harmless",
+            "name": "Mos Le\u0027Harmless",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        }
+      ],
+      "MEDIC": [
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Giant_Medic_Lionel",
+            "name": "Angel of Death",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Giant_Medic",
+            "name": "Giant Medic",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 1
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Giant_Medic_Regen",
+            "name": "Giant Medic",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 1
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "MEDIC",
+            "templateName": "T_TFBot_Giant_Medic_Milkman",
+            "name": "Lon Lon Milkman",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        }
+      ],
+      "SPY": [
+        {
+          "template": {
+            "tfClass": "SPY",
+            "templateName": "T_TFBot_Giant_Spy",
+            "name": "Giant Spy",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 5
+          },
+          "isStandard": true,
+          "isSupport": false
+        }
+      ],
+      "SNIPER": [
+        {
+          "template": {
+            "tfClass": "SNIPER",
+            "templateName": "T_TFBot_Giant_Sniper_Huntsman",
+            "name": "Bowman Rapid Fire",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": true,
+          "isSupport": false
+        },
+        {
+          "template": {
+            "tfClass": "SNIPER",
+            "templateName": "T_TFBot_Giant_Sniper_Smig",
+            "name": "Smiger",
+            "isGiant": true
+          },
+          "standardWeight": 100,
+          "supportWeight": 100,
+          "standardSpawnRange": {
+            "lowerBound": 2,
+            "upperBound": 3
+          },
+          "supportSpawnRange": {
+            "lowerBound": 1,
+            "upperBound": 3
+          },
+          "isStandard": true,
+          "isSupport": false
+        }
+      ]
+    },
+    "percentRandom": 40,
+    "standardBotDistributions": {
+      "demomanPercentage": 0,
+      "engineerPercentage": 0,
+      "heavyPercentage": 0,
+      "medicPercentage": 0,
+      "pyroPercentage": 0,
+      "scoutPercentage": 0,
+      "sniperPercentage": 0,
+      "soldierPercentage": 100,
+      "spyPercentage": 0
+    },
+    "giantBotDistributions": {
+      "demomanPercentage": 0,
+      "engineerPercentage": 0,
+      "heavyPercentage": 0,
+      "medicPercentage": 0,
+      "pyroPercentage": 0,
+      "scoutPercentage": 0,
+      "sniperPercentage": 0,
+      "soldierPercentage": 100,
+      "spyPercentage": 0
+    },
+    "supportBotDistributions": {
+      "demomanPercentage": 0,
+      "engineerPercentage": 20,
+      "heavyPercentage": 0,
+      "medicPercentage": 0,
+      "pyroPercentage": 0,
+      "scoutPercentage": 0,
+      "sniperPercentage": 40,
+      "soldierPercentage": 100,
+      "spyPercentage": 40
+    },
+    "highlanderMode": false
+  },
+  "randomBotSettings": {
+    "percentAttributes": 25,
+    "maxAttributes": 3,
+    "percentCosmetic": 100,
+    "percentPaint": 75,
+    "percentUnusualEffect": 25,
+    "percentRandomProjectileModel": 100,
+    "percentRandomProjectileType": 20
+  },
+  "tankSettings": {
+    "waveSpawnReduction": 1,
+    "tanks": [
+      {
+        "amount": 1,
+        "speedRange": {
+          "lowerBound": 60,
+          "upperBound": 80
+        },
+        "healthRange": {
+          "lowerBound": 11250,
+          "upperBound": 12500
+        },
+        "spawnDelay": {
+          "lowerBound": 45,
+          "upperBound": 60
+        },
+        "isZebraStriped": true,
+        "weight": 100
+      },
+      {
+        "amount": 2,
+        "speedRange": {
+          "lowerBound": 60,
+          "upperBound": 75
+        },
+        "healthRange": {
+          "lowerBound": 8000,
+          "upperBound": 10000
+        },
+        "spawnDelay": {
+          "lowerBound": 45,
+          "upperBound": 60
+        },
+        "isZebraStriped": false,
+        "weight": 100
+      },
+      {
+        "amount": 3,
+        "speedRange": {
+          "lowerBound": 60,
+          "upperBound": 70
+        },
+        "healthRange": {
+          "lowerBound": 6250,
+          "upperBound": 8000
+        },
+        "spawnDelay": {
+          "lowerBound": 45,
+          "upperBound": 60
+        },
+        "isZebraStriped": false,
+        "weight": 100
+      },
+      {
+        "amount": 4,
+        "speedRange": {
+          "lowerBound": 50,
+          "upperBound": 60
+        },
+        "healthRange": {
+          "lowerBound": 4000,
+          "upperBound": 6250
+        },
+        "spawnDelay": {
+          "lowerBound": 45,
+          "upperBound": 60
+        },
+        "isZebraStriped": false,
+        "weight": 100
+      },
+      {
+        "amount": 10,
+        "speedRange": {
+          "lowerBound": 400,
+          "upperBound": 400
+        },
+        "healthRange": {
+          "lowerBound": 400,
+          "upperBound": 600
+        },
+        "spawnDelay": {
+          "lowerBound": 10,
+          "upperBound": 15
+        },
+        "isZebraStriped": true,
+        "weight": 100
+      }
+    ]
+  },
+  "mapSettings": {
+    "maps": {
+      "ATOMGRAD": {
+        "map": "ATOMGRAD",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "PLATEAU": {
+        "map": "PLATEAU",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "SANDSTONE": {
+        "map": "SANDSTONE",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "SNOWFLAKE": {
+        "map": "SNOWFLAKE",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "DAMM": {
+        "map": "DAMM",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "WATERFRONT": {
+        "map": "WATERFRONT",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 1200,
+          "upperBound": 1500
+        },
+        "enabled": true
+      },
+      "TEUFORT": {
+        "map": "TEUFORT",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "DECOY": {
+        "map": "DECOY",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "MUSEUM": {
+        "map": "MUSEUM",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "MAELSTROM": {
+        "map": "MAELSTROM",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "MANNWORKS": {
+        "map": "MANNWORKS",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "SHIVER_PEAK": {
+        "map": "SHIVER_PEAK",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "QUETZALCOATL": {
+        "map": "QUETZALCOATL",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "SPACEPOST": {
+        "map": "SPACEPOST",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "AFFINITY": {
+        "map": "AFFINITY",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "TEIEN": {
+        "map": "TEIEN",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "MANNCOHQ": {
+        "map": "MANNCOHQ",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "DOCKYARD": {
+        "map": "DOCKYARD",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "MANNDARIN": {
+        "map": "MANNDARIN",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "CONDEMNED": {
+        "map": "CONDEMNED",
+        "spawnMultiplier": 0.6,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "MANNHATTAN": {
+        "map": "MANNHATTAN",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "BANDCORNER": {
+        "map": "BANDCORNER",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "CASINO_CITY": {
+        "map": "CASINO_CITY",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "SADDLE": {
+        "map": "SADDLE",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "COAST_ROCK": {
+        "map": "COAST_ROCK",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "OILRIG": {
+        "map": "OILRIG",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "BIGROCK": {
+        "map": "BIGROCK",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "MARIO_KART": {
+        "map": "MARIO_KART",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "ROTTENBURG": {
+        "map": "ROTTENBURG",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "HILLSIDE": {
+        "map": "HILLSIDE",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "BRUGGE": {
+        "map": "BRUGGE",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "VENTUS": {
+        "map": "VENTUS",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.2,
+        "startingCurrency": {
+          "lowerBound": 1000,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "INTERSECTION": {
+        "map": "INTERSECTION",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "OVERGREEN": {
+        "map": "OVERGREEN",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.2,
+        "startingCurrency": {
+          "lowerBound": 1000,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "COALTOWN": {
+        "map": "COALTOWN",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      },
+      "DEFAULT": {
+        "map": "DEFAULT",
+        "spawnMultiplier": 1.0,
+        "currencyMultiplier": 1.0,
+        "startingCurrency": {
+          "lowerBound": 800,
+          "upperBound": 1300
+        },
+        "enabled": true
+      }
+    },
+    "selectedMap": "DEFAULT",
+    "activeMap": "SHIVER_PEAK"
+  }
+}

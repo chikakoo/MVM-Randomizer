@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="Saved Settings">
+    <output-path>$PROJECT_DIR$/out/artifacts/MVM_Randomizer_jar/Saved Settings</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/Saved Settings" />
+    </root>
+  </artifact>
+</component>
