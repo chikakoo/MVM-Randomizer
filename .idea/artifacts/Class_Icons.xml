@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="Class Icons">
+    <output-path>$PROJECT_DIR$/out/artifacts/MVM_Randomizer_jar/Class Icons</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/Class Icons" />
+    </root>
+  </artifact>
+</component>

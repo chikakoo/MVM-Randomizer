@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="Pop Files">
+    <output-path>$PROJECT_DIR$/out/artifacts/MVM_Randomizer_jar/Pop Files</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/Pop Files" />
+    </root>
+  </artifact>
+</component>
