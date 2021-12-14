@@ -556,6 +556,27 @@ WaveSchedule
 			}
 		}
 		
+		T_TFBot_Sniper_Banana_Bomber
+		{
+			Class Sniper
+			Name "Banana Bomber"
+			ClassIcon sniper_banana_bomber
+			Skill Expert
+			Item "The Fortified Compound"
+			Item "Potassium Bonnett"
+			Item "Gingerbread Mann"
+			
+			ItemAttributes 
+			{
+				ItemName "The Fortified Compound"
+				"override projectile type" 17
+				"custom projectile model" "models/weapons/c_models/c_banana/c_banana.mdl"
+				"no self blast dmg" 2.0
+				"fire rate bonus" 0.001
+				"faster reload rate" 0.001
+			}
+		}
+		
 		T_TFBot_Giant_Sniper_Smig
 		{
 			Class Sniper
