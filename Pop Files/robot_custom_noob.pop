@@ -361,6 +361,65 @@ WaveSchedule
 }
 
 		// Demoman
+		T_TFBot_Demoman_Balloonidemo
+		{
+			Class Demoman
+			Name "Balloonidemo"
+			ClassIcon demoman_balloonidemo
+			Skill Expert
+			WeaponRestrictions PrimaryOnly
+			Item "The Loch-n-Load"
+			Item "The Magical Mercenary"
+			Item "Pet Balloonicorn"
+			
+			ItemAttributes
+			{
+				ItemName "The Loch-n-Load"
+				"no self blast dmg" 2.0
+				"fire rate bonus" 0.05
+				"auto fires full clip" 1
+				"auto fires when full" 1
+				"projectile spread angle penalty" 20
+				"projectile speed decreased" 0.5
+				"custom projectile model" "models/workshop/player/items/pyro/spring_rider/spring_rider.mdl"
+				"attach particle effect" 146
+			}
+		}
+		
+		T_TFBot_Demoman_Bezosman
+		{
+			Class Demoman
+			Name "Bezosman"
+			ClassIcon demoman_bezosman
+			Skill Expert
+			Item "Upgradeable TF_WEAPON_PIPEBOMBLAUNCHER"
+			Item "Treasure Hat 3"
+			WeaponRestrictions SecondaryOnly
+			Attributes AlwaysFireWeapon
+			
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_PIPEBOMBLAUNCHER"
+				"is australium item" 1
+				"item style override" 1
+				"turn to gold" 1
+				"no self blast dmg" 2.0
+				"faster reload rate" 0.01
+				"grenade no spin" 1
+				"fire rate bonus" 0.02
+				"stickybomb charge rate" 0.08
+				"stickybomb fizzle time" 0
+				"custom projectile model" "models/items/currencypack_medium.mdl"
+				"attach particle effect" 60
+			}
+			
+			ItemAttributes 
+			{
+				ItemName "Treasure Hat 3"
+				"set item tint RGB" 16766720
+			}
+		}
+		
 		T_TFBot_Giant_Demoman_Legolas
 		{
 			Class Demoman

@@ -128,6 +128,7 @@ public class RandomScout extends RandomBot {
             new Cosmetic("The Wing Mann"),
             new Cosmetic("Reader's Choice"),
             new Cosmetic("The Lightning Lid"),
+            new Cosmetic("Pocket Pauling"),
             new Cosmetic("Trucker's Topper"),
             new Cosmetic("Punk's Pomp"),
             new Cosmetic("Antarctic Eyewear"),
