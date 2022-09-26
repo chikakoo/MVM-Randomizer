@@ -106,7 +106,7 @@ public class BotTemplates {
                     templateFileNames.add(currentFile.getName());
 
                     while (scanner.hasNext()) {
-                        String currentLine = scanner.nextLine().trim();
+                        String currentLine = scanner.nextLine().replace("\t", " ").trim();
                         String lineToCompare = currentLine.toLowerCase();
 
                         if (lineToCompare.contains("t_tfbot")) {
