@@ -157,7 +157,12 @@ public class RandomDemoman extends RandomBot {
             new Cosmetic("The Boom Boxers"),
             new Cosmetic("Helm Helm"),
             new Cosmetic("Particulate Protector"),
-            new Cosmetic("Death Stare")
+            new Cosmetic("Death Stare"),
+            new Cosmetic("Trickster's Treats"),
+            new Cosmetic("Head Banger"),
+            new Cosmetic("Alcoholic Automaton"),
+            new Cosmetic("Bombard Brigadier"),
+            new Cosmetic("Nightbane Brim")
         ));
     }
 

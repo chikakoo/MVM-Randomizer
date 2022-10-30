@@ -243,7 +243,12 @@ public class AllClassCosmeticLists {
             new Cosmetic("Oh Deer!", "Oh Deer"),
             new Cosmetic("Ominous Offering"),
             new Cosmetic("Reindoonihorns"),
-            new Cosmetic("Seasonal Spring")
+            new Cosmetic("Seasonal Spring"),
+            new Cosmetic("The Decorated Veteran"),
+            new Cosmetic("Undercover Brolly"),
+            new Cosmetic("Beaten and Bruised"),
+            new Cosmetic("Onimann"),
+            new Cosmetic("Starlight Sorcerer")
         )
     );
 }

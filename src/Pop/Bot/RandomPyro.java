@@ -209,7 +209,10 @@ public class RandomPyro extends RandomBot {
             new Cosmetic("The Miami Rooster"),
             new Cosmetic("Smiling Somen"),
             new Cosmetic("Wandering Wraith"),
-            new Cosmetic("Elf Ignition")
+            new Cosmetic("Elf Ignition"),
+            new Cosmetic("The Fire Breather"),
+            new Cosmetic("Magical Mount"),
+            new Cosmetic("Propaniac")
         ));
     }
 

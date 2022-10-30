@@ -145,7 +145,12 @@ public class RandomEngineer extends RandomBot {
             new Cosmetic("The Sightliner"),
             new Cosmetic("Computron 5000"),
             new Cosmetic("The Hook, Line, and Thinker", "Hooked"),
-            new Cosmetic("Train Of Thought")
+            new Cosmetic("Train Of Thought"),
+            new Cosmetic("The Lawnmaker"),
+            new Cosmetic("Cabinet Mann"),
+            new Cosmetic("Dustbowl Devil"),
+            new Cosmetic("More Gun Marshal", "More Gun"),
+            new Cosmetic("The Pony Express")
         ));
     }
 

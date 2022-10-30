@@ -119,7 +119,9 @@ public class RandomSpy extends RandomBot {
             new Cosmetic("Crustaceous Cowl"),
             new Cosmetic("Computron 5000"),
             new Cosmetic("Gruesome Gourd"),
-            new Cosmetic("Festive Cover-Up")
+            new Cosmetic("Festive Cover-Up"),
+            new Cosmetic("Monsieur Grenouille"),
+            new Cosmetic("Night Vision Gawkers", "Night Vision")
         ));
     }
 

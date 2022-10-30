@@ -138,7 +138,9 @@ public class RandomMedic extends RandomBot {
             new Cosmetic("Elf Care Provider"),
             new Cosmetic("Particulate Protector"),
             new Cosmetic("Computron 5000"),
-            new Cosmetic("Optic Nerve")
+            new Cosmetic("Optic Nerve"),
+            new Cosmetic("Soda Cap"),
+            new Cosmetic("Victorian Villainy")
         ));
     }
 }

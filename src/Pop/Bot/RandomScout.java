@@ -150,7 +150,10 @@ public class RandomScout extends RandomBot {
             new Cosmetic("Fried Batter"),
             new Cosmetic("Batter's Beak"),
             new Cosmetic("Computron 5000"),
-            new Cosmetic("The Corpse Carrier")
+            new Cosmetic("The Corpse Carrier"),
+            new Cosmetic("Boston Brain Bucket", "Boston Brain"),
+            new Cosmetic("The Throttlehead"),
+            new Cosmetic("The Masked Fiend")
         ));
     }
 }

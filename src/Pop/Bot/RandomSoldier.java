@@ -181,7 +181,10 @@ public class RandomSoldier extends RandomBot {
             new Cosmetic("Thousand-Yard Stare"),
             new Cosmetic("Poopy Doe"),
             new Cosmetic("War Dog"),
-            new Cosmetic("Elf Defence")
+            new Cosmetic("Elf Defence"),
+            new Cosmetic("The Detective"),
+            new Cosmetic("Cranial Cowl"),
+            new Cosmetic("Firearm Protector")
         ));
     }
 

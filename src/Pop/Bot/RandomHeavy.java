@@ -173,7 +173,11 @@ public class RandomHeavy extends RandomBot {
             new Cosmetic("Snack Stack"),
             new Cosmetic("Two Punch Mann", "Two Punch"),
             new Cosmetic("Computron 5000"),
-            new Cosmetic("Mooshanka")
+            new Cosmetic("Mooshanka"),
+            new Cosmetic("Squatter's Right"),
+            new Cosmetic("Horror Shawl"),
+            new Cosmetic("Misha's Maw"),
+            new Cosmetic("Road Rage")
         ));
     }
 

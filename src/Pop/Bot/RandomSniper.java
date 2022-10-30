@@ -134,7 +134,10 @@ public class RandomSniper extends RandomBot {
             new Cosmetic("Glow from Below"),
             new Cosmetic("The Killing Tree"),
             new Cosmetic("Particulate Protector"),
-            new Cosmetic("Wild Brim Slouch", "Wild Brim")
+            new Cosmetic("Wild Brim Slouch", "Wild Brim"),
+            new Cosmetic("Hawaiian Hunter"),
+            new Cosmetic("Rocko"),
+            new Cosmetic("Headhunter's Brim")
         ));
     }
 
