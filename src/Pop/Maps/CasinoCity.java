@@ -72,15 +72,16 @@ public class CasinoCity extends Map {
     {
         // This map only has one spawn location, so just get it
         SpawnLocations spawnLocation = spawnLocations.get(0);
-        if (spawnLocation.equals(SpawnLocations.SPAWN_BOT_CASINO_CITY_CHIPS) && tfBot.getIsGiant()) {
-            tfBot.tags.add("chips_count_10");
-        } else if (!tfBot.getIsGiant()) {
-            boolean giveThreeChips = PopRandomizer.generateBooleanFromPercentage(20);
-            boolean giveFiveChips = PopRandomizer.generateBooleanFromPercentage(3);
-            if (giveThreeChips) {
-                tfBot.tags.add("chips_count_3");
-            } else if (giveFiveChips) {
-                tfBot.tags.add("chips_count_5");
+        if (spawnLocation.equals(SpawnLocations.SPAWN_BOT_CASINO_CITY_CHIPS)) {
+            if (tfBot.getIsGiant()) {
+                tfBot.tags.add("chips_count_10");
+            } else {
+                // 90% to give 3 chips, 10% to give 5
+                if (PopRandomizer.generateBooleanFromPercentage(90)) {
+                    tfBot.tags.add("chips_count_3");
+                } else {
+                    tfBot.tags.add("chips_count_5");
+                }
             }
         }
     }
