@@ -13,7 +13,7 @@ To use this, first either download a release, or build the source code into a ja
 Find your TF2 population file directory - this is typically at _C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\tf\scripts\population_. Doing the following will allow your local server to use the custom pop files.
 - Copy **(do not move!!!)** the pop files directly into this directory. Do not copy the folder, just the files themselves.
 
-Find your TF2 hud directory - this is typically at _C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\tf\materials\hud_. Doing the following will add the custom class icons for the bots. If you deleted the custom templates, you will still want to move the files that start with _leaderboard_class_random_, else the randomly created bots will not have icons.
+Find your TF2 hud directory - this is typically at _C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\tf\materials\hud_. Doing the following will add the custom class icons for the bots. If you deleted the custom templates, you will still want to move the files that start with _leaderboard_class_random_, _leaderboard_class_projectile_, and _leaderboard_class_giant_projectile_ else the randomly created bots will not have icons.
 - Copy the files form the Class Icons folder into this directory. Do not copy the folder, just the files themselves.
 
 ## Pop Files Directory
