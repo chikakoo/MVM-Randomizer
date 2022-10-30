@@ -101,7 +101,7 @@ public class RandomPyro extends RandomBot {
             new Cosmetic("The Head Warmer"),
             new Cosmetic("The Waxy Wayfinder"),
             new Cosmetic("The Triclops"),
-            new Cosmetic("The HazMat Headcase"),
+            //new Cosmetic("The HazMat Headcase"),
             new Cosmetic("Area 451"),
             new Cosmetic("The Plutonidome"),
             new Cosmetic("The Wraith Wrap"),
