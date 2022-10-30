@@ -374,7 +374,7 @@ public abstract class RandomBot extends TFBot {
         boolean hasUnusualEffect = PopRandomizer.generateBooleanFromPercentage(MVMRandomizer.randomBotSettings.getPercentUnusualEffect());
         if (hasUnusualEffect) {
             ArrayList<Integer> unusuals = new ArrayList<>();
-            for (int i = 6; i < 223; i++) {
+            for (int i = 6; i < 270; i++) {
                 if (i > 20 && i < 28) {
                     continue;
                 }
