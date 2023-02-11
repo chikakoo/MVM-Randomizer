@@ -159,7 +159,7 @@ public class RandomSoldier extends RandomBot {
             new Cosmetic("Sky High Fly Guy", "Sky High"),
             new Cosmetic("The Tank Top"),
             new Cosmetic("Vampire Vanquisher"),
-            new Cosmetic("Climbing Commander"),
+            //new Cosmetic("Climbing Commander"), // Glitchy
             new Cosmetic("The Crack Pot"),
             new Cosmetic("The Dumb Bell"),
             new Cosmetic("Bobby Bonnet", "Officer"),
