@@ -356,7 +356,10 @@ public class WeaponModels {
             new WeaponModel("models/items/currencypack_small.mdl", "Money"),
             new WeaponModel("models/items/festivizer.mdl", "Festivizer"),
             new WeaponModel("models/items/gift_festive.mdl", "Festive Gift"),
-            new WeaponModel("models/items/medkit_large.mdl", "Large Medkit"),
+
+            // This crashes on sandstone...
+            //new WeaponModel("models/items/medkit_large.mdl", "Large Medkit"),
+
             new WeaponModel("models/items/medkit_large_bday.mdl", "Large Gift Medkit"),
             new WeaponModel("models/items/medkit_medium.mdl", "Med Medkit"),
             new WeaponModel("models/items/medkit_medium_bday.mdl", "Med Gift Medkit"),
