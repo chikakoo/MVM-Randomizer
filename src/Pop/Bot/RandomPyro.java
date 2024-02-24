@@ -183,7 +183,7 @@ public class RandomPyro extends RandomBot {
             new Cosmetic("The Cat's Pajamas"),
             new Cosmetic("The Burning Question"),
             new Cosmetic("The Arachno-Arsonist"),
-            new Cosmetic("Mr. Quackers"),
+            //new Cosmetic("Mr. Quackers"), // glitchy looking
             new Cosmetic("Pyro in Chinatown", "Chinatown"),
             new Cosmetic("Pocket Pardner"),
             new Cosmetic("The Fiery Phoenix"),

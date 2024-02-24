@@ -21,7 +21,7 @@ public class RandomDemoman extends RandomBot {
         primaryWeaponList = new ArrayList<>(Arrays.asList(
             new GrenadeLauncher("Upgradeable TF_WEAPON_GRENADELAUNCHER", "Grenade Launcher"),
             //new GrenadeLauncher("Festive Grenade Launcher", "Festive Launcher"), // In skins
-            new GrenadeLauncher("The Loch-n-Load"),
+            new LochNLoad("The Loch-n-Load"),
             new GrenadeLauncher("The Iron Bomber"),
             new LooseCannon( "The Loose Cannon"),
             new PassiveItem("Ali Baba's Wee Booties", "Wee Booties"),
@@ -138,7 +138,7 @@ public class RandomDemoman extends RandomBot {
             new Cosmetic("The Hood of Sorrows"),
             new Cosmetic("Teufort Knight"),
             new Cosmetic("The Dayjogger"),
-            new Cosmetic("Spirit of the Bombing Past", "Bombing past"),
+            new Cosmetic("Spirit of the Bombing Past", "Bombing Past"),
             new Cosmetic("Bomb Beanie"),
             new Cosmetic("The Bomber Knight"),
             new Cosmetic("Elf Esteem"),
