@@ -27,6 +27,12 @@ public class MVMRandomizer {
     public static Map currentMap;
 
     /**
+     * We currently will NEVER randomize custom projectiles, since it causes maps to crash
+     * TODO: investigate this and find out a consistent way to get it to work
+     */
+    public static boolean randomizeCustomProjectileModels = false;
+
+    /**
      * Main
      * @param args
      * @throws IOException

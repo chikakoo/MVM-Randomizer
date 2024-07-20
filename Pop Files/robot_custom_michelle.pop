@@ -94,6 +94,37 @@ WaveSchedule
 				"override projectile type" 17
 			}
 		}
+		
+		T_TFBot_Demoman_Vlad
+		{
+			Class Demoman
+			Name "Vlad Sheridan"
+			Skill Normal
+			ClassIcon demoman_vlad
+			WeaponRestrictions PrimaryOnly
+			Item "gentlemanne_grenadelauncher_coffinnail"
+			Item "Mann Co. Cap"
+			Item "Backbreaker's Guards"
+			Item "Buck Turner All-Stars"
+
+			ItemAttributes
+			{
+				ItemName "gentlemanne_grenadelauncher_coffinnail"
+				"bleeding duration" 3
+				"heal on hit for rapidfire" 10
+				"damage penalty" 0.2
+				"fire rate bonus" 2
+				"faster reload rate" 2
+				//"custom projectile model" "models/weapons/c_models/c_bat.mdl"
+				"attach particle effect" 75
+
+			}
+			
+			CharacterAttributes
+			{
+				"move speed bonus" 1.5
+			}
+		}
 
 		T_TFBot_Heavy_Sad
 		{

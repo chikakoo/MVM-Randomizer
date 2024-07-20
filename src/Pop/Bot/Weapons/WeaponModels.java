@@ -379,7 +379,7 @@ public class WeaponModels {
     public static ArrayList<WeaponModel> projectileModels = new ArrayList<>(Arrays.asList(
             new WeaponModel("models/weapons/w_models/w_arrow.mdl", "Arrow"),
             new WeaponModel("models/weapons/w_models/w_arrow_xmas.mdl", "Festive Arrow"),
-            new WeaponModel("models/weapons/w_models/w_baseball.mdl", "Baseball"),
+            //new WeaponModel("models/weapons/w_models/w_baseball.mdl", "Baseball"), // Crashed?
             new WeaponModel("models/weapons/w_models/w_cannonball.mdl", "Cannonball"),
             new WeaponModel("models/weapons/w_models/w_cigarette_case.mdl", "Cigarette Case"),
             new WeaponModel("models/weapons/w_models/w_flaregun_shell.mdl", "Flare"),

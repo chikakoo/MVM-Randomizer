@@ -132,7 +132,7 @@ public class AllClassCosmeticLists {
             new Cosmetic("The MK 50"),
             new Cosmetic("The Dadliest Catch"),
             new Cosmetic("Brimstone"),
-            new Cosmetic("The Crown of the Old Kingdom", "Crown"),
+            //new Cosmetic("The Crown of the Old Kingdom", "Crown"),
             new Cosmetic("The Tomb Readers"),
             new Cosmetic("EOTL_FURCAP", "Fur Cap"),
             new Cosmetic("EOTL_Brisk-weather Beanie", "Brick Weather Beanie"),

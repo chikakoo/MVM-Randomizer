@@ -634,11 +634,15 @@ public abstract class RandomBot extends TFBot {
      * Adds a custom projectile for templated bots
      */
     private void addRandomProjectileModelForTemplatedBot() {
+        if (!MVMRandomizer.randomizeCustomProjectileModels) {
+            return;
+        }
+
         if (template == null) { return; }
 
         String customProjectileName = template.getCustomProjectileWeapon();
         if (customProjectileName != null &&
-                !customProjectileName.equals("") &&
+                !customProjectileName.isEmpty() &&
                 PopRandomizer.generateBooleanFromPercentage(MVMRandomizer.randomBotSettings.getPercentRandomProjectileModel())) {
             addRandomProjectileModelForTemplatedBot(customProjectileName);
         }

@@ -8,9 +8,7 @@ import Pop.ItemAttributes;
 import Pop.MVMRandomizer;
 import Pop.PopRandomizer;
 import Pop.WeightedItemCollection;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Weapon {
     /**
@@ -259,8 +257,12 @@ public class Weapon {
      * Adds a random projectile model to the given weapon
      */
     private static void tryAddRandomProjectileModel(Weapon weapon) {
+        if (!MVMRandomizer.randomizeCustomProjectileModels) {
+            return;
+        }
+
         boolean hasCannonballProjectiles =
-                weapon.overriddenProjectileType != null && weapon.overriddenProjectileType.equals(ProjectileTypes.CANNONBALL);
+            weapon.overriddenProjectileType != null && weapon.overriddenProjectileType.equals(ProjectileTypes.CANNONBALL);
         boolean canHaveRandomModel = weapon.canHaveCustomProjectileModel || hasCannonballProjectiles;
         if (canHaveRandomModel &&
             PopRandomizer.generateBooleanFromPercentage(MVMRandomizer.randomBotSettings.getPercentRandomProjectileModel())) {

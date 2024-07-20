@@ -25,6 +25,40 @@ WaveSchedule
                 "minicritboost on kill" 8
             }
         }
+		
+		T_TFBot_Giant_Scout_Purple_Predator
+		{
+			Class Scout
+			Name "Purple Predator"
+			ClassIcon giant_scout_purple_predator
+			Health 2500
+			Item "powerhouse_scattergun_currentevent"
+			Item "Pocket Pauling"
+			Item "Remorseless Raptor"
+			Attributes MiniBoss
+						
+			CharacterAttributes
+			{
+				"damage force reduction" 0.7
+				"airblast vulnerability multiplier" 0.7
+				"move speed bonus"	0.4
+				"override footstep sound set" 5
+			}
+
+			ItemAttributes
+			{
+				ItemName "powerhouse_scattergun_currentevent"
+				"bullets per shot bonus" 10
+				"weapon spread bonus" 10
+			}
+			
+			ItemAttributes
+			{
+				ItemName "Remorseless Raptor"
+				"attach particle effect" 182
+				"set item tint RGB" 12667882
+			}
+		}
 
 		T_TFBot_Scout_Snail
 		{
@@ -381,7 +415,7 @@ WaveSchedule
 				"auto fires when full" 1
 				"projectile spread angle penalty" 20
 				"projectile speed decreased" 0.5
-				"custom projectile model" "models/workshop/player/items/pyro/spring_rider/spring_rider.mdl"
+				//"custom projectile model" "models/workshop/player/items/pyro/spring_rider/spring_rider.mdl"
 				"attach particle effect" 146
 			}
 		}
@@ -629,7 +663,7 @@ WaveSchedule
 			{
 				ItemName "The Fortified Compound"
 				"override projectile type" 17
-				"custom projectile model" "models/weapons/c_models/c_banana/c_banana.mdl"
+				//"custom projectile model" "models/weapons/c_models/c_banana/c_banana.mdl"
 				"no self blast dmg" 2.0
 				"fire rate bonus" 0.001
 				"faster reload rate" 0.001

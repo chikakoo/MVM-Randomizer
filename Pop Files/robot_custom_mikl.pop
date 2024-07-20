@@ -1,0 +1,25 @@
+WaveSchedule
+{
+	Templates
+	{
+		T_TFBot_Sniper_360_No_Scope
+		{
+			Class Sniper
+			Name "360 No Scope"
+			Skill Expert
+			Health 100
+			Attributes AutoJump
+			AutoJumpMin 1
+			AutoJumpMax 5
+			MaxVisionRange 10000
+			Attributes AlwaysFireWeapon
+			Item "Upgradeable TF_WEAPON_SNIPERRIFLE"
+			Item "The Head Hedge"
+
+			CharacterAttributes 
+			{
+				"move speed bonus" 1.5
+			}										
+		}
+	}
+}
