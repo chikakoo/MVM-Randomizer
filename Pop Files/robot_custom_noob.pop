@@ -443,7 +443,7 @@ WaveSchedule
 				"fire rate bonus" 0.02
 				"stickybomb charge rate" 0.08
 				"stickybomb fizzle time" 0
-				"custom projectile model" "models/items/currencypack_medium.mdl"
+				//"custom projectile model" "models/items/currencypack_medium.mdl"
 				"attach particle effect" 60
 			}
 			

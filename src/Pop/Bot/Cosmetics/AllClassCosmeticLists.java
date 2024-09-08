@@ -143,7 +143,7 @@ public class AllClassCosmeticLists {
             new Cosmetic("The Rotation Sensation"),
             new Cosmetic("Potassium Bonnett"),
             new Cosmetic("Captain Space Mann"),
-            new Cosmetic("Phononaut"),
+            //new Cosmetic("Phononaut"), //Glitchy looking
             new Cosmetic("Universal Translator"),
             new Cosmetic("Duck Billed Hatypus"),
             //"Prehistoric Pullover", // Glitchy looking
